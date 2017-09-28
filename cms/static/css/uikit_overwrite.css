@@ -1,0 +1,105 @@
+/*
+css для переопредеделения стилей uikit
+*/
+
+
+/*-------------------------- <builder colors> ------------------------*/
+a,
+.uk-link {
+    color: #447500;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover,
+.uk-link:hover {
+    color: #5a9a01;
+    text-decoration: underline;
+}
+.uk-subnav-pill > li.uk-active > a {
+    background: #D4D5CB;
+    color: #000;
+}
+.uk-subnav > li > a {
+    color: #447500;
+}
+.uk-pagination > .uk-active > span {
+    background: #598700;
+}
+.uk-progress-bar {
+    background: #598700;
+}
+.uk-navbar {
+    background: #424645;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.uk-navbar-nav > li > a, .uk-navbar strong{
+    color: #fff;
+    text-shadow: none;
+}
+.uk-nav-navbar > li > a:hover, .uk-nav-navbar > li > a:focus{
+    background-color: #79b50f;
+}
+.uk-button-success{
+    background-color: #79b50f;
+}
+
+.uk-nav-dropdown > li > a:hover, .uk-nav-dropdown > li > a:focus {
+    background-color: #79b50f;
+}
+
+.uk-subnav-pill > li > a {
+    background: none repeat scroll 0 0 #F6F7ED;
+    color: #000;
+}
+
+.uk-container {
+    padding: 0 10px;
+}
+
+/*-------------------------- </builder colors> ------------------------*/
+
+
+/*------------------- <nested set list items> ---------------------*/
+.uk-nestable-item {
+    margin-bottom: 0;
+    padding: 0;
+    background: transparent;
+}
+.uk-nestable-placeholder, .uk-sortable-placeholder {
+    margin-bottom: 1px;
+    border: 1px dashed #aaa;
+}
+.uk-nestable-handle{
+    margin: 0 6px;
+}
+/*------------------- </nested set list items> --------------------*/
+
+
+/*------------------- <items button hover> -----------------------*/
+.builder-items_list__item button{
+    background-color: #fff;
+}
+
+.builder-items_list__item button:hover{
+    background-color: #8EC73B;
+}
+.builder-items_list__item button.js_cms-delete_item:hover{
+    background-color: #E4354F;
+}
+/*------------------- </items button hover> -----------------------*/
+
+
+/*------------------- <notify> -----------------------*/
+.uk-notify{
+    max-width: 340px;
+    /*width: auto;*/
+    top: 50px;
+    overflow: hidden;
+}
+.uk-notify p{
+    font-size: 13px;
+    line-height: 16px;
+}
+/*------------------- </notify> -----------------------*/
+
+

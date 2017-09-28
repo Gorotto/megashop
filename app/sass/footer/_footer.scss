@@ -1,0 +1,164 @@
+.footer{
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  .container{
+    border-top: 1px solid #eaeaea;
+  }
+  &__title{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 31px;
+    color: #0e0e0e;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  &__subtitle{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 18px;
+    color: #0e0e0e;
+    font-size: 13px;
+    font-weight: 300;
+    > a {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      color: #0e0e0e;
+      font-size: 13px;
+      font-weight: 300;
+      &:hover{
+        color: #c12025;
+      }
+    }
+  }
+  &__list{
+    display: block;
+    position: relative;
+    float: left;
+    width: 30%;
+    list-style: none;
+    padding: 0;
+    margin-top: 47px;
+    @include breakpoint(max-width 660px){
+      width: 100%;
+      margin-top: 15px;
+      margin-bottom: 0;
+    }
+    > li {
+      > ul{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        margin-top: 23px;
+        @include breakpoint(max-width 770px){
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+  &__nav{
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - 306px);
+    @include breakpoint(max-width 770px){
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+  &__socials{
+    display: block;
+    position: relative;
+    float: left;
+    width: 306px;
+    margin-top: 145px;
+    @include breakpoint(max-width 770px){
+      width: 100%;
+      margin-top: 0;
+    }
+    .footer__title{
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+    .footer__subtitle{
+      margin-bottom: 46px;
+      @include breakpoint(max-width 770px){
+        margin-bottom: 15px;
+      }
+    }
+    &--links{
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(row);
+      @include justify-content(flex-start);
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-bottom: 15px;
+      > a{
+        @include display-flex(flex);
+        @include justify-content(center);
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        border: 1px solid #a1a1a1;
+        border-radius: 50%;
+        &:hover{
+          border: 1px solid #c12025;
+        }
+      }
+    }
+  }
+  &__bottom{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding-top: 23px;
+    padding-bottom: 10px;
+    @include box-sizing(border-box);
+    p{
+      display: block;
+      position: relative;
+      float: left;
+      color: #0e0e0e;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 24px;
+    }
+  }
+  &__pay-sys{
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(flex-end);
+    position: relative;
+    float: right;
+    > span{
+      display: block;
+      position: relative;
+      float: left;
+      max-width: 88px;
+      height: 22px;
+      overflow: hidden;
+      margin-left: 13px;
+      img{
+        object-fit: contain;
+      }
+    }
+  }
+}

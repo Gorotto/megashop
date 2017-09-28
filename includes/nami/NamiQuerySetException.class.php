@@ -1,0 +1,7 @@
+<?
+
+class NamiQuerySetException extends NamiException
+{
+
+}
+

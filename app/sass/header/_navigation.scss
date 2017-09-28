@@ -1,0 +1,325 @@
+.header__navigation {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.header__nav {
+  @include display-flex(flex);
+  @include flex-wrap(wrap);
+  @include flex-direction(row);
+  @include justify-content(space-between);
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  @include breakpoint(max-width 992px) {
+    @include justify-content(center);
+  }
+  @include breakpoint(max-width 736px) {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    float: left;
+    padding-top: 36px;
+    @include box-sizing(border-box);
+    left: 0;
+    margin-top: 0;
+    margin-left: 0;
+    z-index: 4;
+    top: 0;
+    margin-bottom: 24px;
+    background: rgba(193, 32, 37, .9);
+  }
+  > li {
+    max-width: 76px;
+    @include breakpoint(max-width 736px) {
+      max-width: 100%;
+    }
+    > a {
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(column);
+      position: relative;
+      float: left;
+      width: 100%;
+      align-content: center;
+      align-items: center;
+      text-align: center;
+      color: #0e0e0e;
+      font-size: 13px;
+      font-weight: 300;
+      @include breakpoint(max-width 736px) {
+        color: #fff;
+        padding: 10px;
+        @include box-sizing(border-box);
+        font-size: 16px;
+      }
+      > span {
+        @include display-flex(flex);
+        @include justify-content(center);
+        align-items: center;
+        position: relative;
+        float: left;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px solid #e3e3e3;
+        margin-bottom: 16px;
+        @include breakpoint(max-width 736px) {
+          display: none;
+        }
+      }
+    }
+    > a:hover, a:focus, a:active {
+      color: #c12025;
+      > span {
+        border: 1px solid #c12025;
+      }
+      @include breakpoint(max-width 736px) {
+        color: #fff;
+      }
+    }
+    > a.show-head-submenu {
+      @include breakpoint(max-width 736px) {
+        color: #ffffff;
+      }
+      &:before {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        left: 26px;
+        bottom: -20px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 12px solid #c21a20;
+        z-index: 2;
+        @include breakpoint(max-width 736px) {
+          display: none;
+        }
+      }
+      &:after {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        left: 26px;
+        bottom: -24px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 12px solid #fff;
+        z-index: 3;
+        @include breakpoint(max-width 736px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.header__catalog {
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 131px;
+  padding-top: 30px;
+  background-color: #fff;
+  z-index: 2;
+  border-top: 2px solid #c21a20;
+  @include breakpoint(max-width 736px) {
+    position: relative;
+    float: left;
+    margin-top: 0;
+    top: inherit;
+  }
+  &--column {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(column);
+    position: relative;
+    float: left;
+    width: 25%;
+    @include breakpoint(max-width 736px) {
+      width: 100%;
+    }
+    > ul {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-bottom: 12px;
+      padding-left: 34px;
+      padding-right: 34px;
+      @include box-sizing(border-box);
+      list-style: none;
+      li {
+        width: 100%;
+        float: left;
+        a {
+          display: block;
+          position: relative;
+          float: left;
+          width: 100%;
+          padding: 10px 0;
+          @include box-sizing(border-box);
+          color: #0e0e0e;
+          font-size: 13px;
+          font-weight: 300;
+          &:hover, &:active, &:focus {
+            color: #c21a20;
+          }
+        }
+        a.title {
+          display: block;
+          position: relative;
+          float: left;
+          width: 100%;
+          padding: 10px 0;
+          @include box-sizing(border-box);
+          color: #0e0e0e;
+          font-size: 13px;
+          font-weight: 300;
+          margin: 0;
+          text-decoration: underline;
+        }
+      }
+    }
+    > .product-slider__carousel--item {
+      width: 100%;
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.header__cabinet-nav {
+  @include display-flex(flex);
+  @include flex-wrap(wrap);
+  @include flex-direction(row);
+  @include justify-content(flex-start);
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 0;
+  list-style: none;
+  @include breakpoint(max-width 992px) {
+    @include justify-content(center);
+  }
+  @include breakpoint(max-width 736px) {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    float: left;
+    padding-top: 36px;
+    @include box-sizing(border-box);
+    left: 0;
+    margin-top: 0;
+    margin-left: 0;
+    z-index: 4;
+    top: 0;
+    margin-bottom: 24px;
+    background: rgba(193, 32, 37, .9);
+  }
+  > li {
+    margin-right: 34px;
+    &:after {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 14px;
+      background-color: #e3e3e3;
+      top: 13px;
+      margin-left: -15px;
+    }
+    @include breakpoint(max-width 736px) {
+      max-width: 100%;
+    }
+    > a {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      text-align: center;
+      color: #000000;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 40px;
+      @include breakpoint(max-width 736px) {
+        color: #fff;
+        padding: 10px;
+        @include box-sizing(border-box);
+        font-size: 16px;
+      }
+    }
+    > a:hover, a:focus, a:active {
+      color: #c12025;
+      @include breakpoint(max-width 736px) {
+        color: #fff;
+      }
+    }
+  }
+  > li:first-of-type:after{
+    display: none;
+  }
+}
+
+.header__trigger {
+  display: none;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  top: 232px;
+  right: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
+  z-index: 15;
+  @include breakpoint(max-width 736px) {
+    display: block;
+  }
+  span, span:before, span:after {
+    display: block;
+    height: 2px;
+    width: 18px;
+    background-color: #222;
+    position: absolute;
+    left: 50%;
+    margin-left: -9px;
+    top: 50%;
+    margin-top: -1px;
+  }
+  span:before {
+    transition: all 0.2s;
+    margin-top: -6px;
+    content: '';
+  }
+  span:after {
+    transition: all 0.2s;
+    margin-top: 4px;
+    content: '';
+  }
+  &--active span {
+    background-color: transparent;
+    &:before {
+      transform: rotate(135deg);
+      margin-top: 0;
+    }
+    &:after {
+      transform: rotate(-134deg);
+      margin-top: 0;
+    }
+  }
+}

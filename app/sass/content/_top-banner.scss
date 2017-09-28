@@ -1,0 +1,79 @@
+.top-banner{
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 11px;
+  @include box-sizing(border-box);
+  &__big{
+    display: block;
+    position: relative;
+    float: left;
+    width: 850px;
+    height: 400px;
+    @include breakpoint(max-width 1200px){
+      width: 70%;
+    }
+    @include breakpoint(max-width 660px){
+      width: 100%;
+      height: 290px;
+    }
+    img{
+      size: 100%;
+      object-fit: cover;
+      @include breakpoint(max-width 992px){
+        object-fit: contain;
+      }
+    }
+  }
+  &__sm{
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - (850px + 20px + 2px));
+    height: 249px;
+    border: 1px solid #e3e3e3;
+    margin-left: 20px;
+    margin-bottom: 21px;
+    @include breakpoint(max-width 1200px){
+      width: calc(100% - (70% + 20px + 2px));
+    }
+    @include breakpoint(max-width 660px){
+      width: 100%;
+      margin-left: 0;
+    }
+    img{
+      size: 100%;
+      object-fit: cover;
+      @include breakpoint(max-width 992px){
+        object-fit: contain;
+      }
+    }
+  }
+  &__links{
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - (850px + 20px + 2px));
+    height: 130px;
+    border: 1px solid #e3e3e3;
+    margin-left: 20px;
+    margin-bottom: 21px;
+    @include breakpoint(max-width 1200px){
+      width: calc(100% - (70% + 20px + 2px));
+    }
+    @include breakpoint(max-width 660px){
+      width: 100%;
+      height: 249px;
+      margin-left: 0;
+    }
+    img{
+      size: 100%;
+      //object-fit: cover;
+      @include breakpoint(max-width 992px){
+        object-fit: contain;
+      }
+    }
+  }
+}

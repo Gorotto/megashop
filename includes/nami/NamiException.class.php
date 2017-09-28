@@ -1,0 +1,7 @@
+<?
+
+class NamiException extends Exception
+{
+
+}
+

@@ -1,0 +1,604 @@
+/*city modal*/
+.modal-city {
+  display: none;
+  position: fixed;
+  width: 630px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  top: 25%;
+  margin-left: calc(50% - (630px / 2));
+  opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+  z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+  padding-top: 36px;
+  @include border-box;
+  @include breakpoint(max-width 600px) {
+    width: 100%;
+    margin-left: 0;
+    top: 0;
+  }
+  &:after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 99px;
+    height: 57px;
+    right: 9px;
+    bottom: 0;
+    background-image: url('../i/OAMI-logo.svg');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  .title {
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - (50px * 2));
+    margin-top: 0;
+    margin-bottom: 37px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom: 20px;
+    @include box-sizing(border-box);
+    color: #0e0e0e;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 1px solid #dddddd;
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: -1px;
+      width: 70px;
+      height: 2px;
+      background-color: #c12025;
+    }
+  }
+  .subtitle {
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - (50px * 2));
+    margin-top: 0;
+    margin-bottom: 37px;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: #0e0e0e;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4;
+    > span {
+      font-weight: 600;
+    }
+  }
+  .element {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    /*padding: 0 50px;*/
+    @include box-sizing(border-box);
+    margin-bottom: 9px;
+    &:last-of-type {
+      margin-bottom: 36px;
+    }
+    .title {
+      display: block;
+      position: relative;
+      float: left;
+      width: 50%;
+      margin: 0;
+      padding: 0;
+      border: none;
+      text-align: left;
+      color: #8e8d8d;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 18px;
+      &:after {
+        display: none;
+      }
+    }
+    .value {
+      display: block;
+      position: relative;
+      float: left;
+      width: 50%;
+      margin: 0;
+      text-align: right;
+      color: #0e0e0e;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 18px;
+    }
+  }
+  &__close {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 36px;
+    right: 50px;
+    width: 12px;
+    height: 12px;
+    background-image: url('../i/icons/modal-close-icon.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    cursor: pointer;
+  }
+  &__form {
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - (50px * 2));
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    > .subtitle {
+      width: 100%;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    &--field {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 42px;
+      padding-left: 26px;
+      padding-right: 26px;
+      @include box-sizing(border-box);
+      color: #0e0e0e;
+      font-size: 14px;
+      font-weight: 300;
+      border: 1px solid #e4e4e4;
+      border-radius: 32px;
+      background-color: #fff;
+      overflow: hidden;
+    }
+    &--submit {
+      display: block;
+      position: relative;
+      float: left;
+      width: 212px;
+      height: 40px;
+      margin-bottom: 34px;
+      background-color: #71c438;
+      border: none;
+      border-radius: 19px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 300;
+      margin-top: 7px;
+    }
+    &--no-submit {
+      display: block;
+      position: relative;
+      float: left;
+      width: 212px;
+      height: 40px;
+      margin-bottom: 34px;
+      margin-left: 20px;
+      background-color: #ca3f43;
+      border: none;
+      border-radius: 19px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 300;
+      margin-top: 7px;
+    }
+  }
+}
+
+.offer-modal {
+  display: none;
+  position: fixed;
+  width: 1000px;
+  height: 840px;
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 5px;
+  top: 15px;
+  margin-left: calc(50% - (1000px / 2));
+  opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+  z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+  padding: 50px 30px;
+  @include border-box;
+  @include breakpoint(max-width 1000px) {
+    width: 100%;
+    margin-left: 0;
+    top: 0;
+  }
+  &__close {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 36px;
+    right: 50px;
+    width: 12px;
+    height: 12px;
+    background-image: url('../i/icons/modal-close-icon.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    cursor: pointer;
+  }
+  &__title {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 42px;
+    text-align: center;
+    color: #0e0e0e;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  &__box {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: calc(100% - 50px);
+    overflow: scroll;
+    ul {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        position: relative;
+        float: left;
+        width: 100%;
+      }
+      > li:first-of-type {
+        margin-bottom: 10px;
+      }
+      > .title {
+        font-weight: 700;
+        > ul {
+          display: block;
+          position: relative;
+          float: left;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          margin-top: 13px;
+          margin-bottom: 13px;
+          > li {
+            color: #0e0e0e;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal-confirm {
+  display: none;
+  position: fixed;
+  width: 670px;
+  /*height: 426px;*/
+  border: 1px solid #dddddd;
+  background-color: #ffffff;
+  overflow: hidden;
+  border-radius: 5px;
+  top: 25%;
+  margin-left: calc(50% - (670px / 2));
+  opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+  z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+  padding: 35px 42px;
+  @include border-box;
+  @include breakpoint(max-width 1000px) {
+    width: 100%;
+    margin-left: 0;
+    top: 0;
+  }
+  &:after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 99px;
+    height: 57px;
+    right: 9px;
+    bottom: 0;
+    background-image: url('../i/OAMI-logo.svg');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  &__close {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 36px;
+    right: 50px;
+    width: 12px;
+    height: 12px;
+    background-image: url('../i/icons/modal-close-icon.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    cursor: pointer;
+  }
+  .title {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 50px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 20px;
+    @include box-sizing(border-box);
+    color: #0e0e0e;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 1px solid #dddddd;
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: -1px;
+      width: 70px;
+      height: 2px;
+      background-color: #c12025;
+    }
+  }
+  .subtitle {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 62px;
+    color: #0e0e0e;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  &__no {
+    display: block;
+    position: relative;
+    float: left;
+    width: 250px;
+    height: 50px;
+    background-color: #f5f5f5;
+    border-radius: 23px;
+    text-align: center;
+    color: #0e0e0e;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 49px;
+    .icon {
+      display: block;
+      position: relative;
+      float: left;
+      width: 12px;
+      height: 12px;
+      margin-left: 56px;
+      margin-top: 19px;
+      margin-right: 14px;
+      background-image: url('../i/icons/no-icon.png');
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+    &:hover, &:active, &:focus {
+      color: #fff;
+      background-color: #c12025;
+    }
+  }
+  &__yes {
+    display: block;
+    position: relative;
+    float: right;
+    width: 250px;
+    height: 50px;
+    border-radius: 23px;
+    background-color: #72c835;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 49px;
+    .icon {
+      display: block;
+      position: relative;
+      float: left;
+      width: 12px;
+      height: 12px;
+      margin-left: 56px;
+      margin-top: 19px;
+      margin-right: 14px;
+      background-image: url('../i/icons/ok-submit-icon.png');
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+  }
+  &__rating-title {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 59px;
+    text-align: center;
+    color: #0e0e0e;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .rating {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    position: relative;
+    float: left;
+    width: 120px;
+    margin-left: calc(50% - (120px / 2));
+    &__star {
+      display: block;
+      position: relative;
+      float: left;
+      width: 19px;
+      height: 19px;
+      cursor: pointer;
+      background-image: url('../i/icons/empty-big-star-icon.png');
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+    &__star.rating__fil-star {
+      background-image: url('../i/icons/filed-big-star-icon.png');
+    }
+  }
+  &__descr {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 22px;
+    color: #0e0e0e;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 18px;
+  }
+  &__claim-links {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(center);
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 48px;
+    .modal-confirm__yes {
+      width: 146px;
+      margin-right: 10%;
+      .icon {
+        margin-left: 49px;
+      }
+    }
+    .modal-confirm__no {
+      width: 146px;
+      margin-left: 10%;
+      color: #fff;
+      background-color: #c12025;
+      text-align: justify;
+      .icon {
+        margin-left: 49px;
+      }
+    }
+  }
+  &__form {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 46px;
+    &--text {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      height: calc(240px - (23px + 28px));
+      margin-top: 23px;
+      margin-bottom: 14px;
+      border-radius: 23px;
+      padding: 19px 24px;
+      @include box-sizing(border-box);
+      border: 1px solid #e4e4e4;
+      background-color: #ffffff;
+      resize: none;
+      color: #0e0e0e;
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+  &__file {
+    display: none;
+  }
+  &__file + .modal-confirm__for-file {
+    display: block;
+    position: relative;
+    float: left;
+    width: 148px;
+    margin-top: 10px;
+    padding-left: 18px;
+    @include box-sizing(border-box);
+    cursor: pointer;
+    span{
+      color: #0e0e0e;
+      font-size: 14px;
+      font-weight: 300;
+      &:before{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 11px;
+        height: 16px;
+        top: 4px;
+        left: 0;
+        background-image: url('../i/icons/upload-file-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+      }
+    }
+  }
+  &__submit{
+    display: block;
+    position: relative;
+    float: right;
+    width: 146px;
+    height: 40px;
+    background-color: #72c835;
+    border-radius: 23px;
+    border: none;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
+
+#black-overlay {
+  display: none;
+  z-index: 4;
+  position: fixed;
+  background-color: #000;
+  opacity: 0.8;
+  -moz-opacity: 0.8;
+  filter: alpha(opacity=80);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+#white-overlay {
+  display: none;
+  z-index: 4;
+  position: fixed;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}

@@ -1,0 +1,6 @@
+<Files *.php>
+    deny from all
+</Files>
+RemoveHandler .php .phtml .pl
+AddType image/svg+xml svg svgz
+Options -Indexes

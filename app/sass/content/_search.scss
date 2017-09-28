@@ -1,0 +1,149 @@
+.search{
+  display: block;
+  position: relative;
+  float: left;
+  width: calc(100% - (270px));
+  margin-top: 0;
+  @include breakpoint(max-width 660px){
+    width: 100%;
+    margin-top: 15px;
+  }
+  .partner{
+    margin-top: 30px;
+    margin-bottom: 24px;
+    @include breakpoint(max-width 1024px){
+      margin-top: 0;
+    }
+    @include breakpoint(max-width 660px){
+      margin-left: calc(50%  - (200px/2));
+    }
+  }
+  &__form{
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - (200px + 68px + 61px));
+    margin-top: 30px;
+    margin-bottom: 24px;
+    margin-left: 68px;
+    margin-right: 61px;
+    @include box-sizing(border-box);
+    border: 2px solid #c21a20;
+    border-radius: 32px;
+    @include breakpoint(max-width 1024px){
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    @include breakpoint(max-width 660px){
+      width: 100%;
+      border-radius: 0;
+    }
+    &--field{
+      display: block;
+      position: relative;
+      float: left;
+      width: calc(65% - 80px);
+      height: 46px;
+      border: none;
+      padding-left: 29px;
+      padding-right: 20px;
+      @include box-sizing(border-box);
+      margin-top: 1px;
+      margin-left: 6px;
+      border-top-left-radius: 32px;
+      border-bottom-left-radius: 32px;
+      @include breakpoint(max-width 660px){
+        width: 100%;
+        border-radius: 0;
+        margin-left: 0;
+      }
+    }
+    &--categories{
+      display: block;
+      position: relative;
+      float: left;
+      width: 35%;
+      padding-left: 9px;
+      @include box-sizing(border-box);
+      cursor: pointer;
+      @include breakpoint(max-width 660px){
+        width: 100%;
+        padding-left: 29px;
+        margin-bottom: 9px;
+      }
+    }
+    &--trigger{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+    }
+    &--title{
+      display: block;
+      position: relative;
+      float: left;
+      color: #414141;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 30px;
+      padding-top: 9px;
+      @include box-sizing(border-box);
+    }
+    &--arrow{
+      display: block;
+      position: relative;
+      float: left;
+      width: 7px;
+      height: 4px;
+      margin-top: 22px;
+      margin-left: 8px;
+      background-image: url('../i/icons/arrow-down-icon.png');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+    &--list{
+      display: none;
+      position: absolute;
+      width: 100%;
+      top: 34px;
+      left: 0;
+      list-style: none;
+      padding-left: 0;
+      @include box-sizing(border-box);
+      box-shadow: 0 0 6px rgba(0,0,0,.22);
+      border-radius: 2px;
+      background-color: #fff;
+      z-index: 3;
+      > li{
+        position: relative;
+        float: left;
+        width: 100%;
+        color: #414141;
+        font-size: 14px;
+        font-weight: 400;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 9px;
+        @include box-sizing(border-box);
+        cursor: pointer;
+      }
+    }
+    &--submit{
+      display: block;
+      position: relative;
+      float: left;
+      width: 74px;
+      height: 48px;
+      right: -1px;
+      background-color: #c12025;
+      border: none;
+      border-top-right-radius: 32px;
+      border-bottom-right-radius: 32px;
+      @include breakpoint(max-width 660px){
+        width: 100%;
+        border-radius: 0;
+      }
+    }
+  }
+}

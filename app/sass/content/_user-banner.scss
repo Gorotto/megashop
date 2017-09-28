@@ -1,0 +1,448 @@
+.user-banner{
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  &__descr{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    border: 1px solid #e3e3e3;
+    background-color: #f8f8f8;
+    &--fotos{
+      display: block;
+      position: relative;
+      float: left;
+      width: calc(100% - 273px);
+
+      @include breakpoint(max-width 660px){
+        width: 100%;
+      }
+
+
+    }
+    &--foto{
+      display: block;
+      position: relative;
+      float: left;
+      width: 205px;
+      height: 176px;
+      background-color: #fff;
+      border: 1px solid #e4e4e4;
+      margin: 12px 13px;
+    }
+    &--about{
+      display: block;
+      position: relative;
+      float: left;
+      width: 272px;
+      border-left: 1px solid #e4e4e4;
+      background-color: #fff;
+      .title{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin: 0;
+        padding: 20px 20px;
+        @include box-sizing(border-box);
+        color: #0e0e0e;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1px solid #dddddd;
+        &:after{
+          display: block;
+          position: absolute;
+          content: '';
+          left: 0;
+          bottom: -1px;
+          width: 70px;
+          height: 2px;
+          background-color: #c12025;
+        }
+      }
+      .element{
+        display: block;
+        position: relative;
+        float: left;
+        width: calc(100% - 40px);
+        margin: 0 20px;
+        margin-bottom: 4px;
+        padding-bottom: 6px;
+        @include box-sizing(border-box);
+        border-bottom: 1px dotted #6e6e6e;
+        > p{
+          display: block;
+          position: relative;
+          float: left;
+          width: 50%;
+          margin: 0;
+          color: #6e6e6e;
+          font-size: 14px;
+          font-weight: 300;
+          text-align: left;
+        }
+        > span{
+          display: block;
+          position: relative;
+          float: left;
+          width: 50%;
+          margin: 0;
+          color: #000000;
+          font-size: 14px;
+          font-weight: 300;
+          text-align: right;
+        }
+      }
+      .element:first-of-type{
+        margin-top: 10px;
+      }
+      .element:last-of-type{
+        border-bottom: none;
+      }
+    }
+  }
+  &__coin{
+    display: block;
+    position: relative;
+    float: left;
+    width: 140px;
+    height: 140px;
+    margin-left: 81px;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    overflow: hidden;
+    @include breakpoint(max-width 736px){
+      width: 100px;
+      height: 100px;
+      margin-left: calc(50% - (100px/2));
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    img{
+      size: 100%;
+      object-fit: cover;
+    }
+  }
+  &__coin-descr{
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - (140px + 81px));
+    padding-left: 79px;
+    padding-right: 46px;
+    padding-top: 28px;
+    @include box-sizing(border-box);
+    @include breakpoint(max-width 736px){
+      width: 100%;
+      padding: 15px;
+    }
+    > p{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 21px;
+      color: #000000;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 22px;
+    }
+    &--element{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-bottom: 10px;
+      .descr{
+        display: block;
+        position: relative;
+        float: left;
+        width: 246px;
+        color: #000000;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: -0.14px;
+        @include breakpoint(max-width 736px){
+          width: 100%;
+          margin-bottom: 15px;
+        }
+      }
+      .value{
+        display: block;
+        position: relative;
+        float: left;
+        width: calc(100% - 246px);
+        color: #000000;
+        font-size: 14px;
+        font-weight: 300;
+        @include breakpoint(max-width 736px){
+          width: 100%;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+  &__coin-title{
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid #e4e4e4;
+    li{
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(column);
+      @include justify-content(center);
+      position: relative;
+      float: left;
+      width: 25%;
+      @include breakpoint(max-width 736px){
+        width: 100%;
+      }
+      .title{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin: 20px 0;
+        color: #000000;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: -0.14px;
+        text-align: center;
+      }
+      .value{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        padding-bottom: 20px;
+        @include box-sizing(border-box);
+        color: #000000;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: -0.14px;
+        text-align: center;
+        border-left: 1px solid #e4e4e4;
+        img{
+          display: inline-block;
+          position: relative;
+          width: 20px;
+          height: 19px;
+          top: -2px;
+        }
+      }
+    }
+    li:last-of-type{
+      .value{
+        border-right: 1px solid #e4e4e4;
+      }
+    }
+  }
+  &__coin-exchange{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 40px;
+    border: 1px solid #e4e4e4;
+    background-color: #ffffff;
+    &--title{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      padding: 0 29px;
+      @include box-sizing(border-box);
+      color: #272727;
+      font-size: 17px;
+      font-weight: 400;
+    }
+    &--amount{
+      display: block;
+      position: relative;
+      float: left;
+      width: 456px;
+      margin-bottom: 15px;
+      padding-left: 29px;
+      @include box-sizing(border-box);
+      @include breakpoint(max-width 736px){
+        width: 100%;
+        padding: 0 15px;
+      }
+      .product__search{
+        width: 100%;
+        height: auto;
+        border: none;
+        border-radius: 0;
+        .product__search--field{
+          width: 170px;
+          height: 42px;
+          margin-right: 10px;
+          border: 1px solid #e4e4e4;
+          border-radius: 32px;
+          background-color: #ffffff;
+          @include breakpoint(max-width 736px){
+            width: calc(100% - 30px);
+            margin-left: 15px;
+            margin-bottom: 15px;
+          }
+        }
+        .product__search--submit{
+          width: calc(100% - (170px + 10px));
+          height: 42px;
+          border-radius: 32px;
+          background-color: #c12025;
+          background-image: none;
+          text-align: center;
+          color: #ffffff;
+          font-size: 14px;
+          font-weight: 300;
+          @include breakpoint(max-width 736px){
+            width: calc(100% - 30px);
+            margin-left: 15px;
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+    &--code{
+      display: block;
+      position: relative;
+      float: left;
+      width: 380px;
+      padding-left: 42px;
+      @include box-sizing(border-box);
+      @include breakpoint(max-width 736px){
+        width: 100%;
+        padding: 0 15px;
+      }
+      .product__search{
+        width: 100%;
+        height: auto;
+        border: none;
+        border-radius: 0;
+        .product__search--field{
+          width: 100%;
+          height: 42px;
+          margin-right: 0;
+          margin-bottom: 20px;
+          border: 1px solid #e4e4e4;
+          border-radius: 32px;
+          background-color: #ffffff;
+        }
+        .product__search--copy{
+          margin-right: 10px;
+          margin-bottom: 48px;
+        }
+        .product__search--submit{
+          width: calc(100% - (180px + 10px));
+          height: 42px;
+          border-radius: 32px;
+          background-color: #71c338;
+          background-image: none;
+          text-align: center;
+          color: #ffffff;
+          font-size: 14px;
+          font-weight: 300;
+        }
+      }
+    }
+    &--counter{
+      display: block;
+      position: relative;
+      float: left;
+      width: calc(100% - (456px + 380px));
+      padding-right: 70px;
+      @include box-sizing(border-box);
+      @include breakpoint(max-width 736px){
+        width: 100%;
+        padding: 0 15px;
+      }
+      > h3{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 13px;
+        margin-bottom: 0;
+        padding-left: 42px;
+        color: #5d5d5d;
+        font-size: 14px;
+        font-weight: 300;
+      }
+      > .countdown{
+        @include display-flex(flex);
+        @include flex-wrap(wrap);
+        @include flex-direction(row);
+        @include justify-content(center);
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          width: 49px;
+          height: 40px;
+          background-color: #f5f5f5;
+          border-radius: 5px;
+          margin-top: 12px;
+          margin-left: 7px;
+          margin-right: 7px;
+          margin-bottom: 53px;
+          padding-top: 12px;
+          @include box-sizing(border-box);
+          &:after {
+            display: block;
+            position: absolute;
+            content: ':';
+            top: 48px;
+            margin-left: 52px;
+            text-align: center;
+            color: #0e0e0e;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 22px;
+          }
+          span {
+            display: block;
+            position: relative;
+            float: left;
+            width: 100%;
+            text-align: center;
+            color: #0e0e0e;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 18px;
+          }
+          p {
+            display: block;
+            position: absolute;
+            width: 62px;
+            margin-left: 0;
+            bottom: 17px;
+            color: #0e0e0e;
+            font-size: 11px;
+            font-weight: 300;
+            text-transform: uppercase;
+            text-align: center;
+          }
+        }
+        li:last-of-type:after {
+          display: none;
+        }
+      }
+    }
+  }
+}

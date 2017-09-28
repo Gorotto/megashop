@@ -1,0 +1,253 @@
+.coins{
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  &__tabs{
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(flex-start);
+    position: relative;
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li{
+      position: relative;
+      a{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        padding: 25px 30px;
+        color: #000000;
+        font-size: 14px;
+        font-weight: 300;
+        &:hover, &:focus, &:active{
+          color: #000000;
+          font-weight: 700;
+        }
+        .counter{
+          display: block;
+          position: relative;
+          float: right;
+          max-width: 43px;
+          margin-top: -9px;
+          margin-left: 13px;
+          padding: 4px;
+          @include box-sizing(border-box);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          background-color: #e5e5e5;
+          border-radius: 23px;
+          color: #010101;
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+      a.active{
+        font-weight: 700;
+      }
+    }
+  }
+  &__tabs-container{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 0;
+    border: 1px solid #e5e5e5;
+    background-color: #ffffff;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 57px;
+    @include box-sizing(border-box);
+    @include breakpoint(max-width 992px){
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    &--box{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+    }
+    &--element{
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(row);
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-bottom: 67px;
+      &:last-of-type{
+        margin-bottom: 34px;
+      }
+      @include breakpoint(max-width 660px){
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-items(center);
+      }
+    }
+    &--element.error{
+      .coins__tabs-container--banner{
+        opacity: 0.5;
+      }
+      .coins__tabs-container--tools{
+        .name{
+          opacity: 0.5;
+        }
+      }
+    }
+    &--banner{
+      display: block;
+      position: relative;
+      float: left;
+      width: 220px;
+      height: 116px;
+      box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.18);
+      background-color: #ffffff;
+      background-image: url('../i/lenta-bg.png');
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+      @include breakpoint(max-width 660px){
+        margin-bottom: 15px;
+      }
+      .title{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 16px;
+        text-align: center;
+        color: #000000;
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .subtitle{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+        color: #000000;
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+    &--status{
+      display: block;
+      position: relative;
+      float: left;
+      width: calc(100% - (220px + 357px));
+      @include breakpoint(max-width 1190px){
+        width: calc(100% - 220px);
+        margin-bottom: 15px;
+      }
+      @include breakpoint(max-width 660px){
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      .line{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-bottom: 25px;
+        padding-left: 60px;
+        @include box-sizing(border-box);
+        @include breakpoint(max-width 660px){
+          padding-left: 0;
+          margin-bottom: 15px;
+        }
+        .name{
+          display: block;
+          position: relative;
+          float: left;
+          width: 96px;
+          color: #7a7a7a;
+          font-size: 14px;
+          font-weight: 300;
+        }
+        .value{
+          display: block;
+          position: relative;
+          float: left;
+          width: calc(100% - 96px);
+          padding-left: 104px;
+          color: #000000;
+          font-size: 14px;
+          font-weight: 300;
+          @include box-sizing(border-box);
+          @include breakpoint(max-width 1200px){
+            padding-left: 30px;
+          }
+          a{
+            color: #1179c2;
+            text-decoration: underline;
+            &:hover, &:active, &:focus{
+              color: #1179c2;
+              text-decoration: none;
+            }
+          }
+        }
+        .value.success{
+          color: #379a0d;
+        }
+        .value.error{
+          color: #c12025;
+        }
+        .value.not-active{
+          color: #939393;
+        }
+      }
+    }
+    &--tools{
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(column);
+      @include justify-content(center);
+      align-items: flex-end;
+      position: relative;
+      float: left;
+      width: 357px;
+      .submit{
+        display: block;
+        position: relative;
+        float: left;
+        width: 180px;
+        height: 40px;
+        margin-bottom: 40px;
+        background-color: #f5f5f5;
+        border-radius: 23px;
+        border: 1px solid transparent;
+        color: #5d5d5d;
+        font-size: 14px;
+        font-weight: 300;
+        &:hover, &:active, &:focus{
+          color: #71c338;
+          border-color: #71c338;
+        }
+      }
+      .name{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        color: #232323;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: right;
+        span{
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

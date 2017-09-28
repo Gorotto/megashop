@@ -1,0 +1,595 @@
+.order {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  &__single {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    border: 1px solid #dddddd;
+    margin-top: 10px;
+    margin-bottom: 10%;
+    padding: 20px 25px;
+    @include box-sizing(border-box);
+    &--top {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+    }
+    &--left {
+      display: block;
+      position: relative;
+      float: left;
+      width: 50%;
+      //border-right: 1px solid #dddddd;
+      padding-right: 20px;
+      @include box-sizing(border-box);
+      @include breakpoint(max-width 660px){
+        width: 100%;
+      }
+      .title {
+        display: block;
+        position: relative;
+        float: left;
+        width: 50%;
+        margin-top: 10px;
+        margin-bottom: 0;
+        padding-bottom: 24px;
+        @include box-sizing(border-box);
+        border-bottom: 1px solid #dddddd;
+        color: #0e0e0e;
+        font-size: 17px;
+        font-weight: 400;
+        @include breakpoint(max-width 770px){
+          width: 100%;
+        }
+      }
+      .date {
+        display: block;
+        position: relative;
+        float: left;
+        width: 50%;
+        margin-top: 10px;
+        margin-bottom: 0;
+        padding-bottom: 24px;
+        @include box-sizing(border-box);
+        border-bottom: 1px solid #dddddd;
+        color: #0e0e0e;
+        font-size: 17px;
+        font-weight: 400;
+        @include breakpoint(max-width 770px){
+          width: 100%;
+        }
+      }
+    }
+    &--box {
+      @include display-flex(flex);
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+      @include justify-content(space-between);
+      position: relative;
+      float: left;
+      width: 100%;
+      padding-top: 45px;
+      @include box-sizing(border-box);
+      .sum {
+        display: block;
+        position: relative;
+        float: left;
+        width: 50%;
+        margin-top: 0;
+        margin-bottom: 0;
+        color: #0e0e0e;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 41px;
+        @include breakpoint(max-width 992px){
+          width: 100%;
+        }
+        .value {
+          color: #0e0e0e;
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+      .trek-code {
+        display: block;
+        position: relative;
+        float: left;
+        width: 50%;
+        margin-top: 0;
+        margin-bottom: 0;
+        color: #0e0e0e;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 41px;
+        @include breakpoint(max-width 992px){
+          width: 100%;
+        }
+        .value {
+          color: #0e0e0e;
+          font-size: 14px;
+          font-weight: 300;
+          text-transform: uppercase;
+          text-decoration: underline;
+        }
+      }
+      .about-error {
+        display: block;
+        position: relative;
+        float: left;
+        width: 200px;
+        margin-right: 60px;
+        padding: 10px 0;
+        @include box-sizing(border-box);
+        text-align: center;
+        border: 1px solid transparent;
+        border-radius: 23px;
+        color: #5d5d5d;
+        font-size: 14px;
+        font-weight: 300;
+        &:hover {
+          color: #c12025;
+          border-color: #c12025;
+          .attention {
+            display: block;
+            position: relative;
+            float: left;
+            width: 16px;
+            height: 16px;
+            margin-left: 10px;
+            background-image: url('../i/icons/attention-hover-icon.png');
+            background-repeat: no-repeat;
+            -webkit-background-size: contain;
+            background-size: contain;
+          }
+        }
+        .attention {
+          display: block;
+          position: relative;
+          float: left;
+          width: 16px;
+          height: 16px;
+          margin-left: 10px;
+          background-image: url('../i/icons/attention-icon.png');
+          background-repeat: no-repeat;
+          -webkit-background-size: contain;
+          background-size: contain;
+        }
+      }
+    }
+    &--right {
+      display: block;
+      position: relative;
+      float: left;
+      width: 50%;
+      padding-right: 20px;
+      @include box-sizing(border-box);
+      border-left: 1px solid #ddd;
+      @include breakpoint(max-width 660px){
+        width: 100%;
+      }
+      .line {
+        display: block;
+        position: relative;
+        float: left;
+        width: calc(100% - 27px);
+        margin-left: 27px;
+        padding-bottom: 30px;
+        @include box-sizing(border-box);
+        &:first-of-type {
+          margin-top: 14px;
+        }
+        .title {
+          display: block;
+          position: relative;
+          float: left;
+          width: 136px;
+          margin-top: 0;
+          margin-bottom: 0;
+          color: #0e0e0e;
+          font-size: 14px;
+          font-weight: 300;
+        }
+        .deliver {
+          display: block;
+          position: relative;
+          float: left;
+          width: calc(100% - 136px);
+          margin: 0;
+          color: #379a0d;
+          font-size: 14px;
+          font-weight: 300;
+        }
+        .descr {
+          display: block;
+          position: relative;
+          float: left;
+          width: calc(100% - 136px);
+          margin: 0;
+          color: #0e0e0e;
+          font-size: 14px;
+          font-weight: 300;
+        }
+      }
+      .line:nth-of-type(3) {
+        border-bottom: 1px solid #dddddd;
+      }
+    }
+    &--messages {
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(column);
+      @include align-items(flex-end);
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 29px;
+      padding-left: 27px;
+      @include box-sizing(border-box);
+      .status {
+        display: block;
+        position: relative;
+        float: left;
+        width: 200px;
+        margin-bottom: 21px;
+        margin-right: 51px;
+        &--indicator {
+          display: block;
+          position: relative;
+          float: left;
+          border-radius: 50%;
+          width: 10px;
+          height: 10px;
+          margin-top: 5px;
+        }
+        &--indicator.on {
+          background-color: #72c835;
+        }
+        &--indicator.off {
+          background-color: #c12025;
+        }
+        &--descr {
+          display: block;
+          position: relative;
+          float: left;
+          width: calc(100% - (10px + 9px));
+          margin-left: 9px;
+          color: #5d5d5d;
+          font-size: 14px;
+          font-weight: 300;
+        }
+        &__chat {
+          display: block;
+          position: relative;
+          float: left;
+          width: 200px;
+          padding: 14px 0;
+          @include box-sizing(border-box);
+          border-radius: 23px;
+          background-color: #fff;
+          text-align: center;
+          color: #5d5d5d;
+          font-size: 14px;
+          font-weight: 300;
+          &:hover, &:focus, &:active {
+            color: #fff;
+            background-color: #72c835;
+          }
+          .icon {
+            display: block;
+            position: relative;
+            float: left;
+            width: 23px;
+            height: 16px;
+            margin-top: 3px;
+            margin-left: 13px;
+            margin-right: 11px;
+            background-image: url('../i/icons/message-icon.png');
+            background-repeat: no-repeat;
+            -webkit-background-size: contain;
+            background-size: contain;
+          }
+        }
+      }
+    }
+    &--bottom {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+    }
+    &--element {
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(row);
+      @include justify-content(flex-start);
+      @include align-items(center);
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      @include box-sizing(border-box);
+      border-bottom: 1px solid #dddddd;
+      .photo {
+        display: block;
+        position: relative;
+        float: left;
+        width: 50px;
+        height: 66px;
+        overflow: hidden;
+        img {
+          size: 100%;
+          object-fit: contain;
+        }
+      }
+      .descr {
+        display: block;
+        position: relative;
+        float: left;
+        width: 242px;
+        padding-left: 20px;
+        @include box-sizing(border-box);
+        @include breakpoint(max-width 1160px){
+          width: 50%;
+          margin-top: 5px;
+          margin-bottom: 5px;
+        }
+        @include breakpoint(max-width 660px){
+          width: calc(100% - 50px);
+          margin-top: 5px;
+          margin-bottom: 5px;
+        }
+        &--name {
+          display: block;
+          position: relative;
+          float: left;
+          width: 100%;
+          margin-top: 0;
+          margin-bottom: 11px;
+          color: #0e0e0e;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 20px;
+          text-decoration: underline;
+        }
+        &--art {
+          display: block;
+          position: relative;
+          float: left;
+          width: 100%;
+          margin: 0;
+          color: #4f4f4f;
+          font-size: 11px;
+          font-weight: 400;
+          line-height: 18px;
+          text-decoration: underline;
+        }
+      }
+      .value {
+        display: block;
+        position: relative;
+        float: left;
+        width: 104px;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+        color: #0e0e0e;
+        font-size: 15px;
+        font-weight: 300;
+        @include breakpoint(max-width 1160px){
+          width: 50%;
+          margin-top: 5px;
+          margin-bottom: 5px;
+        }
+      }
+      .price {
+        display: block;
+        position: relative;
+        float: left;
+        width: calc(100% - (50px + 242px + 104px));
+        text-align: center;
+        color: #0e0e0e;
+        font-size: 16px;
+        font-weight: 400;
+        @include breakpoint(max-width 1160px){
+          width: 50%;
+          margin-top: 5px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+    &--element:last-of-type {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    &--counter {
+      display: block;
+      position: relative;
+      float: left;
+      width: 40%;
+      margin-top: 38px;
+      margin-bottom: 92px;
+      padding-left: 27px;
+      @include box-sizing(border-box);
+      @include breakpoint(max-width 1160px){
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      .countdown {
+        @include display-flex(flex);
+        @include flex-wrap(wrap);
+        @include flex-direction(row);
+        @include justify-content(flex-start);
+        position: relative;
+        float: left;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          width: 49px;
+          height: 40px;
+          background-color: #f5f5f5;
+          border-radius: 5px;
+          margin-top: 12px;
+          margin-left: 0;
+          margin-right: 7px;
+          margin-bottom: 53px;
+          padding-top: 12px;
+          @include box-sizing(border-box);
+          &:after {
+            display: block;
+            position: absolute;
+            content: ':';
+            top: 21px;
+            margin-left: 50px;
+            text-align: center;
+            color: #0e0e0e;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 22px;
+          }
+          span {
+            display: block;
+            position: relative;
+            float: left;
+            width: 100%;
+            text-align: center;
+            color: #0e0e0e;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 18px;
+          }
+          p {
+            display: block;
+            position: absolute;
+            width: 45px;
+            margin-left: 0;
+            bottom: 17px;
+            color: #0e0e0e;
+            font-size: 11px;
+            font-weight: 400;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 19px;
+          }
+        }
+        li:last-of-type:after {
+          display: none;
+        }
+      }
+    }
+    &--confirm{
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(row);
+      @include justify-content(space-between);
+      position: relative;
+      float: left;
+      width: 60%;
+      margin-top: 152px;
+      @include breakpoint(max-width 1160px){
+        width: 100%;
+        @include justify-content(flex-start);
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+    }
+    &--return{
+      display: block;
+      position: relative;
+      float: left;
+      width: calc(50% - 3px);
+      height: 40px;
+      border-radius: 23px;
+      background-color: transparent;
+      color: #5d5d5d;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 40px;
+      .icon{
+        display: block;
+        position: relative;
+        float: left;
+        width: 12px;
+        height: 12px;
+        margin-left: 27px;
+        margin-top: 15px;
+        margin-right: 9px;
+        background-image: url('../i/icons/return-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+      }
+    }
+    &--return:hover, &--return:active, &--return:focus{
+      color: #fff;
+      background-color: #c12025;
+    }
+    &--ok, &--ok:hover, &--ok:active, &--ok:focus{
+      display: block;
+      position: relative;
+      float: left;
+      width: calc(50% - 3px);
+      height: 40px;
+      background-color: #72c835;
+      border-radius: 23px;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 40px;
+      .icon{
+        display: block;
+        position: relative;
+        float: left;
+        width: 12px;
+        height: 12px;
+        margin-left: 27px;
+        margin-top: 15px;
+        margin-right: 9px;
+        background-image: url('../i/icons/ok-submit-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+      }
+    }
+    &--status {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      padding-left: 8px;
+      margin-top: 10px;
+      margin-bottom: 40px;
+      padding-left: 22px;
+      @include box-sizing(border-box);
+      font-size: 14px;
+      font-weight: 400;
+      &:before {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 16px;
+        height: 16px;
+        top: 2px;
+        left: 0;
+        background-image: url('../i/icons/clock-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+      }
+    }
+    &--status.waiting {
+      color: #c12025;
+    }
+    &--status.recd {
+      color: #72c835;
+    }
+  }
+}
