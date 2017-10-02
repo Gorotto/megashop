@@ -98,23 +98,26 @@
     </div>
 
 </header>
-<div class="container">
-  <ul class="header__cabinet-nav">
-    <li><a href="">Заказы</a></li>
-    <li><a href="">Склад</a></li>
-    <li><a href="">Витрина</a></li>
-    <li><a href="">Продвижение</a></li>
-    <li class="active"><a href="">Сообщения</a></li>
-    <li><a href="">Бугхалтерия</a></li>
-    <li><a href="">Мои покупки</a></li>
-    <li><a href="">Профиль</a></li>
-    <li><a href="">Настройки магазина</a></li>
-  </ul>
+<div class="cabinet-menu">
+  <div class="container">
+    <ul class="header__cabinet-nav">
+      <li><a href="">Заказы</a></li>
+      <li><a href="">Склад</a></li>
+      <li><a href="">Витрина</a></li>
+      <li><a href="">Продвижение</a></li>
+      <li class="active"><a href="">Сообщения</a></li>
+      <li><a href="">Бугхалтерия</a></li>
+      <li><a href="">Мои покупки</a></li>
+      <li><a href="">Профиль</a></li>
+      <li><a href="">Настройки магазина</a></li>
+    </ul>
+  </div>
 </div>
 <section class="incoming-msg">
   <div class="container">
     <h3 class="incoming-msg--title">Входящие письма</h3>
     <div class="incoming-msg__wrap">
+      <i class="fa fa-bars sidebar-menu-mob" aria-hidden="true"></i>
       <div class="incoming-msg__wrap--sidebar">
         <ul class="incoming-msg__wrap--menu">
           <li class="active"><a href="">Входящие письма <span class="value">7</span></a></li>
@@ -131,17 +134,92 @@
             <span class="loop-msg"></span>
           </div>
         </div>
-        <div class="incoming-msg__wrap--row">
-          <div class="">
-            <input id="1_1" class="incoming-msg__wrap--checkbox" type="checkbox">
+        <div class="incoming-msg__wrap--row incoming-msg__wrap--title">
+          <div class="incoming-msg__wrap--checkbox-wrap greb">
+            <input id="1_1" class="incoming-msg__wrap--checkbox-all" type="checkbox">
             <label class="incoming-msg__wrap--forcheck" for="1_1">
               <span class="incoming-msg__wrap--checked"></span>
             </label>
           </div>
-          <div>От</div>
-          <div>Тема</div>
-          <div>Заказ</div>
-          <div>Дата</div>
+          <div class="incoming-msg__wrap--row-author">От</div>
+          <div class="incoming-msg__wrap--row-subject">Тема</div>
+          <div class="incoming-msg__wrap--row-order">Заказ</div>
+          <div class="incoming-msg__wrap--row-date">Дата</div>
+        </div>
+        <div class="incoming-msg__wrap--row incoming-msg__wrap--row-newmsg">
+          <div class="incoming-msg__wrap--checkbox-wrap incoming-msg__wrap--checkbox-item">
+            <input id="1_2" class="incoming-msg__wrap--checkbox" type="checkbox">
+            <label class="incoming-msg__wrap--forcheck" for="1_2">
+              <span class="incoming-msg__wrap--checked"></span>
+            </label>
+          </div>
+          <div class="incoming-msg__wrap--row-author">ООО Ромашка</div>
+          <div class="incoming-msg__wrap--row-subject">Возникли проблемы с доставкой</div>
+          <div class="incoming-msg__wrap--row-order">3256323</div>
+          <div class="incoming-msg__wrap--row-date">
+            <span class="attach-icon"></span>14 ноября, 12:34</div>
+        </div>
+        <div class="incoming-msg__wrap--row">
+          <div class="incoming-msg__wrap--checkbox-wrap incoming-msg__wrap--checkbox-item">
+            <input id="1_3" class="incoming-msg__wrap--checkbox" type="checkbox">
+            <label class="incoming-msg__wrap--forcheck" for="1_3">
+              <span class="incoming-msg__wrap--checked"></span>
+            </label>
+          </div>
+          <div class="incoming-msg__wrap--row-author">Donald John Trump</div>
+          <div class="incoming-msg__wrap--row-subject">Я победил!</div>
+          <div class="incoming-msg__wrap--row-order"></div>
+          <div class="incoming-msg__wrap--row-date">
+            <span class="attach-icon"></span>8 ноября, 11:04</div>
+        </div>
+        <div class="incoming-msg__wrap--row">
+          <div class="incoming-msg__wrap--checkbox-wrap incoming-msg__wrap--checkbox-item">
+            <input id="1_4" class="incoming-msg__wrap--checkbox" type="checkbox">
+            <label class="incoming-msg__wrap--forcheck" for="1_4">
+              <span class="incoming-msg__wrap--checked"></span>
+            </label>
+          </div>
+          <div class="incoming-msg__wrap--row-author">Donald John Trump</div>
+          <div class="incoming-msg__wrap--row-subject">Я победил!</div>
+          <div class="incoming-msg__wrap--row-order"></div>
+          <div class="incoming-msg__wrap--row-date">
+            <span class="attach-icon"></span>8 ноября, 11:04</div>
+        </div>
+        <div class="incoming-msg__wrap--row">
+          <div class="incoming-msg__wrap--checkbox-wrap incoming-msg__wrap--checkbox-item">
+            <input id="1_5" class="incoming-msg__wrap--checkbox" type="checkbox">
+            <label class="incoming-msg__wrap--forcheck" for="1_5">
+              <span class="incoming-msg__wrap--checked"></span>
+            </label>
+          </div>
+          <div class="incoming-msg__wrap--row-author">Donald John Trump</div>
+          <div class="incoming-msg__wrap--row-subject">Я победил!</div>
+          <div class="incoming-msg__wrap--row-order"></div>
+          <div class="incoming-msg__wrap--row-date">
+            <span class="attach-icon"></span>8 ноября, 11:04</div>
+        </div>
+        <div class="catalog__main--pagination incoming-msg__wrap--pagination">
+
+            <div class="catalog__main--select">
+                <select name="" id="">
+                    <option value="20">Удалить</option>
+                    <option value="30">Удалить</option>
+                    <option value="40">Удалить</option>
+                </select>
+            </div>
+
+            <div class="catalog__main--find">
+                Показано <span class="value">20</span> из <span class="total-value">24</span> писем
+            </div>
+
+            <ul class="pagination">
+                <li><a href="#" class="number active">1</a></li>
+                <li><a href="#" class="number">2</a></li>
+                <li><a href="#" class="number">3</a></li>
+                <li class="dots">...</li>
+                <li><a href="#" class="number">18</a></li>
+            </ul>
+
         </div>
       </div>
     </div>

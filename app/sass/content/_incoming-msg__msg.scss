@@ -21,12 +21,19 @@
   width: 100%;
   border-top: 1px solid #e3e3e3;
   padding-top: 45px;
+  padding-bottom: 283px;
   box-sizing: border-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flex;
   display: inline-flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  @include breakpoint(max-width 770px) {
+    padding-bottom: 40px;
+  }
+  @include breakpoint(max-width 660px) {
+    padding-bottom: 40px;
+  }
   &:before {
     display: block;
     position: absolute;
@@ -44,6 +51,13 @@
     border-radius: 4px;
     padding: 0 18px;
     box-sizing: border-box;
+    @include breakpoint(max-width 770px) {
+      display: none;
+      position: absolute;
+      left: 1px;
+      margin-top: 57px;
+      z-index: 10;
+    }
   }
   &--menu {
     width: 100%;
@@ -82,6 +96,9 @@
     border: 1px solid #e3e3e3;
     background-color: #fff;
     border-radius: 4px;
+    @include breakpoint(max-width 770px) {
+      width: 100%;
+    }
   }
   &--search {
     width: 100%;
@@ -97,6 +114,14 @@
       border-radius: 18px;
       background-color: #fff;
       border: 1px solid #e3e3e3;
+      @include breakpoint(max-width 770px) {
+        width: 95%;
+        float: right;
+      }
+      @include breakpoint(max-width 660px) {
+        width: 85%;
+        float: right;
+      }
       input {
         border: none;
         background-color: #fff;
@@ -118,6 +143,43 @@
       }
     }
   }
+  &--checkbox,
+  &--checkbox-all {
+    display: none;
+  }
+  &--checkbox + .incoming-msg__wrap--forcheck,
+  &--checkbox-all + .incoming-msg__wrap--forcheck {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    cursor: pointer;
+  }
+  &--checkbox + .incoming-msg__wrap--forcheck .incoming-msg__wrap--checked,
+  &--checkbox-all + .incoming-msg__wrap--forcheck .incoming-msg__wrap--checked {
+    display: block;
+    position: relative;
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin-top: 2px;
+    margin-right: 8px;
+    background-image: url('../i/icons/checkbox-empty-icon.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+  }
+  &--checkbox:checked + .incoming-msg__wrap--forcheck .incoming-msg__wrap--checked,
+  &--checkbox-all:checked + .incoming-msg__wrap--forcheck .incoming-msg__wrap--checked {
+    background-image: url('../i/icons/checkbox-fill-icon.png');
+  }
+  &--pagination {
+    margin: 0;
+    border-top: none;
+    padding: 28px 25px;
+    box-sizing: border-box;
+  }
+
 }
 
 .loop-msg {
@@ -130,4 +192,136 @@
   margin-right: 15px;
   position: relative;
   top: 10px;
+}
+
+.incoming-msg__wrap--row {
+  width: 100%;
+  float: left;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e3e3e3;
+  &:last-of-type {
+    border-bottom: none;
+  }
+  &-author {
+    width: 190px;
+    float: left;
+    font-size: 14px;
+    font-weight: 300;
+    color: #000;
+    text-align: left;
+    @include breakpoint(max-width 770px) {
+      width: 25%;
+    }
+    @include breakpoint(max-width 660px) {
+      width: calc(100% - 33px);
+    }
+  }
+  &-subject {
+    float: left;
+    width: 390px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #000;
+    text-align: left;
+    @include breakpoint(max-width 770px) {
+      width: 40%;
+    }
+    @include breakpoint(max-width 660px) {
+      padding-left: 33px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+  }
+  &-order {
+    float: left;
+    width: 130px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #000;
+    text-align: left;
+    @include breakpoint(max-width 770px) {
+      width: 10%;
+    }
+    @include breakpoint(max-width 660px) {
+      width: 30%;
+      padding-left: 33px;
+      box-sizing: border-box;
+    }
+  }
+  &-date {
+    float: right;
+    width: 124px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #000;
+    text-align: left;
+    position: relative;
+    @include breakpoint(max-width 770px) {
+      width: 18%;
+    }
+    @include breakpoint(max-width 660px) {
+      width: 50%;
+      float: left;
+      padding-left: 33px;
+    }
+  }
+
+}
+
+.incoming-msg__wrap--title {
+  padding: 20px 25px;
+  box-sizing: border-box;
+  @include breakpoint(max-width 660px) {
+    display: none;
+  }
+}
+.incoming-msg__wrap--row-newmsg {
+  .incoming-msg__wrap--row-author,
+  .incoming-msg__wrap--row-subject,
+  .incoming-msg__wrap--row-order,
+  .incoming-msg__wrap--row-date {
+    font-weight: 700;
+  }
+}
+
+.selected-message {
+  background-color: #f5f5f5;
+}
+.incoming-msg__wrap--checkbox-wrap {
+  float: left;
+  position: relative;
+  margin-right: 30px;
+  @include breakpoint(max-width 770px) {
+    margin-right: 10px;
+  }
+}
+
+
+.attach-icon {
+  background-image: url("../i/icons/attach-icon.png");
+  display: block;
+  position: absolute;
+  width: 14px;
+  height: 16px;
+  margin-left: -20px;
+  margin-top: 2px;
+}
+
+.sidebar-menu-mob {
+  display: none;
+  position: absolute;
+  z-index: 12;
+  margin-left: 20px;
+  margin-top: 18px;
+  background-color: #c12025;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  color: #fff;
+  @include breakpoint(max-width 770px) {
+    display: block;
+  }
 }

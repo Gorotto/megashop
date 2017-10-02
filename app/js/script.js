@@ -19,7 +19,7 @@ $(document).ready(function () {
     $(document).on('click', '.header__nav li a', function (event) {
         event.preventDefault();
         var HeadSubmenu = $(this).next('.header__catalog'),
-            BackgroundBlock = $(this).closest('.header').nextAll().find('.catalog__bg');       
+            BackgroundBlock = $(this).closest('.header').nextAll().find('.catalog__bg');
         if ($(this).hasClass('show-head-submenu') && HeadSubmenu.length > 0) {
             $(this).removeClass('show-head-submenu');
             HeadSubmenu.slideUp(400);
@@ -253,19 +253,19 @@ $(document).ready(function () {
     $(document).on('click', '.first-submenu', function (e) {//клик по меню первого уровная
         e.preventDefault();
         var selector = $(this),//элемент, по которуму кликаем
-            selectorClass = $('.main-submenu');// елемент, который нужно показать       
+            selectorClass = $('.main-submenu');// елемент, который нужно показать
         showSubmenu(selector, selectorClass);//вызываем функцию выпадающего меню
     });
     $(document).on('click', '.second-submenu', function (e) {//клик по меню вторго уровная
         e.preventDefault();
         var selector = $(this),//элемент, по которуму кликаем
-            selectorClass = $('.main-submenu__list');// елемент, который нужно показать    
+            selectorClass = $('.main-submenu__list');// елемент, который нужно показать
         showSubmenu(selector, selectorClass);//вызываем функцию выпадающего меню
     });
     $(document).on('click', '.third-submenu', function (e) {//клик по меню третьего уровная
         e.preventDefault();
         var selector = $(this),//элемент, по которуму кликаем
-            selectorClass = $('.main-submenu__list--catalog');// елемент, который нужно показать  
+            selectorClass = $('.main-submenu__list--catalog');// елемент, который нужно показать
         showSubmenu(selector, selectorClass);//вызываем функцию выпадающего меню
     });
     /*close*/
@@ -285,7 +285,7 @@ $(document).ready(function () {
             max: max,
             values: [selMin, selMax],
             slide: function (event, ui) {
-                $("#price").val(ui.values[0]);//Поле минимального значения               
+                $("#price").val(ui.values[0]);//Поле минимального значения
                 $("#price2").val(ui.values[1]); //Поле максимального значения
             },
             stop: function (event, ui) {
@@ -528,6 +528,30 @@ $(document).ready(function () {
         nextStars.removeClass(selectedCssClass);
         $(this).addClass(selectedCssClass).parent().addClass('vote-cast');
 
+    });
+    /*close*/
+
+    /*selected-message*/
+    $(document).on('click', '.incoming-msg__wrap--checkbox-item', function (e) {//при клике на кнопку добавляем класс
+        event.preventDefault();
+        $(this).closest('.incoming-msg__wrap--checkbox-wrap').find('input').prop('checked', true);
+        $(this).parent().toggleClass('selected-message');
+    });
+    /*close*/
+
+    /*selected-all*/
+    $('.incoming-msg__wrap--checkbox-all').on('change', function(){
+        if ($(this).is(':checked'))
+            $('.incoming-msg__wrap--checkbox').prop('checked', true);
+        else
+            $('.incoming-msg__wrap--checkbox').prop('checked', false);
+    });
+    /*close*/
+
+    /*cabinet-sidebar*/
+    $(document).on('click', '.sidebar-menu-mob', function () {
+      $('.incoming-msg__wrap--sidebar').slideToggle(500);
+        return false;
     });
     /*close*/
 });
