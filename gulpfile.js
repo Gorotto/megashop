@@ -89,17 +89,12 @@ gulp.task('sass', function () { // Создаем таск Sass
         /*.pipe(browserSync.stream({}));*/
 });
 
-gulp.task('browser-sync', function () { // Создаем таск browser-sync
-    browserSync.init({ // Выполняем browserSync
+
+gulp.task('browser-sync', () => {
+    browserSync.init({
         server: {
-            baseDir: './layout' // Директория для сервера - app
-        },
-        ghostMode: {
-            clicks: true,
-            forms: true,
-            scroll: true
-        },
-        notify: false // Отключаем уведомления
+            baseDir: "./"
+        }
     });
 });
 
@@ -150,7 +145,7 @@ gulp.task('extend-blocks', function () {
         // .pipe(browserSync.stream({}));
 });
 
-gulp.task('watch', ['compress', 'extend-pages', 'css-libs', 'img', 'sass'], function () {
+gulp.task('watch', ['browser-sync', 'compress', 'extend-pages', 'css-libs', 'img', 'sass'], function () {
     gulp.watch('app/libs/**/*', ['css-libs']); // Наблюдение за папкой libs
     gulp.watch('app/img/**/*', ['img']);// Наблюдение за папкой img
     gulp.watch('app/sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
