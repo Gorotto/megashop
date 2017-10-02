@@ -1,0 +1,133 @@
+.incoming-msg {
+  width: 100%;
+  float: left;
+  position: relative;
+  &--title {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    color: #0e0e0e;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 48px;
+    margin-bottom: 14px;
+  }
+}
+
+.incoming-msg__wrap {
+  position: relative;
+  float: left;
+  width: 100%;
+  border-top: 1px solid #e3e3e3;
+  padding-top: 45px;
+  box-sizing: border-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flex;
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  &:before {
+    display: block;
+    position: absolute;
+    content: '';
+    top: -2px;
+    left: 0;
+    width: 114px;
+    height: 2px;
+    background-color: #c21a20;
+  }
+  &--sidebar {
+    width: 200px;
+    min-height: 277px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    padding: 0 18px;
+    box-sizing: border-box;
+  }
+  &--menu {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    li {
+      width: 100%;
+      display: inline-block;
+      list-style-type: none;
+      padding: 16px 0;
+      box-sizing: border-box;
+      border-bottom: 1px solid #ddd;
+      float: left;
+      a {
+        width: 100%;
+        text-align: left;
+        color: #0e0e0e;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 18px;
+        float: left;
+        .value {
+          float: right;
+        }
+      }
+    }
+    li:last-of-type {
+    border-bottom: none;
+    }
+    li.active a {
+      font-weight: 700;
+    }
+  }
+  &--content {
+    width: 939px;
+    border: 1px solid #e3e3e3;
+    background-color: #fff;
+    border-radius: 4px;
+  }
+  &--search {
+    width: 100%;
+    float: left;
+    position: relative;
+    background-color: #f5f5f5;
+    padding: 10px 25px;
+    box-sizing: border-box;
+    &-wrap {
+      width: 100%;
+      float: left;
+      position: relative;
+      border-radius: 18px;
+      background-color: #fff;
+      border: 1px solid #e3e3e3;
+      input {
+        border: none;
+        background-color: #fff;
+        float: left;
+        height: 35px;
+        border-radius: 18px;
+        padding-left: 15px;
+        box-sizing: border-box;
+        color: #868686;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 35px;
+        &::placeholder {
+          color: #868686;
+          font-size: 13px;
+          font-weight: 300;
+          line-height: 35px;
+        }
+      }
+    }
+  }
+}
+
+.loop-msg {
+  width: 13px;
+  height: 13px;
+  background-image: url("../i/icons/msg-loop.png");
+  float: right;
+  display: block;
+  background-repeat: no-repeat;
+  margin-right: 15px;
+  position: relative;
+  top: 10px;
+}
