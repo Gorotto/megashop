@@ -9,33 +9,32 @@ $(document).ready(function () {
         var listText = $(this).html(),
             listAttr = $(this).attr('data-id'),
             list = $(this).parent();
-
         list.slideUp('fast');
         $('.search__form--trigger .search__form--title').html(listText).attr('data-id', listAttr);
     });
     /*close*/
 
     /*header submenu*/
-    $(document).on('click', '.header__nav li a', function (event) {
+    $(document).on('click', '.header__nav li a', function (event) {//меню каталога
         event.preventDefault();
-        var HeadSubmenu = $(this).next('.header__catalog'),
-            BackgroundBlock = $(this).closest('.header').nextAll().find('.catalog__bg');
-        if ($(this).hasClass('show-head-submenu') && HeadSubmenu.length > 0) {
-            $(this).removeClass('show-head-submenu');
-            HeadSubmenu.slideUp(400);
-            BackgroundBlock.fadeOut('400');
+        var HeadSubmenu = $(this).next('.header__catalog'),//блок каталога
+            BackgroundBlock = $(this).closest('.header').nextAll().find('.catalog__bg');//блок затемнения
+        if ($(this).hasClass('show-head-submenu') && HeadSubmenu.length > 0) {//при наличии подменю
+            $(this).removeClass('show-head-submenu');//убираем класс-индикатор
+            HeadSubmenu.slideUp(400);//убираем блок каталога
+            BackgroundBlock.fadeOut('400');//скрываем блок затемнения
         } else {
-            $('.header__nav li a').removeClass('show-head-submenu');
-            $('.header__catalog').slideUp(400);
-            $(this).addClass('show-head-submenu');
-            HeadSubmenu.slideDown(400);
-            BackgroundBlock.fadeIn('400');
+            $('.header__nav li a').removeClass('show-head-submenu');//убираем у всех элементов меню класс-индикатор
+            $('.header__catalog').slideUp(400);//скрываем все блоки каталогов
+            $(this).addClass('show-head-submenu');//добавляем нужной ссылке класс-индикатор
+            HeadSubmenu.slideDown(400);//показываем нужный блок каталога
+            BackgroundBlock.fadeIn('400');//показываем блок затемнения
         }
     });
     /*close*/
 
     /*cabinet submenu*/
-    $(document).on('click', '.header__top-links--enter', function () {
+    $(document).on('click', '.header__top-links--enter', function (event) {
         if ($(this).next('.header__top-links--cabinet-submenu').length > 0) {
             event.preventDefault();
             var submenu = $(this).next('.header__top-links--cabinet-submenu');
@@ -47,14 +46,14 @@ $(document).ready(function () {
     /*close*/
 
     /*mobile menu*/
-    $(document).on('click', '#mobile-menu', function () {
+    $(document).on('click', '#mobile-menu', function (event) {
         event.preventDefault();
         var menu = $(this).next('.header__nav');
         $(this).toggleClass('header__trigger--active');
         menu.slideToggle('slow');
         return false;
     });
-    $(document).on('click', '#mobile-menu', function () {
+    $(document).on('click', '#mobile-menu', function (event) {
         event.preventDefault();
         var userMenu = $(this).next('.header__cabinet-nav');
         $(this).toggleClass('header__trigger--active');
@@ -144,7 +143,7 @@ $(document).ready(function () {
     /*close*/
 
     /*product counter*/
-    $(document).on('click', '.plus', function () {
+    $(document).on('click', '.plus', function (event) {
         event.preventDefault();
         var count = $('.product__views--counter').find('.number'),
             val = parseInt($('.product__views--counter').find('.number').val());
@@ -157,7 +156,7 @@ $(document).ready(function () {
         }
         return false;
     });
-    $(document).on('click', '.minus', function () {
+    $(document).on('click', '.minus', function (event) {
         event.preventDefault();
         var count = $('.product__views--counter').find('.number');
         var counter = parseInt(count.val()) - 1;
@@ -176,8 +175,8 @@ $(document).ready(function () {
             $(this).hide(0)
         }
     });
-    $(document).on('click', '.product__descr--tabs a', function (e) {
-        e.preventDefault();
+    $(document).on('click', '.product__descr--tabs a', function (event) {
+        event.preventDefault();
         var tabId = $(this).attr('href');
         $('.product__descr--tabs a').removeClass('active');
         $(this).addClass('active');
@@ -192,8 +191,8 @@ $(document).ready(function () {
             $(this).hide(0)
         }
     });
-    $(document).on('click', '.coins__tabs a', function (e) {
-        e.preventDefault();
+    $(document).on('click', '.coins__tabs a', function (event) {
+        event.preventDefault();
         var tabId = $(this).attr('href');
         $('.coins__tabs a').removeClass('active');
         $(this).addClass('active');
@@ -250,20 +249,20 @@ $(document).ready(function () {
 
     /*----------catalog scripts----------*/
     /*catigories submenu*/
-    $(document).on('click', '.first-submenu', function (e) {//клик по меню первого уровная
-        e.preventDefault();
+    $(document).on('click', '.first-submenu', function (event) {//клик по меню первого уровная
+        event.preventDefault();
         var selector = $(this),//элемент, по которуму кликаем
             selectorClass = $('.main-submenu');// елемент, который нужно показать
         showSubmenu(selector, selectorClass);//вызываем функцию выпадающего меню
     });
-    $(document).on('click', '.second-submenu', function (e) {//клик по меню вторго уровная
-        e.preventDefault();
+    $(document).on('click', '.second-submenu', function (event) {//клик по меню вторго уровная
+        event.preventDefault();
         var selector = $(this),//элемент, по которуму кликаем
             selectorClass = $('.main-submenu__list');// елемент, который нужно показать
         showSubmenu(selector, selectorClass);//вызываем функцию выпадающего меню
     });
-    $(document).on('click', '.third-submenu', function (e) {//клик по меню третьего уровная
-        e.preventDefault();
+    $(document).on('click', '.third-submenu', function (event) {//клик по меню третьего уровная
+        event.preventDefault();
         var selector = $(this),//элемент, по которуму кликаем
             selectorClass = $('.main-submenu__list--catalog');// елемент, который нужно показать
         showSubmenu(selector, selectorClass);//вызываем функцию выпадающего меню
@@ -331,7 +330,7 @@ $(document).ready(function () {
     });
     /*close*/
     /*refresh all checked items*/
-    $(document).on('click', '.catalog__sidebar--maker .revers', function (e) {//при клике на кнопку "сбросить"
+    $(document).on('click', '.catalog__sidebar--maker .revers', function (event) {//при клике на кнопку "сбросить"
         event.preventDefault();
         var item = $(this).parent()//находим все лежащие за кнопкой чекбоксы
             .nextAll('.catalog__sidebar--element')
@@ -387,8 +386,8 @@ $(document).ready(function () {
             $(this).hide(0)
         }
     });
-    $(document).on('click', '.catalog__main--tabs a', function (e) {
-        e.preventDefault();
+    $(document).on('click', '.catalog__main--tabs a', function (event) {
+        event.preventDefault();
         var tabId = $(this).attr('href');
         $('.catalog__main--tabs a').removeClass('active');
         $(this).addClass('active');
@@ -398,8 +397,8 @@ $(document).ready(function () {
     /*close*/
 
     /*show mobile filter*/
-    $(document).on('click', '.catalog__sidebar--trigger', function (e) {
-        e.preventDefault();
+    $(document).on('click', '.catalog__sidebar--trigger', function (event) {
+        event.preventDefault();
         var background = $(this).closest('.catalog').find('.catalog__bg'),
             sidebar = $(this).closest('.catalog__sidebar');
         if ($(this).hasClass('show-sidebar')) {
@@ -418,11 +417,21 @@ $(document).ready(function () {
         $(this).closest('.catalog').find('.catalog__bg').fadeOut('400');
     });
     /*close*/
+
+    /*catalog categories mobile*/
+    $(document).on('click', '.catalog__category--trigger', function (event) {//клик по стреле рядом с заголовком категории
+        event.preventDefault();
+        var CatList = $(this).closest('.catalog__category').find('.catalog__category--list-box');//блок со списком ссылок
+        $(this).toggleClass('show-categories');//добовляем/убираем класс сработки
+        CatList.slideToggle(400);//показываем/скрываем список
+        return false;
+    });
+    /*close*/
     /*----------close-----------*/
 
     /*----------modals----------*/
     /*city modal*/
-    $(document).on('click', '.header__top-links--hover-region .chose', function () {
+    $(document).on('click', '.header__top-links--hover-region .chose', function (event) {
         event.preventDefault();
         $('#black-overlay').fadeIn(400,
             function () {
@@ -439,7 +448,7 @@ $(document).ready(function () {
     });
     /*close*/
     /*1 click buy modal*/
-    $(document).on('click', '.product__views--click', function () {
+    $(document).on('click', '.product__views--click', function (event) {
         event.preventDefault();
         $('#black-overlay').fadeIn(400,
             function () {
@@ -456,7 +465,7 @@ $(document).ready(function () {
     });
     /*close*/
     /*offer modal*/
-    $(document).on('click', '.offer-doc', function () {
+    $(document).on('click', '.offer-doc', function (event) {
         event.preventDefault();
         $('#black-overlay').fadeIn(400,
             function () {
@@ -473,7 +482,7 @@ $(document).ready(function () {
     });
     /*close*/
     /*confirm modal*/
-    $(document).on('click', '.order__single--ok', function () {
+    $(document).on('click', '.order__single--ok', function (event) {
         event.preventDefault();
         $('#modal-confirm').css('display', 'block').animate({opacity: 1}, 200);
     });
@@ -483,7 +492,7 @@ $(document).ready(function () {
     });
     /*close*/
     /*start claim modal*/
-    $(document).on('click', '.order__single--return', function () {
+    $(document).on('click', '.order__single--return', function (event) {
         event.preventDefault();
         $('#black-overlay').fadeIn(400,
             function () {
@@ -500,7 +509,7 @@ $(document).ready(function () {
     });
     /*close*/
     /*send ms to admin*/
-    $(document).on('click', '.about-error', function () {
+    $(document).on('click', '.about-error', function (event) {
         event.preventDefault();
         $('#black-overlay').fadeIn(400,
             function () {
@@ -531,29 +540,20 @@ $(document).ready(function () {
     });
     /*close*/
 
-    /*selected-message*/
-    $(document).on('click', '.incoming-msg__wrap--checkbox-item', function (e) {//при клике на кнопку добавляем класс
-        event.preventDefault();
-        $(this).closest('.incoming-msg__wrap--checkbox-wrap').find('input').prop('checked', true);
-        $(this).parent().toggleClass('selected-message');
-    });
-    /*close*/
+  /*selected-message*/
+   $(document).on('click', '.cabinet__content--check-wrapper', function (e) {
+       event.preventDefault();
+       $(this).closest('.cabinet__content--check-wrapper').find('input').prop('checked', true);
+       $(this).parent().toggleClass('selected-message');
+   });
+   /*close*/
 
-    /*selected-all*/
-    $('.incoming-msg__wrap--checkbox-all').on('change', function(){
-        if ($(this).is(':checked'))
-            $('.incoming-msg__wrap--checkbox').prop('checked', true);
-        else
-            $('.incoming-msg__wrap--checkbox').prop('checked', false);
-    });
-    /*close*/
-
-    /*cabinet-sidebar*/
-    $(document).on('click', '.sidebar-menu-mob', function () {
-      $('.incoming-msg__wrap--sidebar').slideToggle(500);
-        return false;
-    });
-    /*close*/
+   /*cabinet-sidebar*/
+   $(document).on('click', '.cabinet__sidebar--button', function () {
+     $('.cabinet__sidebar').slideToggle(500);
+       return false;
+   });
+   /*close*/
 });
 
 function showSubmenu(selector, selectorClass) {//функция выпадающего списка

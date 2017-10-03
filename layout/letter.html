@@ -42,7 +42,6 @@
                 </div>
 
 
-
                 <div class="header__top-links--cabinet">
 
                     <a href="authorization.html" class="header__top-links--enter">Вход</a>
@@ -98,7 +97,6 @@
                     </button>
 
 
-
                 </form>
 
                 <a href="#" class="partner">
@@ -112,69 +110,91 @@
 
     </div>
 
-</header>
-<div class="cabinet-menu">
-  <div class="container">
-    <ul class="header__cabinet-nav">
-      <li><a href="">Заказы</a></li>
-      <li><a href="">Склад</a></li>
-      <li><a href="">Витрина</a></li>
-      <li><a href="">Продвижение</a></li>
-      <li class="active"><a href="">Сообщения</a></li>
-      <li><a href="">Бугхалтерия</a></li>
-      <li><a href="">Мои покупки</a></li>
-      <li><a href="">Профиль</a></li>
-      <li><a href="">Настройки магазина</a></li>
-    </ul>
-  </div>
-</div>
-<section class="incoming-msg">
-  <div class="container">
-    <h3 class="incoming-msg--title">Входящие письма</h3>
-    <div class="incoming-msg__wrap">
-      <i class="fa fa-bars sidebar-menu-mob" aria-hidden="true"></i>
-      <div class="incoming-msg__wrap--sidebar">
-        <ul class="incoming-msg__wrap--menu">
-          <li class="active"><a href="">Входящие письма <span class="value">7</span></a></li>
-          <li><a href="">Сеансы чата <span class="value">3</span></a></li>
-          <li><a href="">История сообщений</a></li>
-          <li><a href="">Уведомления  <span class="value">1</span></a></li>
-          <li><a href="">Написать администрации</a></li>
-        </ul>
-      </div>
-      <div class="incoming-msg__wrap--content">
-        <div class="incoming-msg__wrap--search">
-          <div class="incoming-msg__wrap--search-wrap">
-            <input type="text" placeholder="Поиск по сообщениям">
-            <span class="loop-msg"></span>
-          </div>
+    <div class="header__navigation">
+
+        <div class="container">
+
+            <a id="mobile-menu" href="#" class="header__trigger">
+                <span class=""></span>
+            </a>
+
+            <ul class="header__cabinet-nav">
+                <li><a href="orders-page.html">Заказы</a></li>
+                <li><a href="#">Склад</a></li>
+                <li><a href="#">Витрина</a></li>
+                <li><a href="#">Продвижение</a></li>
+                <li><a href="#">Сообщения</a></li>
+                <li><a href="#">Бугхалтерия</a></li>
+                <li><a href="#">Мои покупки</a></li>
+                <li><a href="#">Профиль</a></li>
+                <li><a href="#">Настройки магазина</a></li>
+            </ul>
+
         </div>
-        <div class="incoming-msg__wrap--letter">
-          <div class="incoming-msg__wrap--letter-header">
-            <div class="incoming-msg__wrap--letter-info">
-              <p class="incoming-msg__wrap--letter-author"><span>От:</span>"ООО Ромашка"</p>
-              <p class="incoming-msg__wrap--letter-subject"><span>Тема:</span>Возникли проблемы с доставкой</p>
-            </div>
-            <div class="incoming-msg__wrap--letter-buttons">
-              <a href="#" class="reply-icon"></a>
-              <a href="#" class="reply-button">Ответить</a>
-              <a href="#" class="del-button">Удалить</a>
-            </div>
-          </div>
-          <div class="incoming-msg__wrap--letter-content">
-            <p class="incoming-msg__wrap--letter-text">Nunc ut sem id urna aliquet vestibulum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas vel fringilla lacus, efficitur ultricies quam. Fusce finibus eu nibh sit amet efficitur. Etiam efficitur sed erat vel vulputate. Sed eget augue vestibulum, ornare eros non, suscipit justo. Morbi ac odio cursus, rhoncus dui et, facilisis odio.</p>
-          </div>
-          <div class="incoming-msg__wrap--letter-attached">
-            <p class="incoming-msg__wrap--letter-attachments">Вложения:</p>
-            <a href="#" class="attachments-item"><span class="zip-icon"></span>Импорт товаров.zip <span class="close-icon"></span></a>
-            <a href="#" class="attachments-item"><span class="txt-icon"></span>Выплата за декабрь.txt <span class="close-icon"></span></a>
-            <a href="#" class="attachments-item"><span class="pdf-icon"></span>Отчет по доставке заказов.pdf <span class="close-icon"></span></a>
-          </div>
-        </div>
-      </div>
+
     </div>
-  </div>
+
+</header>
+
+<section class="cabinet">
+
+    <div class="container">
+
+        <h1 class="title">Входящие письма</h1>
+
+            <i class="fa fa-bars cabinet__sidebar--button" aria-hidden="true"></i>
+
+            <div class="cabinet__sidebar">
+
+                <ul class="cabinet__sidebar--menu">
+                    <li class="active"><a href="">Входящие письма <span class="value">7</span></a></li>
+                    <li><a href="">Сеансы чата <span class="value">3</span></a></li>
+                    <li><a href="">История сообщений</a></li>
+                    <li><a href="">Уведомления <span class="value">1</span></a></li>
+                    <li><a href="">Написать администрации</a></li>
+                </ul>
+
+            </div>
+
+            <div class="cabinet__content">
+
+                <div class="cabinet__content--search">
+                    <form class="product__search" action="">
+                        <input class="product__search--field" type="text" placeholder="Поиск по сообщениям">
+                        <button class="product__search--submit"></button>
+                    </form>
+                </div>
+
+                <div class="cabinet__content--letter">
+                  <div class="cabinet__content--letter-header">
+                    <div class="cabinet__content--letter-info">
+                      <p class="cabinet__content--letter-author"><span>От:</span>"ООО Ромашка"</p>
+                      <p class="cabinet__content--letter-subject"><span>Тема:</span>Возникли проблемы с доставкой</p>
+                    </div>
+                    <div class="cabinet__content--letter-buttons">
+                      <a href="#" class="reply-icon"></a>
+                      <a href="#" class="reply-button">Ответить</a>
+                      <a href="#" class="del-button">Удалить</a>
+                    </div>
+                  </div>
+                  <div class="cabinet__content--letter-content">
+                    <p class="cabinet__content--letter-text">Nunc ut sem id urna aliquet vestibulum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas vel fringilla lacus, efficitur ultricies quam. Fusce finibus eu nibh sit amet efficitur. Etiam efficitur sed erat vel vulputate. Sed eget augue vestibulum, ornare eros non, suscipit justo. Morbi ac odio cursus, rhoncus dui et, facilisis odio.</p>
+                  </div>
+                  <div class="cabinet__content--letter-attached">
+                    <p class="cabinet__content--letter-attachments">Вложения:</p>
+                    <a href="#" class="attachments-item"><span class="zip-icon"></span>Импорт товаров.zip <span class="close-icon"></span></a>
+                    <a href="#" class="attachments-item"><span class="txt-icon"></span>Выплата за декабрь.txt <span class="close-icon"></span></a>
+                    <a href="#" class="attachments-item"><span class="pdf-icon"></span>Отчет по доставке заказов.pdf <span class="close-icon"></span></a>
+                  </div>
+                </div>
+
+            </div>
+
+    </div>
+
 </section>
+
+
 <!-- start footer.html-->
 <footer class="footer">
 
