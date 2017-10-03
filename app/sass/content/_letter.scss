@@ -74,8 +74,8 @@
     @include breakpoint(max-width 660px) {
       padding-left: 25px;
     }
-   }
-   &-attachments {
+  }
+  &-attachments {
     float: left;
     color: #010101;
     font-size: 14px;
@@ -89,8 +89,9 @@
       width: 100%;
       margin-right: 0;
     }
-   }
+  }
 }
+
 .attachments-item {
   min-width: 176px;
   height: 30px;
@@ -132,6 +133,7 @@
   width: 13px;
   height: 16px;
 }
+
 .txt-icon {
   background-image: url("../i/icons/txt-icon.png");
   background-repeat: no-repeat;
@@ -142,6 +144,7 @@
   width: 13px;
   height: 16px;
 }
+
 .pdf-icon {
   background-image: url("../i/icons/pdf-icon.png");
   background-repeat: no-repeat;

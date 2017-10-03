@@ -540,20 +540,26 @@ $(document).ready(function () {
     });
     /*close*/
 
-  /*selected-message*/
-   $(document).on('click', '.cabinet__content--check-wrapper', function (e) {
-       event.preventDefault();
-       $(this).closest('.cabinet__content--check-wrapper').find('input').prop('checked', true);
-       $(this).parent().toggleClass('selected-message');
-   });
-   /*close*/
+    /*selected-message*/
+    $(document).on('click', '.cabinet__content--forcheck', function () {
+        var row = $(this).closest('.cabinet__content--row');
+        if ($(this).hasClass('focus')){
+            $(this).removeClass('focus');
+            row.removeClass('selected-message');
+        } else {
+            $(this).addClass('focus');
+            row.addClass('selected-message');
+        }
+    });
+    /*close*/
 
-   /*cabinet-sidebar*/
-   $(document).on('click', '.cabinet__sidebar--button', function () {
-     $('.cabinet__sidebar').slideToggle(500);
-       return false;
-   });
-   /*close*/
+    /*cabinet-sidebar*/
+    $(document).on('click', '.cabinet__sidebar--button', function (event) {
+        $('.cabinet__sidebar').slideToggle(500);
+        return false;
+    });
+    /*close*/
+
 });
 
 function showSubmenu(selector, selectorClass) {//функция выпадающего списка

@@ -36,20 +36,6 @@
     border-radius: 4px;
     padding: 0 18px;
     @include box-sizing(border-box);
-    @include breakpoint(max-width 770px) {
-      display: none;
-      position: absolute;
-      left: 11px;
-      margin-top: 195px;
-      z-index: 10;
-    }
-    @include breakpoint(max-width 660px) {
-      display: none;
-      position: absolute;
-      left: 11px;
-      margin-top: 211px;
-      z-index: 10;
-    }
     &--menu {
       width: 100%;
       margin: 0;
@@ -110,10 +96,6 @@
     border-radius: 4px;
     margin-left: 29px;
     @include box-sizing(border-box);
-    @include breakpoint(max-width 770px) {
-      width: 100%;
-      margin: 0;
-    }
     &--search {
       width: 100%;
       float: left;
@@ -123,14 +105,6 @@
       @include box-sizing(border-box);
       .product__search {
         width: 100%;
-        @include breakpoint(max-width 770px) {
-          width: 95%;
-          float: right;
-        }
-        @include breakpoint(max-width 660px) {
-          width: 85%;
-          float: right;
-        }
       }
     }
     &--row {
@@ -143,15 +117,11 @@
       padding: 22px 0;
       @include box-sizing(border-box);
       border-bottom: 1px solid #e3e3e3;
-
     }
     &--check-wrapper {
       flex: 0 0 69px;
       position: relative;
       float: left;
-      @include breakpoint(max-width 660px) {
-        flex-basis: 15px;
-      }
     }
     &--checkbox {
       display: none;
@@ -177,7 +147,7 @@
       -webkit-background-size: contain;
       background-size: contain;
     }
-    &--checkbox:checked + .cabinet__content--forcheck .cabinet__content--checked {
+    &--checkbox:checked + .cabinet__content--forcheck .cabinet__content--checked{
       background-image: url('../i/icons/checkbox-fill-icon.png');
     }
     &--author {
@@ -194,7 +164,7 @@
         width: 25%;
       }
       @include breakpoint(max-width 660px) {
-        flex-basis: calc(100% - 57px);
+        width: calc(100% - 33px);
       }
     }
     &--subject {
@@ -211,9 +181,9 @@
         width: 40%;
       }
       @include breakpoint(max-width 660px) {
-        padding-left: 57px;
+        padding-left: 33px;
         box-sizing: border-box;
-        flex-basis: 100%;
+        width: 100%;
       }
     }
     &--order {
@@ -230,8 +200,8 @@
         width: 10%;
       }
       @include breakpoint(max-width 660px) {
-        flex-basis: 30%;
-        padding-left: 57px;
+        width: 30%;
+        padding-left: 33px;
         box-sizing: border-box;
       }
     }
@@ -262,18 +232,110 @@
         width: 18%;
       }
       @include breakpoint(max-width 660px) {
-        flex-basis: 50%;
+        width: 50%;
         float: left;
-        // padding-left: 57px;
+        padding-left: 33px;
       }
     }
     .catalog__main--pagination {
       padding-left: 34px;
       padding-right: 34px;
     }
+    &--letter{
+      position: relative;
+      float: left;
+      width: 100%;
+      &-header {
+        width: 100%;
+        float: left;
+        position: relative;
+        border-bottom: 1px solid #dadada;
+        padding: 25px 25px 15px;
+        box-sizing: border-box;
+      }
+      &-info {
+        width: 50%;
+        float: left;
+      }
+      &-author, &-subject {
+        width: 100%;
+        position: relative;
+        text-align: left;
+        color: #000;
+        font-weight: 600;
+        font-size: 14px;
+        margin: 0;
+        span {
+          color: #868686;
+          font-weight: 300;
+          font-size: 14px;
+          width: 54px;
+          float: left;
+          @include breakpoint(max-width 660px) {
+            width: 100%;
+            display: inline-block;
+          }
+        }
+      }
+      &-author {
+        margin-bottom: 10px;
+      }
+      &-buttons {
+        width: 50%;
+        float: left;
+        text-align: right;
+        @include breakpoint(max-width 660px) {
+          text-align: center;
+        }
+      }
+      &-content {
+        width: 100%;
+        float: left;
+        position: relative;
+        padding: 50px 25px 50px 78px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #dadada;
+        @include breakpoint(max-width 660px) {
+          padding-left: 25px;
+        }
+      }
+      &-text {
+        width: 100%;
+        float: left;
+        margin: 0;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 300;
+        color: #000;
+        line-height: 27px;
+      }
+      &-attached {
+        width: 100%;
+        float: left;
+        padding: 25px 25px 25px 78px;
+        box-sizing: border-box;
+        @include breakpoint(max-width 660px) {
+          padding-left: 25px;
+        }
+      }
+      &-attachments {
+        float: left;
+        color: #010101;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 30px;
+        margin: 0 25px 0 0;
+        @include breakpoint(max-width 770px) {
+          min-height: 60px;
+        }
+        @include breakpoint(max-width 660px) {
+          width: 100%;
+          margin-right: 0;
+        }
+      }
+    }
   }
 }
-
 
 .selected-message {
   background-color: #f5f5f5;
@@ -303,4 +365,94 @@
   @include breakpoint(max-width 770px) {
     display: block;
   }
+}
+.attachments-item {
+  min-width: 176px;
+  height: 30px;
+  float: left;
+  background-color: #f3f3f3;
+  color: #0e0e0e;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 15px;
+  padding: 8px;
+  box-sizing: border-box;
+  margin: 0 5px;
+  @include breakpoint(max-width 770px) {
+    margin-bottom: 5px;
+  }
+  .close-icon {
+    background-image: url("../i/icons/modal-close-icon.png");
+    background-repeat: no-repeat;
+    display: block;
+    position: relative;
+    float: right;
+    width: 7px;
+    height: 7px;
+    background-size: 100%;
+    margin-left: 7px;
+    top: 5px;
+    z-index: 10;
+    cursor: pointer;
+  }
+}
+
+.zip-icon {
+  background-image: url("../i/icons/zip-icon.png");
+  background-repeat: no-repeat;
+  display: block;
+  position: relative;
+  float: left;
+  margin-right: 7px;
+  width: 13px;
+  height: 16px;
+}
+
+.txt-icon {
+  background-image: url("../i/icons/txt-icon.png");
+  background-repeat: no-repeat;
+  display: block;
+  position: relative;
+  float: left;
+  margin-right: 7px;
+  width: 13px;
+  height: 16px;
+}
+
+.pdf-icon {
+  background-image: url("../i/icons/pdf-icon.png");
+  background-repeat: no-repeat;
+  display: block;
+  position: relative;
+  float: left;
+  margin-right: 7px;
+  width: 13px;
+  height: 16px;
+}
+
+.reply-icon {
+  background-image: url("../i/icons/reply-icon.png");
+  width: 20px;
+  height: 18px;
+  float: none;
+  display: inline-block;
+  position: relative;
+  top: -8px;
+}
+
+.reply-button, .del-button {
+  display: inline-block;
+  position: relative;
+  float: none;
+  width: 126px;
+  height: 38px;
+  border-radius: 23px;
+  background-color: #f5f5f5;
+  overflow: hidden;
+  text-align: center;
+  color: #010101;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 38px;
+  margin-left: 20px;
 }
