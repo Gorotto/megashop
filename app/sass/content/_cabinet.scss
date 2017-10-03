@@ -143,11 +143,7 @@
       padding: 22px 0;
       @include box-sizing(border-box);
       border-bottom: 1px solid #e3e3e3;
-      @include breakpoint(max-width 660px) {
-        &:first-of-type {
-          display: none;
-        }
-      }
+
     }
     &--check-wrapper {
       flex: 0 0 69px;
@@ -277,6 +273,7 @@
     }
   }
 }
+
 
 .selected-message {
   background-color: #f5f5f5;
