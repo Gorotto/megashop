@@ -19,10 +19,12 @@
     position: relative;
     float: left;
     width: 270px;
+    margin-right: 30px;
     @include breakpoint(max-width 660px){
       position: absolute;
       top: 453px;
       left: -270px;
+      margin-left: 0;
       background-color: #fff;
       z-index: 2;
       @include transition(0.4s);
@@ -564,13 +566,25 @@
         object-fit: contain;
       }
     }
+    &--sm-banner{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 226px;
+      margin-bottom: 32px;
+      img {
+        size: 100%;
+        object-fit: contain;
+      }
+    }
   }
   &__main {
     display: block;
     position: relative;
     float: left;
-    width: calc(100% - 270px);
-    padding-left: 30px;
+    width: calc(100% - (270px + 30px));
+    padding-left: 0;
     @include box-sizing(border-box);
     @include breakpoint(max-width 660px){
       width: 100%;
@@ -956,6 +970,122 @@
       .product-slider__carousel--tools{
         display: block;
       }
+    }
+  }
+  &__category{
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - 2px);
+    margin-bottom: -1px;
+    padding-top: 37px;
+    padding-left: 28px;
+    padding-bottom: 33px;
+    padding-right: 28px;
+    @include box-sizing(border-box);
+    border-radius: 0;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+    @include transition(0.4s);
+    &:last-of-type{
+      margin-bottom: 152px;
+      @include breakpoint(max-width 660px){
+        margin-bottom: 30px;
+      }
+    }
+    &:hover{
+      border-color: #ffffff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
+      @include transition(0.4s);
+    }
+    &--title{
+      display: block;
+      position: relative;
+      float: left;
+      //width: 100%;
+      margin-bottom: 19px;
+      color: #c12025;
+      font-size: 17px;
+      font-weight: 600;
+      @include breakpoint(max-width 520px){
+        margin-bottom: 0;
+      }
+      &:hover{
+        color: #c12025;
+        text-decoration: underline;
+      }
+    }
+    &--trigger{
+      display: none;
+      position: relative;
+      float: left;
+      width: 15px;
+      height: 11px;
+      top: 9px;
+      margin-left: 0;
+      margin-right: 37px;
+      background-image: url('../i/icons/arrow-red-down-icon.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      @include breakpoint(max-width 520px){
+        display: block;
+      }
+    }
+    &--list-box{
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(row);
+      @include justify-content(space-between);
+      position: relative;
+      float: left;
+      width: 100%;
+      @include breakpoint(max-width 520px){
+        display: none;
+        margin-top: 10px;
+      }
+    }
+    &--list{
+      display: block;
+      position: relative;
+      float: left;
+      width: 30%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      @include breakpoint(max-width 520px){
+        width: 100%;
+      }
+      li{
+        position: relative;
+        float: left;
+        width: 100%;
+        a{
+          display: block;
+          position: relative;
+          float: left;
+          //width: 100%;
+          margin: 0;
+          padding: 6px 0;
+          @include box-sizing(border-box);
+          color: #2d0303;
+          font-size: 14px;
+          font-weight: 300;
+          &:hover{
+            color: #c12025;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  &__banners{
+    display: block;
+    position: relative;
+    float: left;
+    width: 270px;
+    margin-left: 30px;
+    @include breakpoint(max-width 660px){
+      display: none;
     }
   }
 }

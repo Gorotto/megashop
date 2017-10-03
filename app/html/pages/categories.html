@@ -1,27 +1,10 @@
-<!-- start html_open.html-->
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="format-detection" content="telephone=no">
-    <title></title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link href="../static/css/libs.min.css" rel="stylesheet" type="text/css">
-    <link href="../static/css/styles.min.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-<!-- open .header -->
-<!-- end html_open.html-->
+<!-- @@include ../html_open.html -->
 
-<!-- start header.html-->
 <header class="header">
 
     <div class="header__top">
 
         <div class="container">
-
 
             <div class="header__top-links">
 
@@ -43,39 +26,12 @@
 
                 </div>
 
-                <div class="header__top-links--tools">
 
-                    <a href="monetki.html" class="element">
-                        <span class="icon">
-                            <img src="../static/i/icons/coin-icon.png" alt="">
-                        </span>
-                        <span class="counter">99</span>
-                        Монетки <!--(<span class="value">57 026</span>)--></a>
-                    <a href="#" class="element">
-                        <span class="icon"><img src="../static/i/icons/wishlist-icon.png" alt=""></span>
-                        <span class="counter">99</span>
-                        Избранное <!--(<span class="value">9</span>)--></a>
-                    <a href="#" class="element">
-                        <span class="icon"><img src="../static/i/icons/scales-icon.png" alt=""></span>
-                        <span class="counter">99</span>
-                        Сравнение <!--(<span class="value">1</span>)--></a>
-                    <a href="#" class="element">
-                        <span class="icon"><img src="../static/i/icons/basket-icon.png" alt=""></span>
-                        <span class="counter">99</span>
-                        <span class="value">12 350</span>руб.</a>
-
-                </div>
 
                 <div class="header__top-links--cabinet">
 
-                    <a href="#" class="header__top-links--enter">ООО "Ромашка"</a>
-                    <!--<a href="authorization.html" class="header__top-links&#45;&#45;enter">Вход</a>-->
-                    <!--<a href="buyer-registration.html" class="header__top-links&#45;&#45;enter">Регистрация</a>-->
-
-                    <ul class="header__top-links--cabinet-submenu">
-                        <li><a href="#">Мой профиль</a></li>
-                        <li><a href="#">Выхож</a></li>
-                    </ul>
+                    <a href="authorization.html" class="header__top-links--enter">Вход</a>
+                    <a href="buyer-registration.html" class="header__top-links--enter">Регистрация</a>
 
                 </div>
 
@@ -125,6 +81,8 @@
                     <button class="search__form--submit" type="submit">
                         <span><img src="../static/i/icons/search-icon.png" alt=""></span>
                     </button>
+
+
 
                 </form>
 
@@ -1477,161 +1435,517 @@
 
 </header>
 
-<!-- end header.html-->
-
-<section class="product">
+<section class="catalog">
 
     <div class="catalog__bg"></div>
-    
+
     <div class="container">
 
-        <ul>
-            <li><a href="main.html" target="_blank">Главная страница</a></li>
-            <li><a href="authorization.html" target="_blank">Авторизация</a></li>
-            <li><a href="password-recovery.html" target="_blank">Восстановление пароля</a></li>
-            <li><a href="password-сhange.html" target="_blank">Смена пароля</a></li>
-            <li><a href="passwor-recovery-msg.html" target="_blank">Сообщение об отправке инструкции по восстановлению/смене пароля</a></li>
-            <li><a href="buyer-registration.html" target="_blank">Регистрация покупателя</a></li>
-            <li><a href="seller-registration.html" target="_blank">Регистрация продавца</a></li>
-            <li><a href="catalog.html" target="_blank">Каталог</a></li>
-            <li><a href="categories.html" target="_blank">Категории</a></li>
-            <li><a href="single-product.html" target="_blank">Страница одного товара</a></li>
-            <li><a href="monetki.html" target="_blank">Монетки</a></li>
-            <li><a href="single-order-page.html" target="_blank">Страница одного заказа</a></li>
-            <li><a href="thanks-page.html" target="_blank">Страница благадарности</a></li>
-            <li><a href="error-404.html" target="_blank">404</a></li>
-            <li><a href="all-letters.html" target="_blank">Кабинет - все письма</a></li>
+        <ul class="breadcrumbs">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Все категори</a></li>
         </ul>
 
+        <div class="catalog__main">
+
+            <div class="catalog__category">
+
+                <a href="#" class="catalog__category--trigger"></a>
+
+                <a href="#" class="catalog__category--title">Одежда и аксессуары для женщин</a>
+
+                <div class="catalog__category--list-box">
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Платья </a></li>
+                        <li><a href="#">Топы и футболки </a></li>
+                        <li><a href="#">Нижнее бельё </a></li>
+                        <li><a href="#">Толстовки и кофты </a></li>
+                        <li><a href="#">Свитеры</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Блузки и рубашки </a></li>
+                        <li><a href="#">Аксессуары </a></li>
+                        <li><a href="#">Комбинезоны </a></li>
+                        <li><a href="#">Чулочно-носочные изделия </a></li>
+                        <li><a href="#">Комбинезон</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Куртки и пальто </a></li>
+                        <li><a href="#">Низ </a></li>
+                        <li><a href="#">Пиджаки и костюмы </a></li>
+                        <li><a href="#">Сон и отдых </a></li>
+                        <li><a href="#">Трико</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="catalog__category">
+
+                <a href="#" class="catalog__category--trigger"></a>
+
+                <a href="#" class="catalog__category--title">Одежда и аксессуары для мужчин</a>
+
+                <div class="catalog__category--list-box">
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Толстовки и кофты </a></li>
+                        <li><a href="#">Куртки и пальто </a></li>
+                        <li><a href="#">Низ </a></li>
+                        <li><a href="#">Костюмы и блейзеры </a></li>
+                        <li><a href="#">Носки</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Свитера </a></li>
+                        <li><a href="#">Рубашки </a></li>
+                        <li><a href="#">Джинсы </a></li>
+                        <li><a href="#">Сон и отдых</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Топы и футболки </a></li>
+                        <li><a href="#">Аксессуары </a></li>
+                        <li><a href="#">Нижнее бельё </a></li>
+                        <li><a href="#">Шорты</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="catalog__category">
+
+                <a href="#" class="catalog__category--trigger"></a>
+
+                <a href="#" class="catalog__category--title">Телефоны и телекоммуникации</a>
+
+                <div class="catalog__category--list-box">
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Дисплеи мобильных телефонов </a></li>
+                        <li><a href="#">Оборудование связи </a></li>
+                        <li><a href="#">Мобильные телефоны</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Аксессуары для мобильных телефонов </a></li>
+                        <li><a href="#">Сумки и чехлы для телефонов </a></li>
+                        <li><a href="#">Резервное питание</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Сенсорные панели для телефонов </a></li>
+                        <li><a href="#">Запчасти для мобильных телефонов</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="catalog__category">
+
+                <a href="#" class="catalog__category--trigger"></a>
+
+                <a href="#" class="catalog__category--title">Детские товары</a>
+
+                <div class="catalog__category--list-box">
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Одежда для малышек </a></li>
+                        <li><a href="#">Одежда для мальчиков </a></li>
+                        <li><a href="#">Уход за младенцами </a></li>
+                        <li><a href="#">Пеленальные принадлежности </a></li>
+                        <li><a href="#">Наборы для семьи</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Одежда для малышей </a></li>
+                        <li><a href="#">Обувь детская </a></li>
+                        <li><a href="#">Физическая активность </a></li>
+                        <li><a href="#">Кормление</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Одежда для девочек </a></li>
+                        <li><a href="#">Детская обувь </a></li>
+                        <li><a href="#">Безопасность </a></li>
+                        <li><a href="#">Материнство</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="catalog__category">
+
+                <a href="#" class="catalog__category--trigger"></a>
+
+                <a href="#" class="catalog__category--title">Автомобили и мотоциклы</a>
+
+                <div class="catalog__category--list-box">
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Запчасти для авто </a></li>
+                        <li><a href="#">Салонные аксессуары </a></li>
+                        <li><a href="#">Дорожная безопасность</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Автомобильная электроника </a></li>
+                        <li><a href="#">Внешние аксессуары </a></li>
+                        <li><a href="#">Транспорт и аксессуары</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Инструменты, тех. обслуживание </a></li>
+                        <li><a href="#">Запчасти для мотоциклов</a></li>
+                        <li><a href="#">Безопасность </a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="catalog__category">
+
+                <a href="#" class="catalog__category--trigger"></a>
+
+                <a href="#" class="catalog__category--title">Часы</a>
+
+                <div class="catalog__category--list-box">
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Мужские часы </a></li>
+                        <li><a href="#">Детские часы </a></li>
+                        <li><a href="#">Часы-браслеты</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Модные часы </a></li>
+                        <li><a href="#">Карманные часы и брелоки</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Парные часы </a></li>
+                        <li><a href="#">Аксессуары для часов</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="catalog__category">
+
+                <a href="#" class="catalog__category--trigger"></a>
+
+                <a href="#" class="catalog__category--title">Компьютеры и сетевое оборудование</a>
+
+                <div class="catalog__category--list-box">
+                    <ul class="catalog__category--list">
+                        <li><a href="#">DIY Компьютеры </a></li>
+                        <li><a href="#">Компьютерные компоненты </a></li>
+                        <li><a href="#">Настольные компьютеры и серверы </a></li>
+                        <li><a href="#">Мини-ПК </a></li>
+                        <li><a href="#">Офисная электроника </a></li>
+                        <li><a href="#">Внешние накопители </a></li>
+                        <li><a href="#">Беспроводной Адаптер</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Карты памяти и Аксессуары </a></li>
+                        <li><a href="#">Компьютерная периферия </a></li>
+                        <li><a href="#">Аксессуары для ноутбуков </a></li>
+                        <li><a href="#">Нетбуки и ультрамобильные ПК </a></li>
+                        <li><a href="#">Прочие компьютерные товары </a></li>
+                        <li><a href="#">Аксессуары для планшетов</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Планшеты Планшетные компьютеры</a></li>
+                        <li><a href="#">Плата прототипирования </a></li>
+                        <li><a href="#">Ноутбуки </a></li>
+                        <li><a href="#">Сетевое оборудование </a></li>
+                        <li><a href="#">Программное обеспечение </a></li>
+                        <li><a href="#">Планшетные компьютеры</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="catalog__category">
+
+                <a href="#" class="catalog__category--trigger"></a>
+
+                <a href="#" class="catalog__category--title">Багаж и сумки</a>
+
+                <div class="catalog__category--list-box">
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Женские сумки </a></li>
+                        <li><a href="#">Кошельки </a></li>
+                        <li><a href="#">Функциональные сумки</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Мужские сумки </a></li>
+                        <li><a href="#">Сумки для детей </a></li>
+                        <li><a href="#">Кошельки и визитницы</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Рюкзаки </a></li>
+                        <li><a href="#">Багаж и дорожные сумки </a></li>
+                        <li><a href="#">Запчасти для сумок и аксессуары</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="catalog__category">
+
+                <a href="#" class="catalog__category--trigger"></a>
+
+                <a href="#" class="catalog__category--title">Для дома и сада</a>
+
+                <div class="catalog__category--list-box">
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Кухня, столовая и бар </a></li>
+                        <li><a href="#">Искусство, ремесло и шитьё </a></li>
+                        <li><a href="#">Домашнее хозяйство и организация </a></li>
+                        <li><a href="#">Бытовые Товары</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Домашний декор </a></li>
+                        <li><a href="#">Товары для праздников </a></li>
+                        <li><a href="#">Товары для домашних животных</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Текстиль для дома </a></li>
+                        <li><a href="#">Товары для ванной </a></li>
+                        <li><a href="#">Садовые принадлежности</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="catalog__category">
+
+                <a href="#" class="catalog__category--trigger"></a>
+
+                <a href="#" class="catalog__category--title">Бытовая электроника</a>
+
+                <div class="catalog__category--list-box">
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Внешние накопители </a></li>
+                        <li><a href="#">Электронные сигареты </a></li>
+                        <li><a href="#">Домашнее аудио и видео </a></li>
+                        <li><a href="#">Видеоигры</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">VR Услуги </a></li>
+                        <li><a href="#">Аксессуары и запчасти </a></li>
+                        <li><a href="#">Прочая потребительская электроника</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Умная электроника </a></li>
+                        <li><a href="#">Камеры и фото </a></li>
+                        <li><a href="#">Портативное аудио и видео</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="catalog__category">
+
+                <a href="#" class="catalog__category--trigger"></a>
+
+                <a href="#" class="catalog__category--title">Красота и здоровье</a>
+
+                <div class="catalog__category--list-box">
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Наращивание волос и парики </a></li>
+                        <li><a href="#">Здоровье и гигиена </a></li>
+                        <li><a href="#">Бритьё и эпиляция </a></li>
+                        <li><a href="#">Татуировки и боди-арт </a></li>
+                        <li><a href="#">Гигиена полости рта</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Маникюр и инструменты </a></li>
+                        <li><a href="#">Уход за кожей </a></li>
+                        <li><a href="#">Эротические товары </a></li>
+                        <li><a href="#">Ванна и душ </a></li>
+                        <li><a href="#">Туалетная бумага</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Макияж </a></li>
+                        <li><a href="#">Уход за волосами и укладка </a></li>
+                        <li><a href="#">Инструменты для красоты </a></li>
+                        <li><a href="#">Духи и дезодоранты </a></li>
+                        <li><a href="#">Инструменты и аксессуары</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="catalog__category">
+
+                <a href="#" class="catalog__category--trigger"></a>
+
+                <a href="#" class="catalog__category--title">Спорт и развлечения</a>
+
+                <div class="catalog__category--list-box">
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Спорт и развлечения </a></li>
+                        <li><a href="#">Командные виды спорта </a></li>
+                        <li><a href="#">Кемпинг и туризм </a></li>
+                        <li><a href="#">Рыбалка </a></li>
+                        <li><a href="#">Скачки </a></li>
+                        <li><a href="#">Товары для спорта/развлечений </a></li>
+                        <li><a href="#">Стрельба </a></li>
+                        <li><a href="#">Плавание </a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Кеды и кроссовки </a></li>
+                        <li><a href="#">Ракетки для занятий спортом </a></li>
+                        <li><a href="#">Велоспорт </a></li>
+                        <li><a href="#">Фитнес и бодибилдинг </a></li>
+                        <li><a href="#">Охота </a></li>
+                        <li><a href="#">Скейтбординг, ролики и скутеры </a></li>
+                        <li><a href="#">Катание на лыжах и коньках </a></li>
+                        <li><a href="#">Водные виды спорта</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Спортивные аксессуары </a></li>
+                        <li><a href="#">Боулинг </a></li>
+                        <li><a href="#">Развлечения </a></li>
+                        <li><a href="#">Гольф </a></li>
+                        <li><a href="#">Музыкальные инструменты </a></li>
+                        <li><a href="#">Бег </a></li>
+                        <li><a href="#">Спортивная одежда</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="catalog__category">
+
+                <a href="#" class="catalog__category--trigger"></a>
+
+                <a href="#" class="catalog__category--title">Обувь</a>
+
+                <div class="catalog__category--list-box">
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Сапоги и ботинки </a></li>
+                        <li><a href="#">Туфли </a></li>
+                        <li><a href="#">Кроссовки для женщин </a></li>
+                        <li><a href="#">Обувь для женщин</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Сапоги и ботинки </a></li>
+                        <li><a href="#">Обувь на плоской подошве </a></li>
+                        <li><a href="#">Сандалии </a></li>
+                        <li><a href="#">Мужская обувь</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Обувь на плоской подошве </a></li>
+                        <li><a href="#">Кроссовки для мужчин </a></li>
+                        <li><a href="#">Сандалии </a></li>
+                        <li><a href="#">Аксессуары для обуви</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="catalog__category">
+
+                <a href="#" class="catalog__category--trigger"></a>
+
+                <a href="#" class="catalog__category--title">Лампы и освещение</a>
+
+                <div class="catalog__category--list-box">
+                    <ul class="catalog__category--list">
+                        <li><a href="#">HolidayLighting </a></li>
+                        <li><a href="#">Внутреннее освещение </a></li>
+                        <li><a href="#">Светодиодное освещение </a></li>
+                        <li><a href="#">Ночные светильники </a></li>
+                        <li><a href="#">Переносное освещение</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Лампы и абажуры </a></li>
+                        <li><a href="#">Коммерческое освещение </a></li>
+                        <li><a href="#">Лампочки </a></li>
+                        <li><a href="#">Оригинальные светильники </a></li>
+                        <li><a href="#">Профессиональное освещение</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Лампы для чтения </a></li>
+                        <li><a href="#">Светодиодные лампы </a></li>
+                        <li><a href="#">Аксессуары к приборам </a></li>
+                        <li><a href="#">Наружное освещение</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="catalog__category">
+
+                <a href="#" class="catalog__category--trigger"></a>
+
+                <a href="#" class="catalog__category--title">Игрушки и хобби</a>
+
+                <div class="catalog__category--list-box">
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Радиоуправляемые игрушки </a></li>
+                        <li><a href="#">Обучение и образование </a></li>
+                        <li><a href="#">Фигурки и конструкторы </a></li>
+                        <li><a href="#">Электронные игрушки</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Куклы и мягкие игрушки </a></li>
+                        <li><a href="#">Уличный спорт и развлечения </a></li>
+                        <li><a href="#">Игрушечные машинки </a></li>
+                        <li><a href="#">Пазлы и волшебные кубики</a></li>
+                    </ul>
+                    <ul class="catalog__category--list">
+                        <li><a href="#">Классические игрушки </a></li>
+                        <li><a href="#">Игрушечные фигурки </a></li>
+                        <li><a href="#">Игрушки для маленьких детей </a></li>
+                        <li><a href="#">Необычные игрушки и приколы</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="catalog__banners">
+
+            <a href="#" class="catalog__sidebar--banner">
+                <img src="../static/i/banners/sidebar-banner-1.png" alt="">
+            </a>
+
+            <a href="#" class="catalog__sidebar--banner">
+                <img src="../static/i/banners/sidebar-banner-3.png" alt="">
+            </a>
+
+            <a href="#" class="catalog__sidebar--banner">
+                <img src="../static/i/banners/sidebar-banner-2.png" alt="">
+            </a>
+
+            <a href="#" class="catalog__sidebar--sm-banner">
+                <img src="../static/i/banners/sidebar-banner-5.png" alt="">
+            </a>
+
+            <a href="#" class="catalog__sidebar--banner">
+                <img src="../static/i/banners/sidebar-banner-1.png" alt="">
+            </a>
+
+            <a href="#" class="catalog__sidebar--banner">
+                <img src="../static/i/banners/sidebar-banner-3.png" alt="">
+            </a>
+
+            <a href="#" class="catalog__sidebar--banner">
+                <img src="../static/i/banners/sidebar-banner-2.png" alt="">
+            </a>
+
+            <a href="#" class="catalog__sidebar--sm-banner">
+                <img src="../static/i/banners/sidebar-banner-5.png" alt="">
+            </a>
+
+            <a href="#" class="catalog__sidebar--banner">
+                <img src="../static/i/banners/sidebar-banner-1.png" alt="">
+            </a>
+
+            <a href="#" class="catalog__sidebar--banner">
+                <img src="../static/i/banners/sidebar-banner-3.png" alt="">
+            </a>
+
+            <a href="#" class="catalog__sidebar--sm-banner">
+                <img src="../static/i/banners/sidebar-banner-5.png" alt="">
+            </a>
+            
+        </div>
+
     </div>
-    
+
 </section>
 
-<!-- start footer.html-->
-<footer class="footer">
+<!-- @@include ../footer.html -->
 
-    <div class="catalog__bg"></div>
-
-    <div class="container">
-
-        <div class="footer__nav">
-
-            <ul class="footer__list">
-                <li class="footer__title">Покупателям
-                    <ul>
-                        <li class="footer__subtitle"><a href="#">Покупки на Safe-Shopping</a></li>
-                        <li class="footer__subtitle"><a href="#">Доставка и оплата товаров</a></li>
-                        <li class="footer__subtitle"><a href="#">Пользовательское соглашение</a></li>
-                        <li class="footer__subtitle"><a href="#">Юридическим лицам</a></li>
-                        <li class="footer__subtitle"><a href="#">Рассылка</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <ul class="footer__list">
-                <li class="footer__title">Магазинам
-                    <ul>
-                        <li class="footer__subtitle"><a href="#">Истории успеха</a></li>
-                        <li class="footer__subtitle"><a href="#">Торговля на Safe-Shopping</a></li>
-                        <li class="footer__subtitle"><a href="#">Все еще думаете?</a></li>
-                        <li class="footer__subtitle"><a href="#">Добавить магазин</a></li>
-                        <li class="footer__subtitle"><a href="#">Договор оферты</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <ul class="footer__list">
-                <li class="footer__title">О компании
-                    <ul>
-                        <li class="footer__subtitle"><a href="#">Сотрудничество</a></li>
-                        <li class="footer__subtitle"><a href="#">Отзывы</a></li>
-                        <li class="footer__subtitle"><a href="#">Пресс-центр</a></li>
-                        <li class="footer__subtitle"><a href="#">Контактные данные</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-        </div>
-
-        <div class="footer__socials">
-
-            <h3 class="footer__title">Подружитесь с нами:</h3>
-
-            <p class="footer__subtitle">Мы ежедневно публикуем скидки и промокоды</p>
-
-            <div class="footer__socials--links">
-
-                <a href="#">
-                    <img src="../static/i/icons/vk-icon.png" alt="">
-                </a>
-                <a href="#">
-                    <img src="../static/i/icons/fb-icon.png" alt="">
-                </a>
-                <a href="#">
-                    <img src="../static/i/icons/odn-icon.png" alt="">
-                </a>
-                <a href="#">
-                    <img src="../static/i/icons/tw-icon.png" alt="">
-                </a>
-                <a href="#">
-                    <img src="../static/i/icons/gplus-icon.png" alt="">
-                </a>
-                <a href="#">
-                    <img src="../static/i/icons/inst-icon.png" alt="">
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="footer__bottom">
-
-        <div class="container">
-
-            <p>© Safe-Shopping - Все права защищены.</p>
-
-            <div class="footer__pay-sys">
-                <span><img src="../static/i/icons/paypal-icon.png" alt=""></span>
-                <span><img src="../static/i/icons/visa-icon.png" alt=""></span>
-                <span><img src="../static/i/icons/mastercard-icon.png" alt=""></span>
-            </div>
-
-        </div>
-
-    </div>
-
-</footer>
-
-<div id="city-selection" class="modal-city">
-
-    <h3 class="title">Ваш город</h3>
-
-    <span class="modal-city__close"></span>
-
-    <p class="subtitle">Выберете город, в котором собираетесь получать товар. <br>
-        От выбора зависит стоимость товара и доставки.
-    </p>
-
-    <form action="" class="modal-city__form">
-
-        <input class="modal-city__form--field" type="text" placeholder="Ввведите название города">
-
-        <p class="subtitle">Например: Москва, Санкт-Петербургб еще </p>
-
-        <button class="modal-city__form--submit" type="submit">Сохранить</button>
-
-    </form>
-
-</div>
-
-<div id="black-overlay"></div>
-<!-- end footer.html-->
-
-<!-- start html_close.html-->
-<script src='../static/js/vendors.js' type="text/javascript"></script>
-<script src="../static/js/common.js" type="text/javascript"></script>
-</body>
-</html>
-<!-- end html_close.html-->
+<!-- @@include ../html_close.html -->
