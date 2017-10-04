@@ -39,7 +39,7 @@ gulp.task('css-libs', function () { // Создаем таск css-libs
     ]) // Берем источник
         .pipe(postcss(processors))// сжымаем
         .pipe(concat('libs.min.css'))// объеденяем в файл
-        .pipe(gulp.dest('./static/css')) // Выгружаем результата в папку app/css
+        .pipe(gulp.dest('./static/css')); // Выгружаем результата в папку app/css
         // .pipe(browserSync.stream({})); // Обновляем CSS на странице при изменении
 });
 
@@ -85,16 +85,21 @@ gulp.task('sass', function () { // Создаем таск Sass
         }))
         .pipe(sourcemaps.write('.', {sourceRoot: 'css-source'}))
         .pipe(plumber.stop())
-        .pipe(gulp.dest('./static/css'))
+        .pipe(gulp.dest('./static/css'));
         /*.pipe(browserSync.stream({}));*/
 });
 
-
-gulp.task('browser-sync', () => {
-    browserSync.init({
+gulp.task('browser-sync', function () { // Создаем таск browser-sync
+    browserSync.init({ // Выполняем browserSync
         server: {
-            baseDir: "./"
-        }
+            baseDir: './' // Директория для сервера - app
+        },
+        ghostMode: {
+            clicks: true,
+            forms: true,
+            scroll: true
+        },
+        notify: false // Отключаем уведомления
     });
 });
 
@@ -149,7 +154,7 @@ gulp.task('watch', ['browser-sync', 'compress', 'extend-pages', 'css-libs', 'img
     gulp.watch('app/libs/**/*', ['css-libs']); // Наблюдение за папкой libs
     gulp.watch('app/img/**/*', ['img']);// Наблюдение за папкой img
     gulp.watch('app/sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
-    gulp.watch(['./app/html/**/*.html'], ['extend-pages']);// Наблюдение за HTML-файлами в папке html
+    gulp.watch(['app/html/**/*.html'], ['extend-pages']);// Наблюдение за HTML-файлами в папке html
     gulp.watch('app/js/**/*.js', ['compress']); // Наблюдение за js-файлами
 });
 

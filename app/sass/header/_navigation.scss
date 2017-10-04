@@ -40,6 +40,38 @@
     @include breakpoint(max-width 736px) {
       max-width: 100%;
     }
+    &:before {
+      display: none;
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 0;
+      margin-left: 26px;
+      bottom: -20px;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 12px solid #c21a20;
+      z-index: 2;
+      @include breakpoint(max-width 736px) {
+        display: none;
+      }
+    }
+    &:after {
+      display: none;
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 0;
+      margin-left: 26px;
+      bottom: -24px;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 12px solid #fff;
+      z-index: 3;
+      @include breakpoint(max-width 736px) {
+        display: none;
+      }
+    }
     > a {
       @include display-flex(flex);
       @include flex-wrap(wrap);
@@ -94,7 +126,7 @@
         content: '';
         width: 0;
         height: 0;
-        left: 26px;
+        margin-left: 26px;
         bottom: -20px;
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
@@ -110,7 +142,7 @@
         content: '';
         width: 0;
         height: 0;
-        left: 26px;
+        margin-left: 26px;
         bottom: -24px;
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
@@ -119,6 +151,45 @@
         @include breakpoint(max-width 736px) {
           display: none;
         }
+      }
+    }
+  }
+  > li.show-head-submenu{
+    a{
+      @include breakpoint(max-width 736px) {
+        color: #ffffff;
+      }
+    }
+    &:before {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 0;
+      margin-left: 26px;
+      bottom: -20px;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 12px solid #c21a20;
+      z-index: 2;
+      @include breakpoint(max-width 736px) {
+        display: none;
+      }
+    }
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 0;
+      margin-left: 26px;
+      bottom: -24px;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 12px solid #fff;
+      z-index: 3;
+      @include breakpoint(max-width 736px) {
+        display: none;
       }
     }
   }
