@@ -971,6 +971,28 @@
         display: block;
       }
     }
+    &--code {
+      width: 100%;
+      float: left;
+      font-size: 11px;
+      text-transform: uppercase;
+      color: #4f4f4f;
+      font-weight: 400;
+      margin: 5px 0;
+    }
+    &--favorite {
+      background-image: url("../i/icons/wishlist-sm-icon.png");
+      width: 15px;
+      height: 14px;
+      float: left;
+    }
+    &--amount {
+      float: left;
+      width: 122px;
+      .product__views--counter {
+        margin: 0 0 10px;
+      }
+    }
   }
   &__category{
     display: block;
