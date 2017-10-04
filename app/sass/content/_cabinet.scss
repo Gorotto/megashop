@@ -63,6 +63,43 @@
           .value {
             float: right;
           }
+          .arrow {
+            background-image: url("../i/icons/arrow-down-icon.png");
+            width: 7px;
+            height: 5px;
+            background-repeat: no-repeat;
+            position: relative;
+            float: right;
+            top: 7px;
+            right: 5px;
+          }
+        }
+        ul {
+          width: 100%;
+          margin: 30px 0 0;
+          padding: 0;
+          display: none;
+          li {
+            border-bottom: none;
+            padding: 10px 0 10px 25px;
+            position: relative;
+            &:before {
+              content: "";
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              background-color: #bfbfbf;
+              margin-left: -15px;
+              margin-top: 6px;
+              position: absolute;
+            }
+            a {
+              color: #0e0e0e;
+              font-size: 14px;
+              font-weight: 300;
+              line-height: 18px;
+            }
+          }
         }
       }
       li:last-of-type {
@@ -71,6 +108,7 @@
       li.active a {
         font-weight: 700;
       }
+
     }
     &--button {
       display: none;
@@ -314,6 +352,42 @@
           margin-right: 0;
         }
       }
+    }
+  }
+  &__form {
+    width: 430px;
+    float: left;
+    margin-left: 55px;
+    &--new-adress {
+      width: 100%;
+      float: left;
+      position: relative;
+      color: #1179c2;
+      float: left;
+      text-align: left;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 22px;
+      text-decoration: underline;
+      margin-top: 15px;
+    }
+    .regist__form--forcheck {
+      margin-bottom: 0;
+    }
+    &--submit {
+      display: block;
+      position: relative;
+      float: left;
+      width: 152px;
+      height: 47px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      background-color: #c12025;
+      border-radius: 23px;
+      border: none;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 600;
     }
   }
 }
