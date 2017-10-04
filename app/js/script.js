@@ -152,8 +152,8 @@ $(document).ready(function () {
     /*product counter*/
     $(document).on('click', '.plus', function (event) {
         event.preventDefault();
-        var count = $('.product__views--counter').find('.number'),
-            val = parseInt($('.product__views--counter').find('.number').val());
+        var count = $(this).closest('.product__views--counter').find('.number'),
+            val = parseInt($(this).closest('.product__views--counter').find('.number').val());
         if (val == 999) {
             return false;
         } else {
@@ -165,7 +165,7 @@ $(document).ready(function () {
     });
     $(document).on('click', '.minus', function (event) {
         event.preventDefault();
-        var count = $('.product__views--counter').find('.number');
+        var count = $(this).closest('.product__views--counter').find('.number');
         var counter = parseInt(count.val()) - 1;
         counter = counter < 1 ? 1 : counter;
         count.val(counter);
