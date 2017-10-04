@@ -31,11 +31,15 @@
     position: relative;
     float: left;
     width: 200px;
-    min-height: 277px;
+    /*min-height: 277px;*/
     background-color: #f5f5f5;
     border-radius: 4px;
     padding: 0 18px;
     @include box-sizing(border-box);
+    @include breakpoint(max-width 660px){
+      width: 100%;
+      display: none;
+    }
     &--menu {
       width: 100%;
       margin: 0;
@@ -70,10 +74,10 @@
     }
     &--button {
       display: none;
-      position: absolute;
+      position: relative;
+      float: left;
       z-index: 7;
-      margin-left: 14px;
-      margin-top: 146px;
+      margin-bottom: 15px;
       background-color: #c12025;
       border-radius: 50%;
       width: 40px;
@@ -96,6 +100,10 @@
     border-radius: 4px;
     margin-left: 29px;
     @include box-sizing(border-box);
+    @include breakpoint(max-width 660px){
+      width: 100%;
+      margin-left: 0;
+    }
     &--search {
       width: 100%;
       float: left;
@@ -117,6 +125,9 @@
       padding: 22px 0;
       @include box-sizing(border-box);
       border-bottom: 1px solid #e3e3e3;
+      @include breakpoint(max-width 440px){
+        @include flex-direction(column)
+      }
     }
     &--check-wrapper {
       flex: 0 0 69px;
@@ -160,12 +171,6 @@
       text-align: left;
       padding: 0 9px;
       @include box-sizing(border-box);
-      @include breakpoint(max-width 770px) {
-        width: 25%;
-      }
-      @include breakpoint(max-width 660px) {
-        width: calc(100% - 33px);
-      }
     }
     &--subject {
       flex: 3 0 0;
@@ -177,14 +182,6 @@
       text-align: left;
       padding: 0 9px;
       @include box-sizing(border-box);
-      @include breakpoint(max-width 770px) {
-        width: 40%;
-      }
-      @include breakpoint(max-width 660px) {
-        padding-left: 33px;
-        box-sizing: border-box;
-        width: 100%;
-      }
     }
     &--order {
       flex: 1 0 0;
@@ -196,14 +193,6 @@
       text-align: left;
       padding: 0 9px;
       @include box-sizing(border-box);
-      @include breakpoint(max-width 770px) {
-        width: 10%;
-      }
-      @include breakpoint(max-width 660px) {
-        width: 30%;
-        padding-left: 33px;
-        box-sizing: border-box;
-      }
     }
     &--date {
       flex: 1 0 0;
@@ -227,14 +216,6 @@
         background-repeat: no-repeat;
         -webkit-background-size: contain;
         background-size: contain;
-      }
-      @include breakpoint(max-width 770px) {
-        width: 18%;
-      }
-      @include breakpoint(max-width 660px) {
-        width: 50%;
-        float: left;
-        padding-left: 33px;
       }
     }
     .catalog__main--pagination {

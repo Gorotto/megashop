@@ -198,12 +198,13 @@
       position: absolute;
       width: 176px;
       top: 34px;
-      left: -28px;
+      right: 0;
       padding: 0;
       margin: 0;
       list-style: none;
       background-color: #ffffff;
       z-index: 2;
+      border: 1px solid #c12025;
       li{
         width: 100%;
         a{
@@ -218,7 +219,14 @@
           font-size: 13px;
           font-weight: 300;
           text-decoration: none;
-          border-bottom: 1px solid #e8e8e8;
+          border-bottom: 1px solid #c12025;
+          margin-bottom: -1px;
+          @include transition(0.4s);
+          &:hover{
+            background-color: #c12025;
+            color: #fff;
+            @include transition(0.4s);
+          }
         }
       }
     }
@@ -327,6 +335,7 @@
         .counter {
           display: block;
           position: absolute;
+          max-width: 40px;
           color: #0e0e0e;
           background-color: #d6d5d5;
           padding: 4px;
@@ -334,10 +343,13 @@
           font-size: 10px;
           font-weight: 400;
           line-height: 8px;
-          top: -7px;
+          top: -12px;
           /* right: 0; */
           margin-left: 10px;
           border-radius: 15px;
+          white-space: normal;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
       }
     }
