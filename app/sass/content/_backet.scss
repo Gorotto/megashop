@@ -11,6 +11,12 @@
     color: #0e0e0e;
     margin: 0;
     float: left;
+    @include breakpoint(max-width 770px) {
+      width: 100%;
+    }
+    @include breakpoint(max-width 660px) {
+      font-size: 24px;
+    }
     &-red {
       color: #c12025;
     }
@@ -22,6 +28,12 @@
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 32px;
+    @include breakpoint(max-width 770px) {
+      margin-top: 20px;
+    }
+    @include breakpoint(max-width 660px) {
+      width: 100%;
+    }
     &--field {
       width: calc(100% - 145px);
       float: left;
@@ -79,9 +91,24 @@
       height: 12px;
       background-repeat: no-repeat;
       margin: 0 20px;
+      @include breakpoint(max-width 770px) {
+        margin: 0 10px;
+      }
+      @include breakpoint(max-width 660px) {
+        margin-right: 20px;
+      }
     }
     .catalog__grid-element--descr {
       width: 40%;
+      @include breakpoint(max-width 660px) {
+        padding-right: 0;
+        width: 58%;
+      }
+    }
+    .catalog__grid-element--photo {
+      @include breakpoint(max-width 770px) {
+        margin-left: 0;
+      }
     }
     .product-slider__carousel--price,
     .product-slider__carousel--old-price,
@@ -96,6 +123,9 @@
     .product-slider__carousel--coins {
       width: 80px;
       text-align: left;
+      @include breakpoint(max-width 770px) {
+        width: auto;
+      }
     }
     &--title {
       width: 100%;
@@ -107,6 +137,9 @@
       border-bottom: 1px solid #ddd;
       padding: 25px 25px 10px;
       box-sizing: border-box;
+      @include breakpoint(max-width 770px) {
+        padding-right: 0;
+      }
       span {
         color: #747474;
         font-size: 15px;
@@ -122,12 +155,28 @@
       }
       &-amount {
         flex-basis: 11%;
+        @include breakpoint(max-width 770px) {
+          flex-basis: 18%;
+        }
+        @include breakpoint(max-width 660px) {
+          margin-top: 10px;
+        }
+
       }
       &-price {
         flex-basis: 26%;
+        @include breakpoint(max-width 770px) {
+          flex-basis: 18%;
+        }
+        @include breakpoint(max-width 660px) {
+          flex-basis: 40%;
+        }
       }
       &-coins {
         flex-basis: 80px;
+        @include breakpoint(max-width 770px) {
+          flex-basis: 62px;
+        }
       }
     }
     &--not-available {
@@ -149,8 +198,107 @@
       }
     }
   }
+  &__sum {
+    width: 100%;
+    float: left;
+    position: relative;
+    &--banner {
+      width: 620px;
+      float: left;
+      @include breakpoint(max-width 770px) {
+        width: 100%;
+        margin-bottom: 20px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    &--content {
+      width: 30%;
+      float: right;
+      @include breakpoint(max-width 770px) {
+        width: 50%;
+      }
+      @include breakpoint(max-width 660px) {
+        width: 100%;
+      }
+      &-products,
+      &-notdiscounts,
+      &-shopdiscounts,
+      &-coupondiscounts,
+      &-price,
+      &-monetki {
+        width: 100%;
+        float: left;
+        color: #0e0e0e;
+        font-size: 16px;
+        font-weight: 300;
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 10px;
+        span {
+          width: 50%;
+          float: left;
+          color: #0e0e0e;
+          font-size: 14px;
+          font-weight: 300;
+          margin-right: 40px;
+          position: relative;
+          b {
+            width: 100%;
+            font-weight: 700;
+            float: left;
+          }
+        }
+      }
+      .checkout-btn {
+        width: 217px;
+        height: 47px;
+        float: right;
+        margin-top: 45px;
+        background-color: #c12025;
+        border-radius: 23px;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+      }
+      &-price {
+        font-size: 24px;
+        font-weight: 600;
+        margin-top: 15px;
+        margin-bottom: 20px;
+      }
+      &-monetki {
+        span:before {
+          content: "";
+          background-image: url("../i/icons/coin-icon.png");
+          width: 20px;
+          height: 18px;
+          position: absolute;
+          left: -40px;
+          margin-top: 14px;
+          @include breakpoint(max-width 770px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  &__banner {
+    width: 100%;
+    float: left;
+    position: relative;
+    margin-bottom: 100px;
+    @include breakpoint(max-width 660px) {
+      margin-bottom: 20px;
+    }
+    img {
+      width: 100%;
+      float: left;
+    }
+  }
 }
-
 .product__color, .product__weight {
   width: 100%;
   float: left;
@@ -161,6 +309,9 @@
   margin: 0;
   line-height: 20px;
   text-align: center;
+  @include breakpoint(max-width 660px) {
+    width: 50%;
+  }
   &--title {
     color: #616161;
     font-size: 13px;

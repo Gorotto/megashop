@@ -991,6 +991,16 @@
       width: 122px;
       .product__views--counter {
         margin: 0 0 10px;
+        @include breakpoint(max-width 660px) {
+          .number {
+            width: 50%;
+          }
+        }
+      }
+      @include breakpoint(max-width 660px) {
+        flex-basis: 45%;
+        width: 45%;
+        margin-top: 10px;
       }
     }
   }

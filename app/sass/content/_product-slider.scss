@@ -54,6 +54,9 @@
       &:before{
         display: none;
       }
+      @include breakpoint(max-width 770px) {
+        left: -6px;
+      }
     }
     .slick-next{
       display: block;
@@ -70,6 +73,9 @@
       transform: rotate(180deg);
       &:before{
         display: none;
+      }
+      @include breakpoint(max-width 770px) {
+        right: -6px;
       }
     }
     &--box {
@@ -302,4 +308,3 @@
     }
   }
 }
-
