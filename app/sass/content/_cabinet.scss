@@ -358,6 +358,14 @@
     width: 430px;
     float: left;
     margin-left: 55px;
+    @include breakpoint(max-width 770px) {
+      width: 100%;
+      margin-left: 0;
+    }
+    @include breakpoint(max-width 660px) {
+      width: 100%;
+      margin-left: 0;
+    }
     &--new-adress {
       width: 100%;
       float: left;
