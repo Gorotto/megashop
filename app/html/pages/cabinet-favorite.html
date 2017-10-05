@@ -1,0 +1,815 @@
+<!-- @@include ../html_open.html -->
+
+<header class="header">
+
+    <div class="header__top">
+
+        <div class="container">
+
+            <div class="header__top-links">
+
+                <div class="header__top-links--region">
+                    <span>Ваш регион:</span>
+
+                    <a href="#" class="city-select">Москва</a>
+
+                    <div class="header__top-links--hover-region">
+
+                        <h3>Ваш регион <span>Москва</span>?</h3>
+
+                        <div class="links">
+                            <a href="#" class="yes">Да, верно</a>
+                            <a href="#" class="chose">Выбрать другой</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="header__top-links--cabinet">
+
+                    <a href="authorization.html" class="header__top-links--enter">Вход</a>
+                    <a href="buyer-registration.html" class="header__top-links--enter">Регистрация</a>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="header__logo">
+
+        <div class="container">
+
+            <a href="index.html" class="logo">
+                <img src="../static/i/OAMI-logo.svg" alt="">
+            </a>
+
+            <section class="search">
+
+                <form class="search__form">
+
+                    <input class="search__form--field" type="text" placeholder="Поиск среди товаров">
+
+                    <div class="search__form--categories">
+
+                        <div class="search__form--trigger">
+                            <span class="search__form--title" data-id="0">
+                                    Все категории</span>
+                            <span class="search__form--arrow"></span>
+                        </div>
+                        <ul class="search__form--list">
+                            <li data-id="1">Все для ремонта</li>
+                            <li data-id="2"> Увлечения и хобби</li>
+                            <li data-id="3"> Детские товары</li>
+                            <li data-id="4">Спорт и отдых</li>
+                            <li data-id="5">Красота и здоровье</li>
+                            <li data-id="6">Софт и программы</li>
+                            <li data-id="7">Все для дачи</li>
+                            <li data-id="8">Праздники и торжества</li>
+                            <li data-id="9">Еда и напитки</li>
+                            <li data-id="10">Обувь и сумки</li>
+                            <li data-id="11">Другие категории</li>
+                            <li data-id="12">Скидки и акции</li>
+                        </ul>
+
+                    </div>
+
+                    <button class="search__form--submit" type="submit">
+                        <span><img src="../static/i/icons/search-icon.png" alt=""></span>
+                    </button>
+
+
+                </form>
+
+                <a href="#" class="partner">
+                    <span><img src="../static/i/icons/shake-hands-icon.png" alt=""></span>
+                    <span>Стать партнером</span>
+                </a>
+
+            </section>
+
+        </div>
+
+    </div>
+
+    <div class="header__navigation">
+
+        <div class="container">
+
+            <a id="mobile-menu" href="#" class="header__trigger">
+                <span class=""></span>
+            </a>
+
+            <ul class="header__cabinet-nav">
+                <li><a href="orders-page.html">Заказы</a></li>
+                <li><a href="#">Склад</a></li>
+                <li><a href="#">Витрина</a></li>
+                <li><a href="#">Продвижение</a></li>
+                <li><a href="#">Сообщения</a></li>
+                <li><a href="#">Бугхалтерия</a></li>
+                <li><a href="#">Мои покупки</a></li>
+                <li><a href="#">Профиль</a></li>
+                <li><a href="#">Настройки магазина</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</header>
+
+<section class="cabinet">
+
+    <div class="container">
+
+        <h1 class="title">Недавно просмотренные</h1>
+
+        <i class="fa fa-bars cabinet__sidebar--button" aria-hidden="true"></i>
+
+            <div class="cabinet__sidebar">
+
+                <ul class="cabinet__sidebar--menu">
+                    <li><a href="">История заказов</a></li>
+                    <li class="active"><a href="">Избранные товары</a></li>
+                    <li><a href="">Недавно просмотренные</a></li>
+                    <li><a href="">Отслеживаемое</a></li>
+                    <li><a href="">Сравнение</a></li>
+                </ul>
+
+            </div>
+
+            <div class="cabinet__content">
+              <div class="catalog__main--tools">
+                  <a href="#" class="catalog__main--clear">Уведомления</a>
+                  <ul class="catalog__main--sorting">
+                      <li>Сортировать:</li>
+                      <li><a href="#">Популярность</a></li>
+                      <li><a href="#">Цены</a></li>
+                      <li><a href="#">Новинки</a></li>
+                      <li><a href="#">Скидки</a></li>
+                  </ul>
+
+              </div>
+
+              <div id="list-view" class="catalog__main--tabs-box">
+
+                  <div class="product__box">
+
+                      <div class="catalog__grid-element">
+
+                          <a href="#" class="catalog__grid-element--photo">
+                              <span class="product__box--stock">- 20%</span>
+                              <img src="../static/i/goods/product_2.png" alt="">
+                          </a>
+
+                          <div class="catalog__grid-element--descr">
+
+                              <a href="#" class="catalog__grid-element--category">Аудио техника</a>
+                              <a href="#" class="catalog__grid-element--name">Samsung WAM7500 акустическая система</a>
+
+                              <p class="catalog__grid-element--about">Уникальный дизайн и стильная текстура обработки корпуса </p>
+
+                              <a href="#" class="rating">
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star"></span>
+                                  <span class="value">Отзывы (3)</span>
+                              </a>
+
+
+                          </div>
+
+                          <div class="catalog__grid-element--tools">
+
+                              <p class="product-slider__carousel--old-price">27 150 р.</p>
+
+                              <p class="product-slider__carousel--new-price">23 490 руб.</p>
+
+                              <a href="#" class="product-slider__carousel--buy">
+                                  <span></span>
+                                  <span>заказать</span>
+                              </a>
+
+                              <a href="#" class="product-slider__carousel--coins">
+                                  <span class="counter">240</span> монеток
+                              </a>
+
+                              <div class="product-slider__carousel--tools">
+
+                                  <a href="#">Сравнить</a>
+
+                                  <a href="#">В избранное</a>
+
+                              </div>
+
+
+                          </div>
+
+                      </div>
+
+                      <div class="catalog__grid-element">
+
+                          <a href="#" class="catalog__grid-element--photo">
+                              <img src="../static/i/goods/product_3.png" alt="">
+                          </a>
+
+                          <div class="catalog__grid-element--descr">
+
+                              <a href="#" class="catalog__grid-element--category">Ноутбуки</a>
+                              <a href="#" class="catalog__grid-element--name">Asus Transformer 3 Pro Gold Black</a>
+
+                              <p class="catalog__grid-element--about">При взгляде на Asus в глаза бросается совершенство его дизайна</p>
+
+                              <a href="#" class="rating">
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star"></span>
+                                  <span class="value">Отзывы (3)</span>
+                              </a>
+
+
+                          </div>
+
+                          <div class="catalog__grid-element--tools">
+
+                              <p class="product-slider__carousel--price">38 900 руб.</p>
+
+                              <a href="#" class="product-slider__carousel--buy">
+                                  <span></span>
+                                  <span>заказать</span>
+                              </a>
+
+                              <a href="#" class="product-slider__carousel--coins">
+                                  <span class="counter">750</span> монеток
+                              </a>
+
+                              <div class="product-slider__carousel--tools">
+
+                                  <a href="#">Сравнить</a>
+
+                                  <a href="#">В избранное</a>
+
+                              </div>
+
+
+                          </div>
+
+                      </div>
+
+                      <div class="catalog__grid-element">
+
+                          <a href="#" class="catalog__grid-element--photo">
+                              <img src="../static/i/goods/product_4.png" alt="">
+                          </a>
+
+                          <div class="catalog__grid-element--descr">
+
+                              <a href="#" class="catalog__grid-element--category">Наушники</a>
+                              <a href="#" class="catalog__grid-element--name">Наушники Beats Solo2 Wireless</a>
+
+                              <p class="catalog__grid-element--about">Наслаждайтесь чистым динамическим звучанием беспроводных наушников </p>
+
+                              <a href="#" class="rating">
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star"></span>
+                                  <span class="value">Отзывы (3)</span>
+                              </a>
+
+
+                          </div>
+
+                          <div class="catalog__grid-element--tools">
+
+                              <p class="product-slider__carousel--price">5 380 руб.</p>
+
+                              <a href="#" class="product-slider__carousel--buy">
+                                  <span></span>
+                                  <span>заказать</span>
+                              </a>
+
+                              <a href="#" class="product-slider__carousel--coins">
+                                  <span class="counter">120</span> монеток
+                              </a>
+
+                              <div class="product-slider__carousel--tools">
+
+                                  <a href="#">Сравнить</a>
+
+                                  <a href="#">В избранное</a>
+
+                              </div>
+
+
+                          </div>
+
+                      </div>
+
+                      <div class="catalog__grid-element">
+
+                          <a href="#" class="catalog__grid-element--photo">
+                              <img src="../static/i/goods/product_9.png" alt="">
+                          </a>
+
+                          <div class="catalog__grid-element--descr">
+
+                              <a href="#" class="catalog__grid-element--category">Смартфоны</a>
+                              <a href="#" class="catalog__grid-element--name">Apple iPhone 6s Plus 32 ГБ золотой</a>
+
+                              <p class="catalog__grid-element--about">При взгляде на Asus в глаза бросается совершенство его дизайна</p>
+
+                              <a href="#" class="rating">
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star"></span>
+                                  <span class="value">Отзывы (3)</span>
+                              </a>
+
+
+                          </div>
+
+                          <div class="catalog__grid-element--tools">
+
+                              <p class="product-slider__carousel--price">46 750 руб.</p>
+
+                              <a href="#" class="product-slider__carousel--buy">
+                                  <span></span>
+                                  <span>заказать</span>
+                              </a>
+
+                              <a href="#" class="product-slider__carousel--coins">
+                                  <span class="counter">2 300</span> монеток
+                              </a>
+
+                              <div class="product-slider__carousel--tools">
+
+                                  <a href="#">Сравнить</a>
+
+                                  <a href="#">В избранное</a>
+
+                              </div>
+
+
+                          </div>
+
+                      </div>
+
+                      <div class="catalog__grid-element">
+
+                          <a href="#" class="catalog__grid-element--photo">
+                              <img src="../static/i/goods/product_10.png" alt="">
+                          </a>
+
+                          <div class="catalog__grid-element--descr">
+
+                              <a href="#" class="catalog__grid-element--category">Фотоаппараты</a>
+                              <a href="#" class="catalog__grid-element--name">Samsung NX Mini Kit серый</a>
+
+                              <p class="catalog__grid-element--about">Системная камера Samsung NX сочетает простоту настроек</p>
+
+                              <a href="#" class="rating">
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star"></span>
+                                  <span class="value">Отзывы (3)</span>
+                              </a>
+
+
+                          </div>
+
+                          <div class="catalog__grid-element--tools">
+
+                              <p class="product-slider__carousel--price">7 830 руб.</p>
+
+                              <a href="#" class="product-slider__carousel--buy">
+                                  <span></span>
+                                  <span>заказать</span>
+                              </a>
+
+                              <a href="#" class="product-slider__carousel--coins">
+                                  <span class="counter">370</span> монеток
+                              </a>
+
+                              <div class="product-slider__carousel--tools">
+
+                                  <a href="#">Сравнить</a>
+
+                                  <a href="#">В избранное</a>
+
+                              </div>
+
+
+                          </div>
+
+                      </div>
+
+                      <div class="catalog__grid-element">
+
+                          <a href="#" class="catalog__grid-element--photo">
+                              <img src="../static/i/goods/product_11.png" alt="">
+                          </a>
+
+                          <div class="catalog__grid-element--descr">
+
+                              <a href="#" class="catalog__grid-element--category">Принтеры</a>
+                              <a href="#" class="catalog__grid-element--name">HP Color LaserJet Pro Mellita V</a>
+
+                              <p class="catalog__grid-element--about">Быстро печатает! Как в цвете так и текст... засекал 18 страниц в минуту</p>
+
+                              <a href="#" class="rating">
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star"></span>
+                                  <span class="value">Отзывы (3)</span>
+                              </a>
+
+
+                          </div>
+
+                          <div class="catalog__grid-element--tools">
+
+                              <p class="product-slider__carousel--price">11 690 руб.</p>
+
+                              <a href="#" class="product-slider__carousel--buy">
+                                  <span></span>
+                                  <span>заказать</span>
+                              </a>
+
+                              <a href="#" class="product-slider__carousel--coins">
+                                  <span class="counter">370</span> монеток
+                              </a>
+
+                              <div class="product-slider__carousel--tools">
+
+                                  <a href="#">Сравнить</a>
+
+                                  <a href="#">В избранное</a>
+
+                              </div>
+
+
+                          </div>
+
+                      </div>
+
+                      <div class="catalog__grid-element">
+
+                          <a href="#" class="catalog__grid-element--photo">
+                              <span class="product__box--stock">- 20%</span>
+                              <img src="../static/i/goods/product_12.png" alt="">
+                          </a>
+
+                          <div class="catalog__grid-element--descr">
+
+                              <a href="#" class="catalog__grid-element--category">Умные часы</a>
+                              <a href="#" class="catalog__grid-element--name">Apple Watch 42mm  Milanese Серый</a>
+
+                              <p class="catalog__grid-element--about">Они умеют всё то, что должны уметь часы, но совершенно по-новому</p>
+
+                              <a href="#" class="rating">
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star"></span>
+                                  <span class="value">Отзывы (3)</span>
+                              </a>
+
+
+                          </div>
+
+                          <div class="catalog__grid-element--tools">
+
+                              <p class="product-slider__carousel--old-price">35 390 р.</p>
+
+                              <p class="product-slider__carousel--new-price">32 989 руб.</p>
+
+                              <a href="#" class="product-slider__carousel--buy">
+                                  <span></span>
+                                  <span>заказать</span>
+                              </a>
+
+                              <a href="#" class="product-slider__carousel--coins">
+                                  <span class="counter">1 030</span> монеток
+                              </a>
+
+                              <div class="product-slider__carousel--tools">
+
+                                  <a href="#">Сравнить</a>
+
+                                  <a href="#">В избранное</a>
+
+                              </div>
+
+
+                          </div>
+
+                      </div>
+
+                      <div class="catalog__grid-element">
+
+                          <a href="#" class="catalog__grid-element--photo">
+                              <img src="../static/i/goods/product_3.png" alt="">
+                          </a>
+
+                          <div class="catalog__grid-element--descr">
+
+                              <a href="#" class="catalog__grid-element--category">Ноутбуки</a>
+                              <a href="#" class="catalog__grid-element--name">Asus Transformer 3 Pro Gold Black</a>
+
+                              <p class="catalog__grid-element--about">При взгляде на Asus в глаза бросается совершенство его дизайна</p>
+
+                              <a href="#" class="rating">
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star"></span>
+                                  <span class="value">Отзывы (3)</span>
+                              </a>
+
+
+                          </div>
+
+                          <div class="catalog__grid-element--tools">
+
+                              <p class="product-slider__carousel--price">38 900 руб.</p>
+
+                              <a href="#" class="product-slider__carousel--buy">
+                                  <span></span>
+                                  <span>заказать</span>
+                              </a>
+
+                              <a href="#" class="product-slider__carousel--coins">
+                                  <span class="counter">750</span> монеток
+                              </a>
+
+                              <div class="product-slider__carousel--tools">
+
+                                  <a href="#">Сравнить</a>
+
+                                  <a href="#">В избранное</a>
+
+                              </div>
+
+
+                          </div>
+
+                      </div>
+
+                      <div class="catalog__grid-element">
+
+                          <a href="#" class="catalog__grid-element--photo">
+                              <img src="../static/i/goods/product_4.png" alt="">
+                          </a>
+
+                          <div class="catalog__grid-element--descr">
+
+                              <a href="#" class="catalog__grid-element--category">Наушники</a>
+                              <a href="#" class="catalog__grid-element--name">Наушники Beats Solo2 Wireless</a>
+
+                              <p class="catalog__grid-element--about">Наслаждайтесь чистым динамическим звучанием беспроводных наушников </p>
+
+                              <a href="#" class="rating">
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star"></span>
+                                  <span class="value">Отзывы (3)</span>
+                              </a>
+
+
+                          </div>
+
+                          <div class="catalog__grid-element--tools">
+
+                              <p class="product-slider__carousel--price">5 380 руб.</p>
+
+                              <a href="#" class="product-slider__carousel--buy">
+                                  <span></span>
+                                  <span>заказать</span>
+                              </a>
+
+                              <a href="#" class="product-slider__carousel--coins">
+                                  <span class="counter">120</span> монеток
+                              </a>
+
+                              <div class="product-slider__carousel--tools">
+
+                                  <a href="#">Сравнить</a>
+
+                                  <a href="#">В избранное</a>
+
+                              </div>
+
+
+                          </div>
+
+                      </div>
+
+                      <div class="catalog__grid-element">
+
+                          <a href="#" class="catalog__grid-element--photo">
+                              <img src="../static/i/goods/product_9.png" alt="">
+                          </a>
+
+                          <div class="catalog__grid-element--descr">
+
+                              <a href="#" class="catalog__grid-element--category">Смартфоны</a>
+                              <a href="#" class="catalog__grid-element--name">Apple iPhone 6s Plus 32 ГБ золотой</a>
+
+                              <p class="catalog__grid-element--about">При взгляде на Asus в глаза бросается совершенство его дизайна</p>
+
+                              <a href="#" class="rating">
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star"></span>
+                                  <span class="value">Отзывы (3)</span>
+                              </a>
+
+
+                          </div>
+
+                          <div class="catalog__grid-element--tools">
+
+                              <p class="product-slider__carousel--price">46 750 руб.</p>
+
+                              <a href="#" class="product-slider__carousel--buy">
+                                  <span></span>
+                                  <span>заказать</span>
+                              </a>
+
+                              <a href="#" class="product-slider__carousel--coins">
+                                  <span class="counter">2 300</span> монеток
+                              </a>
+
+                              <div class="product-slider__carousel--tools">
+
+                                  <a href="#">Сравнить</a>
+
+                                  <a href="#">В избранное</a>
+
+                              </div>
+
+
+                          </div>
+
+                      </div>
+
+                      <div class="catalog__grid-element">
+
+                          <a href="#" class="catalog__grid-element--photo">
+                              <img src="../static/i/goods/product_10.png" alt="">
+                          </a>
+
+                          <div class="catalog__grid-element--descr">
+
+                              <a href="#" class="catalog__grid-element--category">Фотоаппараты</a>
+                              <a href="#" class="catalog__grid-element--name">Samsung NX Mini Kit серый</a>
+
+                              <p class="catalog__grid-element--about">Системная камера Samsung NX сочетает простоту настроек</p>
+
+                              <a href="#" class="rating">
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star"></span>
+                                  <span class="value">Отзывы (3)</span>
+                              </a>
+
+
+                          </div>
+
+                          <div class="catalog__grid-element--tools">
+
+                              <p class="product-slider__carousel--price">7 830 руб.</p>
+
+                              <a href="#" class="product-slider__carousel--buy">
+                                  <span></span>
+                                  <span>заказать</span>
+                              </a>
+
+                              <a href="#" class="product-slider__carousel--coins">
+                                  <span class="counter">370</span> монеток
+                              </a>
+
+                              <div class="product-slider__carousel--tools">
+
+                                  <a href="#">Сравнить</a>
+
+                                  <a href="#">В избранное</a>
+
+                              </div>
+
+
+                          </div>
+
+                      </div>
+
+                      <div class="catalog__grid-element">
+
+                          <a href="#" class="catalog__grid-element--photo">
+                              <img src="../static/i/goods/product_3.png" alt="">
+                          </a>
+
+                          <div class="catalog__grid-element--descr">
+
+                              <a href="#" class="catalog__grid-element--category">Ноутбуки</a>
+                              <a href="#" class="catalog__grid-element--name">Asus Transformer 3 Pro Gold Black</a>
+
+                              <p class="catalog__grid-element--about">При взгляде на Asus в глаза бросается совершенство его дизайна</p>
+
+                              <a href="#" class="rating">
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star rating__fil-star"></span>
+                                  <span class="rating__star"></span>
+                                  <span class="value">Отзывы (3)</span>
+                              </a>
+
+
+                          </div>
+
+                          <div class="catalog__grid-element--tools">
+
+                              <p class="product-slider__carousel--price">38 900 руб.</p>
+
+                              <a href="#" class="product-slider__carousel--buy">
+                                  <span></span>
+                                  <span>заказать</span>
+                              </a>
+
+                              <a href="#" class="product-slider__carousel--coins">
+                                  <span class="counter">750</span> монеток
+                              </a>
+
+                              <div class="product-slider__carousel--tools">
+
+                                  <a href="#">Сравнить</a>
+
+                                  <a href="#">В избранное</a>
+
+                              </div>
+
+
+                          </div>
+
+                      </div>
+
+                  </div>
+
+              </div>
+
+              <div class="catalog__main--pagination">
+
+                  <div class="catalog__main--select">
+                      <select name="" id="">
+                          <option value="20">Товары 20</option>
+                          <option value="30">Товары 30</option>
+                          <option value="40">Товары 40</option>
+                      </select>
+                  </div>
+
+                  <div class="catalog__main--find">
+                      Показано <span class="value">20</span> из <span class="total-value">3 820</span> товаров
+                  </div>
+
+                  <ul class="pagination">
+                      <li><a href="#" class="number active">1</a></li>
+                      <li><a href="#" class="number">2</a></li>
+                      <li><a href="#" class="number">3</a></li>
+                      <li class="dots">...</li>
+                      <li><a href="#" class="number">18</a></li>
+                  </ul>
+
+              </div>
+            </div>
+
+    </div>
+
+</section>
+
+
+<!-- @@include ../footer.html -->
+
+<!-- @@include ../html_close.html -->
