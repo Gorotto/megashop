@@ -793,7 +793,7 @@
       position: relative;
       float: left;
       width: 100%;
-      margin-top: 80px;
+      margin-top: 50px;
       margin-bottom: 132px;
       padding-top: 28px;
       @include box-sizing(border-box);
@@ -875,6 +875,10 @@
       .product__box--stock {
         top: 0;
       }
+      @include breakpoint(max-width 660px) {
+        margin: 0 auto;
+        float: none;
+      }
     }
     &--descr {
       display: block;
@@ -914,6 +918,9 @@
       &:hover, &:active, &:focus {
         color: #878787;
       }
+      @include breakpoint(max-width 660px) {
+        text-align: center;
+      }
     }
     &--name {
       display: block;
@@ -946,6 +953,11 @@
       position: relative;
       float: left;
       width: 197px;
+      @include breakpoint(max-width 660px) {
+        width: 100%;
+        padding: 10px 20px 0;
+        box-sizing: border-box;
+      }
       .product-slider__carousel--old-price{
         width: 100%;
         font-size: 13px;

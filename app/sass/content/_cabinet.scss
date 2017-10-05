@@ -36,6 +36,15 @@
     border-radius: 4px;
     padding: 0 18px;
     @include box-sizing(border-box);
+    @include breakpoint(max-width 770px){
+      display: none;
+      position: absolute;
+      border: 1px solid #e3e3e3;
+      width: 200px;
+      left: 10px;
+      margin-top: 187px;
+      z-index: 10;
+    }
     @include breakpoint(max-width 660px){
       width: 100%;
       display: none;
@@ -138,6 +147,41 @@
     border-radius: 4px;
     margin-left: 29px;
     @include box-sizing(border-box);
+    .catalog__main--tools {
+      margin: 28px;
+      width: calc(100% - (28px*2));
+    }
+    .catalog__main--tabs-box {
+      padding: 0 28px;
+      @include box-sizing(border-box);
+    }
+    .catalog__main {
+      &--tools {
+        padding-top: 9px;
+        padding-bottom: 9px;
+      }
+      &--sorting {
+        width: calc(100% - 180px);
+        height: 40px;
+        align-items: center;
+      }
+      &--clear {
+        width: 180px;
+        height: 40px;
+        background-color: #f5f5f5;
+        color: #5d5d5d;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 40px;
+        border-radius: 23px;
+        float: left;
+        text-align: center;
+      }
+    }
+    @include breakpoint(max-width 770px){
+      width: 100%;
+      margin-left: 0;
+    }
     @include breakpoint(max-width 660px){
       width: 100%;
       margin-left: 0;
