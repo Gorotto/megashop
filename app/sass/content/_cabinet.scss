@@ -146,6 +146,9 @@
     background-color: #fff;
     border-radius: 4px;
     margin-left: 29px;
+    &--border {
+      border: none;
+    }
     @include box-sizing(border-box);
     .catalog__main--tools {
       margin: 28px;
@@ -442,7 +445,105 @@
       font-weight: 600;
     }
   }
+  &__orders {
+    width: 100%;
+    float: left;
+    position: relative;
+    &--row {
+      width: 100%;
+      border: 1px solid #ddd;
+      margin: 0 0 20px;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flex;
+      display: inline-flex;
+      flex-flow: row wrap;
+      &-column {
+        padding: 15px 20px;
+        box-sizing: border-box;
+        @include breakpoint(max-width 770px) {
+          flex-basis: 33.3%;
+          width: 33.3%;
+          padding: 0 20px;
+        }
+        @include breakpoint(max-width 660px) {
+          flex-basis: 100%;
+          width: 100%;
+          padding: 0 20px;
+        }
+        &:last-of-type {
+          padding-left: 0;
+          padding-right: 0;
+          @include breakpoint(max-width 660px) {
+            padding-bottom: 15px;
+          }
+        }
+        &:first-of-type {
+          border-right: 1px solid #ddd;
+        }
+        .product__stock--countdown-clock {
+          width: auto;
+          ul#countdown {
+            height: 70px;
+            li{
+              width: 49px;
+              height: 40px;
+              &:after {
+                margin-left: 51px;
+              }
+              span {
+                font-size: 27px;
+                line-height: 16px;
+              }
+              p {
+                margin-left: -8px;
+                top: 42px;
+                font-size: 11px;
+              }
+            }
+          }
+        }
+        p {
+          color: #0e0e0e;
+          width: 100%;
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 19px;
+        }
+      }
+      &-more{
+        width: 170px;
+        height: 40px;
+        background-color: #f5f5f5;
+        color: #5d5d5d;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 40px;
+        border-radius: 23px;
+        float: left;
+        text-align: center;
+        position: relative;
+        margin-left: 10px;
+        top: calc(50% - (40px/2));
+      }
+      .cabinet__orders--row-order {
+        color: #0e0e0e;
+        font-size: 17px;
+        font-weight: 400;
+      }
+      .cabinet__orders--row-price {
+        color: #0e0e0e;
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .cabinet__orders--row-code,
+      .cabinet__orders--row-commission,
+      .cabinet__orders--row-min-commission {
+        font-size: 15px;
+      }
+    }
+  }
 }
+
 
 .selected-message {
   background-color: #f5f5f5;
@@ -562,4 +663,32 @@
   font-weight: 300;
   line-height: 38px;
   margin-left: 20px;
+}
+
+.status-delivery {
+  color: #d3a601;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  height: 65px;
+  display: table-cell;
+  vertical-align: bottom;
+  width: 130px;
+  @include breakpoint(max-width 660px) {
+    height: 30px;
+    vertical-align: middle;
+  }
+  &--confirm {
+    color: #c12025;
+    text-decoration: underline;
+  }
+  &--way {
+    color: #d3a601;
+  }
+  &--complete {
+    color: #379a0d;
+  }
+  &--returned {
+    color: #999;
+  }
 }
