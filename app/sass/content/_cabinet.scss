@@ -400,6 +400,70 @@
         }
       }
     }
+    &--compare {
+      width: 100%;
+      float: left;
+      position: relative;
+      padding: 40px;
+      box-sizing: border-box;
+      &-wrap {
+        width: 3000px;
+        float: left;
+      }
+      &-products {
+        width: 70%;
+        float: left;
+        overflow-x: scroll;
+        &::-webkit-scrollbar-button {
+          background-image:url('');
+          background-repeat:no-repeat;
+          width: 4px;
+          height: 4px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color:#ecedee
+        }
+
+        &::-webkit-scrollbar-thumb {
+          -webkit-border-radius: 3px;
+          border-radius: 3px;
+          background-color: #c12025;
+          height: 4px;
+        }
+
+
+        &::-webkit-resizer{
+          background-image:url('');
+          background-repeat:no-repeat;
+          height: 4px;
+        }
+
+        &::-webkit-scrollbar{
+          height: 4px;
+        }
+      }
+      .product-slider__carousel--item {
+        height: 420px;
+        &:hover {
+          box-shadow: none;
+        }
+      }
+      &-row {
+        width: 100%;
+        float: left;
+        span {
+          width: 262px;
+          float: left;
+        }
+        &:hover {
+          background-color: #f5f5f5;
+        }
+        &:first-of-type {
+          border-top: 1px solid #ddd;
+        }
+      }
+    }
   }
   &__form {
     width: 430px;
