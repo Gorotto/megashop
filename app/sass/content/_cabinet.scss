@@ -406,6 +406,9 @@
       position: relative;
       padding: 40px;
       box-sizing: border-box;
+      @include breakpoint(max-width 660px) {
+        padding: 10px;
+      }
       &-wrap {
         width: 3000px;
         float: left;
@@ -424,6 +427,12 @@
         width: 65%;
         float: left;
         overflow-x: scroll;
+        @include breakpoint(max-width 770px) {
+          width: 68%;
+        }
+        @include breakpoint(max-width 660px) {
+          width: 100%;
+        }
         &::-webkit-scrollbar-button {
           background-image:url('');
           background-repeat:no-repeat;
@@ -456,10 +465,18 @@
       &-panel {
         width: calc(100% - 65%);
         float: left;
-
+        @include breakpoint(max-width 770px) {
+          width: calc(100% - 68%);
+        }
+        @include breakpoint(max-width 660px) {
+          width: 100%;
+        }
       }
       .product-slider__carousel--item {
         height: 420px;
+        @include breakpoint(max-width 660px) {
+          width: 230px;
+        }
         &:hover {
           box-shadow: none;
         }
@@ -483,6 +500,9 @@
           color: #0e0e0e;
           font-size: 14px;
           font-weight: 300;
+          @include breakpoint(max-width 660px) {
+            width: 230px;
+          }
         }
         &:hover {
           background-color: #f5f5f5;
@@ -495,11 +515,19 @@
         display: inline-flex;
         flex-flow: row wrap;
         align-items: center;
+        @include breakpoint(max-width 660px) {
+          width: 100%;
+          height: auto;
+        }
         .regist__form--radios {
           margin: 0;
           input[type=radio]+label {
             width: 100%;
             margin-bottom: 15px;
+            @include breakpoint(max-width 660px) {
+              width: 50%;
+              margin-right: 0;
+            }
           }
         }
       }
@@ -507,6 +535,9 @@
         width: 100%;
         float: left;
         position: relative;
+        @include breakpoint(max-width 660px) {
+          display: none;
+        }
         .title {
           font-size: 18px;
         }
@@ -519,6 +550,9 @@
           background-color: #f5f5f5;
           border-radius: 10px;
           box-sizing: border-box;
+          @include breakpoint(max-width 770px) {
+            width: 95%;
+          }
           li {
             width: 100%;
             list-style-type: none;
@@ -548,8 +582,14 @@
       padding: 0 20px;
       box-sizing: border-box;
       margin: 22px 22px 22px 0;
+      @include breakpoint(max-width 660px) {
+        margin: 10px;
+      }
       &:first-of-type {
         margin-left: 40px;
+        @include breakpoint(max-width 660px) {
+          margin-left: 10px;
+        }
       }
       .count {
         position: absolute;
