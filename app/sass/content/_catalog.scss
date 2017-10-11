@@ -982,6 +982,24 @@
       .product-slider__carousel--tools{
         display: block;
       }
+      &-edit {
+        background-image: url("../i/icons/pen-icon.png");
+        width: 16px;
+        height: 16px;
+        display: block;
+        float: left;
+        margin-left: 30px;
+        margin-top: 15px;
+      }
+      &-delete {
+        background-image: url("../i/icons/delete-icon.png");
+        width: 24px;
+        height: 24px;
+        display: block;
+        float: right;
+        margin-right: 60px;
+        margin-top: 10px;
+      }
     }
     &--code {
       width: 100%;
