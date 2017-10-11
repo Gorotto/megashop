@@ -947,11 +947,13 @@
     width: 100%;
     float: left;
     position: relative;
+    margin-bottom: 100px;
     &--left {
       width: 370px;
       float: left;
       position: relative;
       text-align: left;
+      margin-right: 30px;
       &-info {
         width: 100%;
         float: left;
@@ -1002,9 +1004,223 @@
         }
       }
     }
+    &--right {
+      float: left;
+      width: calc(100% - 400px);
+      position: relative;
+      border: 1px solid #e5e5e5;
+      border-radius: 4px;
+      box-sizing: border-box;
+      &-title {
+        width: 100%;
+        float: left;
+        position: relative;
+        background-color: #f5f5f5;
+        border-bottom: 1px solid #ddd;
+        padding: 15px;
+        box-sizing: border-box;
+        h4 {
+          width: 50%;
+          float: left;
+          margin: 0;
+          line-height: 36px;
+        }
+        a {
+          width: 180px;
+          height: 36px;
+          background-color: #fff;
+          border-radius: 20px;
+          float: right;
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 36px;
+          color: #000;
+          text-align: right;
+          position: relative;
+          padding-right: 25px;
+          box-sizing: border-box;
+        }
+      }
+      &-tools {
+        width: 100%;
+        float: left;
+        padding: 19px 15px 0;
+        box-sizing: border-box;
+        input, select {
+          width: 200px;
+          height: 35px;
+          background-color: #fff;
+          border: 1px solid #e5e5e5;
+          border-radius: 18px;
+          padding-left: 15px;
+          float: left;
+          cursor: pointer;
+          box-sizing: border-box;
+          &::placeholder {
+            color: #868686;
+            font-size: 13px;
+            font-weight: 300;
+            line-height: 27px;
+          }
+        }
+        select {
+          height: 35px;
+          -webkit-appearance: none;
+           -moz-appearance: none;
+           text-indent: 0.01px;
+           text-overflow: '';
+           -ms-appearance: none;
+           appearance: none!important;
+           color: #868686;
+          font-size: 13px;
+          font-weight: 300;
+          line-height: 27px;
+        }
+        span {
+          text-align: right;
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 40px;
+          color: #000;
+          float: left;
+          margin-right: 10px;
+        }
+      }
+      &-show {
+        width: 146px;
+        height: 35px;
+        background-color: #72c835;
+        border-radius: 20px;
+        text-align: center;
+        float: left;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 25px;
+        border: none;
+        color: #fff;
+      }
+      &-row {
+        width: 100%;
+        float: left;
+        position: relative;
+        padding: 15px 15px 15px 0;
+        box-sizing: border-box;
+        border-top: 1px solid #ddd;
+        &:hover {
+          background-color: #f5f5f5;
+        }
+        span {
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 27px;
+          color: #000;
+          float: left;
+        }
+        &:first-of-type {
+          span {
+            color: #868686;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 27px;
+            text-align: left;
+          }
+        }
+      }
+      &-number {
+        width: 7%;
+        text-align: center;
+      }
+      &-date, &-type {
+        width: 20%;
+        text-align: left;
+      }
+      &-event {
+        width: 38%;
+        text-align: left;
+      }
+      &-amount {
+        width: 15%;
+        text-align: right;
+      }
+    }
   }
 }
-
+.excel-icon {
+  background-image: url("../i/icons/excel-icon.png");
+  display: block;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 8px;
+  left: 23px;
+}
+.datepicker-inner {
+   color: #0e0e0e;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+ }
+ .tools__item {
+  margin-right: 15px;
+  float: left;
+  position: relative;
+  margin-bottom: 15px;
+  &:nth-of-type(1), &:nth-of-type(2) {
+    &:after {
+     content: "";
+     background-image: url("../i/icons/datepicker-icon.png");
+     width: 19px;
+     height: 20px;
+     position: absolute;
+     right: 15px;
+     top: 8px;
+    }
+  }
+  &:nth-of-type(2) {
+    margin-left: 85px;
+  }
+  &--search {
+    margin-left: 27px;
+  }
+  &--button {
+    position: absolute;
+    right: 0;
+    background-image: url("../i/icons/search-prod__icon.png");
+    width: 18px;
+    height: 18px;
+    border: none;
+    background-color: #fff;
+    right: 13px;
+    top: 9px;
+  }
+  &--select {
+    width: 200px;
+    height: 35px;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    float: left;
+    @include breakpoint(max-width 770px) {
+      float: none;
+      display: inline-block;
+    }
+    @include breakpoint(max-width 660px) {
+      width: 100%;
+    }
+    &:after {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 11px;
+      height: 6px;
+      top: 16px;
+      right: 19px;
+      background-image: url(../i/icons/arrow-down-icon.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+ }
 .status-online {
   &:before {
     content: "";

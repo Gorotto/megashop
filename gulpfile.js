@@ -108,6 +108,7 @@ gulp.task('vendors', ['clean'], function () {
             'app/js-libs/jquery-ui.min.js',
             'app/js-libs/jquery.fancybox.js',
             'app/js-libs/slick.js',
+            'app/js-libs/jquery.datetimepicker.full.min.js',
             'app/js-libs/countdown.js'])// Берем все необходимые библиотеки
         .pipe(plumber())
         .pipe(concat('vendors.js'))// Собираем их в кучу в новом файле vendor.js
@@ -150,7 +151,7 @@ gulp.task('extend-blocks', function () {
         // .pipe(browserSync.stream({}));
 });
 
-gulp.task('watch', ['browser-sync', 'compress', 'extend-pages', 'css-libs', 'img', 'sass'], function () {
+gulp.task('watch', ['browser-sync', 'compress', 'vendors', 'extend-pages', 'css-libs', 'img', 'sass'], function () {
     gulp.watch('app/libs/**/*', ['css-libs']); // Наблюдение за папкой libs
     gulp.watch('app/img/**/*', ['img']);// Наблюдение за папкой img
     gulp.watch('app/sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
