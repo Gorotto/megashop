@@ -954,6 +954,9 @@
       position: relative;
       text-align: left;
       margin-right: 30px;
+      @include breakpoint(max-width 990px) {
+        width: 100%;
+      }
       &-info {
         width: 100%;
         float: left;
@@ -1003,6 +1006,7 @@
           color: #000;
         }
       }
+
     }
     &--right {
       float: left;
@@ -1011,6 +1015,9 @@
       border: 1px solid #e5e5e5;
       border-radius: 4px;
       box-sizing: border-box;
+      @include breakpoint(max-width 990px) {
+        width: 100%;
+      }
       &-title {
         width: 100%;
         float: left;
@@ -1024,6 +1031,9 @@
           float: left;
           margin: 0;
           line-height: 36px;
+          @include breakpoint(max-width 660px) {
+            width: 100%;
+          }
         }
         a {
           width: 180px;
@@ -1039,6 +1049,10 @@
           position: relative;
           padding-right: 25px;
           box-sizing: border-box;
+          @include breakpoint(max-width 660px) {
+            float: left;
+            margin-top: 10px;
+          }
         }
       }
       &-tools {
@@ -1098,6 +1112,11 @@
         line-height: 25px;
         border: none;
         color: #fff;
+        @include breakpoint(max-width 660px) {
+          width: calc(100% - 28px);
+          float: right;
+          margin-bottom: 15px;
+        }
       }
       &-row {
         width: 100%;
@@ -1129,10 +1148,16 @@
       &-number {
         width: 7%;
         text-align: center;
+        @include breakpoint(max-width 660px) {
+          display: none;
+        }
       }
-      &-date, &-type {
+      &-date {
         width: 20%;
         text-align: left;
+        @include breakpoint(max-width 660px) {
+          text-align: center;
+        }
       }
       &-event {
         width: 38%;
@@ -1141,6 +1166,13 @@
       &-amount {
         width: 15%;
         text-align: right;
+      }
+      &-type {
+        width: 20%;
+        text-align: left;
+        @include breakpoint(max-width 660px) {
+          width: 27%;
+        }
       }
     }
   }
@@ -1165,6 +1197,19 @@
   float: left;
   position: relative;
   margin-bottom: 15px;
+  @include breakpoint(max-width 990px) {
+    margin-right: 10px;
+  }
+  @include breakpoint(max-width 660px) {
+    width: 100%;
+    input{
+      width: calc(100% - 28px);
+      margin-right: 0;
+    }
+    select {
+      width: 100%;
+    }
+  }
   &:nth-of-type(1), &:nth-of-type(2) {
     &:after {
      content: "";
@@ -1178,6 +1223,9 @@
   }
   &:nth-of-type(2) {
     margin-left: 85px;
+    @include breakpoint(max-width 660px) {
+      margin-left: 0;
+    }
   }
   &--search {
     margin-left: 27px;
@@ -1192,6 +1240,7 @@
     background-color: #fff;
     right: 13px;
     top: 9px;
+
   }
   &--select {
     width: 200px;
@@ -1205,7 +1254,8 @@
       display: inline-block;
     }
     @include breakpoint(max-width 660px) {
-      width: 100%;
+      width: calc(100% - 28px);
+      float: right;
     }
     &:after {
       display: block;
