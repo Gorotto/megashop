@@ -532,6 +532,21 @@ $(document).ready(function () {
         );
     });
     /*close*/
+    /*send ms to admin*/
+    $(document).on('click', '.cabinet__edit--reviews-edit', function (event) {
+        event.preventDefault();
+        var parent = $(this).parent();
+
+        parent.find('.modal-feedback').css('display', 'block').animate({opacity: 1}, 200);
+    });
+    $(document).on('click', '.modal-confirm__no, .modal-confirm__yes', function () {
+        $('.modal-feedback').animate({opacity: 0}, 200,
+            function () {
+                $(this).css('display', 'none');
+            }
+        );
+    });
+    /*close*/
     /*----------close-----------*/
 
     /*rating*/

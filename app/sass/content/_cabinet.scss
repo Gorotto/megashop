@@ -1229,6 +1229,61 @@
       box-sizing: border-box;
     }
   }
+  &__feedback {
+    width: 669px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    float: left;
+    z-index: 10;
+    padding: 40px;
+    box-sizing: border-box;
+    margin-top: 15px;
+    display: none;
+    .title {
+      font-size: 18px;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    .rating {
+      width: 100%;
+      float: left;
+      margin: 15px 0 1px;
+      &__star {
+        width: 19px;
+        height: 19px;
+        cursor: pointer;
+      }
+      &__title {
+        float: left;
+        color: rgba(14, 14, 14, 0.65);
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 17px;
+        text-align: left;
+        margin-right: 15px;
+      }
+    }
+    .cabinet__edit--reviews-wrap {
+      margin-bottom: 25px;
+    }
+    .modal-confirm__no,
+    .modal-confirm__yes{
+      margin-top: 20px;
+      width: 146px;
+      .icon {
+        margin-left: 25px;
+      }
+    }
+    .modal-confirm__no {
+      .icon {
+        background-image: url("../i/icons/circle-close--icon.png");
+        width: 12px;
+        height: 12px;
+        background-repeat: no-repeat;
+      }
+    }
+  }
 }
 .excel-icon {
   background-image: url("../i/icons/excel-icon.png");
