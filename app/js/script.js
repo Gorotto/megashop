@@ -532,19 +532,20 @@ $(document).ready(function () {
         );
     });
     /*close*/
-    /*send ms to admin*/
+    /*modal-feedback open*/
     $(document).on('click', '.cabinet__edit--reviews-edit', function (event) {
         event.preventDefault();
-        var parent = $(this).parent();
+        var parent = $(this).parent().next('.modal-feedback');
 
-        parent.find('.modal-feedback').css('display', 'block').animate({opacity: 1}, 200);
+        parent.css('display', 'block').animate({opacity: 1}, 200);
     });
     $(document).on('click', '.modal-confirm__no, .modal-confirm__yes', function () {
-        $('.modal-feedback').animate({opacity: 0}, 200,
-            function () {
-                $(this).css('display', 'none');
-            }
-        );
+      $('.modal-feedback').animate({opacity: 0}, 200,
+          function () {
+              $(this).css('display', 'none');
+          }
+      );
+
     });
     /*close*/
     /*----------close-----------*/
@@ -585,13 +586,15 @@ $(document).ready(function () {
     /*close*/
 
     /*datetimepicker*/
-      jQuery('.datepicker-inner').datetimepicker({
+    if ($('.datepicker-inner').length > 0) {
+      $('.datepicker-inner').datetimepicker({
        timepicker:false,
        todayButton: false,
        format:'d/m/Y',
        defaultTime:'00:00'
       });
       jQuery.datetimepicker.setLocale('ru');
+    }
     /*close*/
 });
 
