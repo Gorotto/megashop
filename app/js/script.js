@@ -15,29 +15,29 @@ $(document).ready(function () {
     /*close*/
 
     /*header submenu*/
-    $(document).on('click', '.header__nav li', function (event) {//меню каталога
-        event.preventDefault();
+    $(document).on('click', '.header__nav li a', function (event) {//меню каталога
+        // event.preventDefault();
         var HeadSubmenu = $(this).find('.header__catalog'),//блок каталога
             BackgroundBlock = $(this).closest('.header').nextAll().find('.catalog__bg');//блок затемнения
         if ($(this).hasClass('show-head-submenu') && HeadSubmenu.length > 0) {//при наличии подменю
             $(this).removeClass('show-head-submenu');//убираем класс-индикатор
-            HeadSubmenu.slideUp(400);//убираем блок каталога
-            BackgroundBlock.fadeOut('400');//скрываем блок затемнения
+            /*HeadSubmenu.slideUp(400);//убираем блок каталога
+            BackgroundBlock.fadeOut('400');//скрываем блок затемнения*/
         } else {
-            $('.header__nav li').removeClass('show-head-submenu');//убираем у всех элементов меню класс-индикатор
-            $('.header__catalog').slideUp(400);//скрываем все блоки каталогов
+            $('.header__nav li a').removeClass('show-head-submenu');//убираем у всех элементов меню класс-индикатор
+            // $('.header__catalog').slideUp(400);//скрываем все блоки каталогов
             $(this).addClass('show-head-submenu');//добавляем нужной ссылке класс-индикатор
-            HeadSubmenu.slideDown(400);//показываем нужный блок каталога
-            BackgroundBlock.fadeIn('400');//показываем блок затемнения
+            // HeadSubmenu.slideDown(400);//показываем нужный блок каталога
+            // BackgroundBlock.fadeIn('400');//показываем блок затемнения
         }
     });
-    $(document).on('click', function (e) {
+    /*$(document).on('click', function (e) {
         if ($(e.target).closest('.header__nav').length != 1) {
             $('.header__nav li').removeClass('show-head-submenu');
             $('.header__catalog').slideUp(400);
             $('.catalog__bg').fadeOut('400');
         }
-    });
+    });*/
     /*close*/
 
     /*cabinet submenu*/
