@@ -1293,6 +1293,240 @@
       }
     }
   }
+  &__shops--info {
+    float: left;
+    position: relative;
+    width: 49%;
+    border: 1px solid #ddd;
+    padding: 35px 45px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    h4 {
+      width: 100%;
+      margin: 0;
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 34px;
+      color: #000;
+    }
+    &-status {
+      float: right;
+      width: 341px;
+      height: 40px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 25px;
+      > label {
+        color: #0e0e0e;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 18px;
+        width: 50%;
+        float: left;
+      }
+      > input[type="radio"] {
+        display: none;
+      }
+      > input[type="radio"] + label {
+        display: block;
+        position: relative;
+        float: left;
+        width: 100px;
+        color: #0e0e0e;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 40px;
+        width: 50%;
+        cursor: pointer;
+        text-align: center;
+        height: 40px;
+        &:first-of-type {
+          border-top-left-radius: 25px;
+          border-bottom-left-radius: 25px;
+        }
+        &:last-of-type {
+          border-top-right-radius: 25px;
+          border-bottom-right-radius: 25px;
+        }
+      }
+      > input[type="radio"]:checked + label {
+        background-color: #f5f5f5;
+      }
+    }
+  }
+  &__shops--days {
+    float: right;
+    width: 49%;
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 35px 45px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flex;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    h4 {
+      width: 100%;
+      margin: 0;
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 34px;
+      color: #000;
+    }
+    &-item {
+      width: 220px;
+      flex-basis: 220px;
+      position: relative;
+      float: left;
+      &:after {
+        content: "";
+        background-image: url("../i/icons/datepicker-icon.png");
+        width: 19px;
+        height: 20px;
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        padding-left: 10px;
+        box-sizing: border-box;
+      }
+      input {
+        height: 40px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        border-radius: 20px;
+        width: 100%;
+      }
+    }
+    &-calendar {
+      width: 98%;
+      position: relative;
+      background-color: #f5f5f5;
+      border: 1px solid #e5e5e5;
+      float: none;
+      margin: 30px auto 0;
+      display: inline-block;
+      &:before {
+        content: "";
+        position: absolute;
+        left: -11px;
+        width: 104%;
+        background-color: #e5e5e5;
+        height: 1px;
+        margin-top: -16px;
+        background-color: #e5e5e5;
+      }
+    }
+    &-title {
+      width: 100%;
+      float: left;
+      position: relative;
+      background-color: #fff;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    &-info {
+      width: 90px;
+      height: 90px;
+      float: left;
+      border-right: 1px solid #e5e5e5;
+      text-align: center;
+      box-sizing: border-box;
+      i {
+        width: 44px;
+        height: 44px;
+        background-color: #f5f5f5;
+        border-radius: 50%;
+        font-size: 20px;
+        line-height: 42px;
+        margin-top: 20px;
+        color: rgba(0, 0, 0, 0.8);
+      }
+    }
+    &-text {
+      width: calc(100% - 90px);
+      float: left;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 33px;
+      color: #000;
+      padding-left: 30px;
+      box-sizing: border-box;
+      position: relative;
+      padding-top: 28px;
+      &:after {
+        content: "";
+        width: 15px;
+        height: 2px;
+        position: absolute;
+        transform: rotate(45deg);
+        background-color: #c12025;
+        right: 24%;
+        bottom: 23%;
+      }
+      &:before {
+        content: "";
+        width: 15px;
+        height: 2px;
+        position: absolute;
+        transform: rotate(-45deg);
+        background-color: #c12025;
+        right: 24%;
+        bottom: 23%;
+      }
+    }
+  }
+}
+.calendar__weak {
+  float: left;
+  position: relative;
+  text-align: center;
+  width: calc(100% / 7);
+  height: 60px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e5e5e5;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 60px;
+}
+.calendar__day {
+  float: left;
+  position: relative;
+  text-align: center;
+  width: calc(100% / 7);
+  height: 60px;
+  background-color: #f5f5f5;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 60px;
+  text-transform: uppercase;
+  &--current {
+    color: #000;
+  }
+  &--not {
+    &:after {
+      content: "";
+      width: 35px;
+      height: 3px;
+      position: absolute;
+      transform: rotate(45deg);
+      background-color: #c12025;
+      left: 25%;
+      bottom: 47%;
+    }
+    &:before {
+      content: "";
+      width: 35px;
+      height: 3px;
+      position: absolute;
+      transform: rotate(-45deg);
+      background-color: #c12025;
+      left: 25%;
+      bottom: 47%;
+    }
+  }
 }
 .excel-icon {
   background-image: url("../i/icons/excel-icon.png");

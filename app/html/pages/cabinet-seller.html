@@ -1,0 +1,207 @@
+<!-- @@include ../html_open.html -->
+
+<header class="header">
+
+    <div class="header__top">
+
+        <div class="container">
+
+            <div class="header__top-links">
+
+                <div class="header__top-links--region">
+                    <span>Ваш регион:</span>
+
+                    <a href="#" class="city-select">Москва</a>
+
+                    <div class="header__top-links--hover-region">
+
+                        <h3>Ваш регион <span>Москва</span>?</h3>
+
+                        <div class="links">
+                            <a href="#" class="yes">Да, верно</a>
+                            <a href="#" class="chose">Выбрать другой</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="header__top-links--cabinet">
+
+                    <a href="authorization.html" class="header__top-links--enter">Вход</a>
+                    <a href="buyer-registration.html" class="header__top-links--enter">Регистрация</a>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="header__logo">
+
+        <div class="container">
+
+            <a href="index.html" class="logo">
+                <img src="../static/i/OAMI-logo.svg" alt="">
+            </a>
+
+            <section class="search">
+
+                <form class="search__form">
+
+                    <input class="search__form--field" type="text" placeholder="Поиск среди товаров">
+
+                    <div class="search__form--categories">
+
+                        <div class="search__form--trigger">
+                            <span class="search__form--title" data-id="0">
+                                    Все категории</span>
+                            <span class="search__form--arrow"></span>
+                        </div>
+                        <ul class="search__form--list">
+                            <li data-id="1">Все для ремонта</li>
+                            <li data-id="2"> Увлечения и хобби</li>
+                            <li data-id="3"> Детские товары</li>
+                            <li data-id="4">Спорт и отдых</li>
+                            <li data-id="5">Красота и здоровье</li>
+                            <li data-id="6">Софт и программы</li>
+                            <li data-id="7">Все для дачи</li>
+                            <li data-id="8">Праздники и торжества</li>
+                            <li data-id="9">Еда и напитки</li>
+                            <li data-id="10">Обувь и сумки</li>
+                            <li data-id="11">Другие категории</li>
+                            <li data-id="12">Скидки и акции</li>
+                        </ul>
+
+                    </div>
+
+                    <button class="search__form--submit" type="submit">
+                        <span><img src="../static/i/icons/search-icon.png" alt=""></span>
+                    </button>
+
+
+                </form>
+
+                <a href="#" class="partner">
+                    <span><img src="../static/i/icons/shake-hands-icon.png" alt=""></span>
+                    <span>Стать партнером</span>
+                </a>
+
+            </section>
+
+        </div>
+
+    </div>
+
+    <div class="header__navigation">
+
+        <div class="container">
+
+            <a id="mobile-menu" href="#" class="header__trigger">
+                <span class=""></span>
+            </a>
+
+            <ul class="header__cabinet-nav">
+                <li><a href="orders-page.html">Заказы</a></li>
+                <li><a href="#">Склад</a></li>
+                <li><a href="#">Витрина</a></li>
+                <li><a href="#">Продвижение</a></li>
+                <li><a href="#">Сообщения</a></li>
+                <li><a href="#">Бугхалтерия</a></li>
+                <li><a href="#">Мои покупки</a></li>
+                <li><a href="#">Профиль</a></li>
+                <li><a href="#">Настройки магазина</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</header>
+
+<section class="cabinet">
+
+    <div class="container">
+      <div class="cabinet__shops--info">
+        <h4>Статус магазина</h4>
+        <div class="cabinet__shops--info-status">
+            <input type="radio" id="status_1"
+                   name="status" checked>
+            <label for="status_1">
+              Online</label>
+            <input type="radio" id="status_2"
+                   name="status">
+            <label for="status_2">
+              Offline</label>
+        </div>
+      </div>
+      <div class="cabinet__shops--days">
+        <h4>Дни работы магазина</h4>
+        <div class="cabinet__shops--days-item">
+          <input type="text" class="datepicker-inner">
+        </div>
+        <div class="cabinet__shops--days-item">
+          <input type="text" class="datepicker-inner">
+        </div>
+        <div class="cabinet__shops--days-calendar">
+          <div class="cabinet__shops--days-title">
+            <div class="cabinet__shops--days-info">
+              <i class="fa fa-info" aria-hidden="true"></i>
+            </div>
+            <div class="cabinet__shops--days-text">Нерабочие дни магазина помечены </div>
+          </div>
+          <div class="calendar__weak">Пн</div>
+          <div class="calendar__weak">Вт</div>
+          <div class="calendar__weak">Ср</div>
+          <div class="calendar__weak">Чт</div>
+          <div class="calendar__weak">Пт</div>
+          <div class="calendar__weak">Сб</div>
+          <div class="calendar__weak">Вс</div>
+          <span class="calendar__day">29</span>
+          <span class="calendar__day">30</span>
+          <span class="calendar__day calendar__day--current calendar__day--not">1</span>
+          <span class="calendar__day calendar__day--current">2</span>
+          <span class="calendar__day calendar__day--current">3</span>
+          <span class="calendar__day calendar__day--current">4</span>
+          <span class="calendar__day calendar__day--current">5</span>
+          <span class="calendar__day calendar__day--current">6</span>
+          <span class="calendar__day calendar__day--current calendar__day--not">7</span>
+          <span class="calendar__day calendar__day--current">8</span>
+          <span class="calendar__day calendar__day--current">9</span>
+          <span class="calendar__day calendar__day--current">10</span>
+          <span class="calendar__day calendar__day--current calendar__day--not">11</span>
+          <span class="calendar__day calendar__day--current calendar__day--not">12</span>
+          <span class="calendar__day calendar__day--current">13</span>
+          <span class="calendar__day calendar__day--current">14</span>
+          <span class="calendar__day calendar__day--current">15</span>
+          <span class="calendar__day calendar__day--current">16</span>
+          <span class="calendar__day calendar__day--current">17</span>
+          <span class="calendar__day calendar__day--current">18</span>
+          <span class="calendar__day calendar__day--current">19</span>
+          <span class="calendar__day calendar__day--current">20</span>
+          <span class="calendar__day calendar__day--current">21</span>
+          <span class="calendar__day calendar__day--current">22</span>
+          <span class="calendar__day calendar__day--current">23</span>
+          <span class="calendar__day calendar__day--current">24</span>
+          <span class="calendar__day calendar__day--current">25</span>
+          <span class="calendar__day calendar__day--current">26</span>
+          <span class="calendar__day calendar__day--current">27</span>
+          <span class="calendar__day calendar__day--current">28</span>
+          <span class="calendar__day calendar__day--current">29</span>
+          <span class="calendar__day calendar__day--current">30</span>
+          <span class="calendar__day">1</span>
+          <span class="calendar__day">2</span>
+          <span class="calendar__day">3</span>
+        </div>
+      </div>
+
+    </div>
+
+</section>
+
+
+<!-- @@include ../footer.html -->
+
+<!-- @@include ../html_close.html -->
