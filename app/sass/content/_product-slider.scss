@@ -187,24 +187,27 @@
     &--buy {
       display: block;
       position: relative;
-      float: left;
-      width: 80px;
+      float: right;
+      width: 35px;
       height: 35px;
       overflow: hidden;
-      > span:first-of-type {
+      background-color: #e6e6e6;
+      border-radius: 50%;      
+      > span {
         display: block;
         position: absolute;
         content: '';
-        top: 0;
-        right: 0;
-        width: 35px;
-        height: 35px;
+        //top: 0;
+        right: -8px;
+        width: 16px;
+        height: 18px;
+        @include vertical-align;
         background-image: url('../i/icons/to-basket-icon.png');
         background-repeat: no-repeat;
         -webkit-background-size: contain;
         background-size: contain;
       }
-      > span:last-of-type {
+     /* > span:last-of-type {
         display: block;
         position: absolute;
         content: '';
@@ -220,13 +223,10 @@
         line-height: 33px;
         z-index: 2;
         @include transition(0.4s)
-      }
+      }*/
     }
     &--buy:hover {
-      > span:last-of-type {
-        right: 0;
-        @include transition(0.4s)
-      }
+      background-color: #c12025;
     }
     &--coins {
       display: block;
