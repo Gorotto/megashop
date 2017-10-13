@@ -43,7 +43,7 @@
       display: block;
       position: relative;
       float: left;
-      width: calc(65% - 80px);
+      width: calc(59% - 80px);
       height: 46px;
       border: none;
       padding-left: 29px;
@@ -59,14 +59,51 @@
         margin-left: 0;
       }
     }
+    &--upload{
+      display: block;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 50px;
+      border: 1px solid #e4e4e4;
+      border-radius: 7px;
+      background-color: #fff;
+      z-index: 2;
+    }
+    &--example{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin: 0;
+      padding: 0 10px;
+      @include box-sizing(border-box);
+      text-align: left;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: #000;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 33px;
+      cursor: pointer;
+      background-color: transparent;
+      &:hover{
+        background-color: #e4e4e4;
+      }
+    }
     &--categories{
       display: block;
       position: relative;
       float: left;
-      width: 35%;
+      width: 41%;
+      height: 46px;
+      margin-top: 1px;
+      overflow: hidden;
       padding-left: 9px;
       @include box-sizing(border-box);
       cursor: pointer;
+      background-color: transparent;
       @include breakpoint(max-width 660px){
         width: 100%;
         padding-left: 29px;
@@ -78,6 +115,14 @@
       position: relative;
       float: left;
       width: 100%;
+    }
+    &--select{
+      display: block;
+      position: relative;
+      float: left;
+      width: 110%;
+      height: 100%;
+      border: none;
     }
     &--title{
       display: block;
@@ -92,12 +137,14 @@
     }
     &--arrow{
       display: block;
-      position: relative;
+      position: absolute;
+      content: '';
       float: left;
       width: 7px;
       height: 4px;
+      right: 13px;
       margin-top: 22px;
-      margin-left: 8px;
+      margin-left: 0;
       background-image: url('../i/icons/arrow-down-icon.png');
       background-repeat: no-repeat;
       background-size: 100% 100%;

@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     /*show search form categories list*/
-    $(document).on('click', '.search__form--trigger', function () {
+    /*$(document).on('click', '.search__form--trigger', function () {
         var list = $(this).next('.search__form--list');
         list.slideToggle('fast');
     });
@@ -11,33 +11,33 @@ $(document).ready(function () {
             list = $(this).parent();
         list.slideUp('fast');
         $('.search__form--trigger .search__form--title').html(listText).attr('data-id', listAttr);
-    });
+    });*/
     /*close*/
 
     /*header submenu*/
-    $(document).on('click', '.header__nav li a', function (event) {//меню каталога
-        // event.preventDefault();
-        var HeadSubmenu = $(this).find('.header__catalog'),//блок каталога
+    $(document).on('click', '.header__nav li a', function (event) {//меню каталога        
+        var HeadSubmenu = $(this).next('.header__catalog'),//блок каталога
             BackgroundBlock = $(this).closest('.header').nextAll().find('.catalog__bg');//блок затемнения
-        if ($(this).hasClass('show-head-submenu') && HeadSubmenu.length > 0) {//при наличии подменю
+        if ($(this).hasClass('show-head-submenu')) {//при наличии подменю            
             $(this).removeClass('show-head-submenu');//убираем класс-индикатор
-            /*HeadSubmenu.slideUp(400);//убираем блок каталога
-            BackgroundBlock.fadeOut('400');//скрываем блок затемнения*/
-        } else {
+            HeadSubmenu.slideUp(400);//убираем блок каталога
+            BackgroundBlock.fadeOut('400');//скрываем блок затемнения
+        } else if (HeadSubmenu.length > 0){
+            event.preventDefault();
             $('.header__nav li a').removeClass('show-head-submenu');//убираем у всех элементов меню класс-индикатор
-            // $('.header__catalog').slideUp(400);//скрываем все блоки каталогов
+            $('.header__catalog').slideUp(400);//скрываем все блоки каталогов
             $(this).addClass('show-head-submenu');//добавляем нужной ссылке класс-индикатор
-            // HeadSubmenu.slideDown(400);//показываем нужный блок каталога
-            // BackgroundBlock.fadeIn('400');//показываем блок затемнения
+            HeadSubmenu.slideDown(400);//показываем нужный блок каталога
+            BackgroundBlock.fadeIn('400');//показываем блок затемнения
         }
     });
-    /*$(document).on('click', function (e) {
+    $(document).on('click', function (e) {
         if ($(e.target).closest('.header__nav').length != 1) {
-            $('.header__nav li').removeClass('show-head-submenu');
+            $('.header__nav li a').removeClass('show-head-submenu');
             $('.header__catalog').slideUp(400);
             $('.catalog__bg').fadeOut('400');
         }
-    });*/
+    });
     /*close*/
 
     /*cabinet submenu*/
@@ -388,19 +388,19 @@ $(document).ready(function () {
     /*close*/
 
     /*catalog layots tabs*/
-    $('.catalog__main--tabs-box').each(function (i) {
-        if (i != 0) {
-            $(this).hide(0)
-        }
-    });
-    $(document).on('click', '.catalog__main--tabs a', function (event) {
-        event.preventDefault();
-        var tabId = $(this).attr('href');
-        $('.catalog__main--tabs a').removeClass('active');
-        $(this).addClass('active');
-        $('.catalog__main--tabs-box').hide(0);
-        $(tabId).fadeIn();
-    });
+    // $('.catalog__main--tabs-box').each(function (i) {
+    //     if (i != 0) {
+    //         $(this).hide(0)
+    //     }
+    // });
+    // $(document).on('click', '.catalog__main--tabs a', function (event) {
+    //     event.preventDefault();
+    //     var tabId = $(this).attr('href');
+    //     $('.catalog__main--tabs a').removeClass('active');
+    //     $(this).addClass('active');
+    //     $('.catalog__main--tabs-box').hide(0);
+    //     $(tabId).fadeIn();
+    // });
     /*close*/
 
     /*show mobile filter*/
