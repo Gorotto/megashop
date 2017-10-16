@@ -1301,6 +1301,11 @@
     padding: 35px;
     box-sizing: border-box;
     border-radius: 10px;
+    @include breakpoint(max-width 770px) {
+      width: 100%;
+      padding: 15px;
+      text-align: center;
+    }
     h4 {
       width: 100%;
       margin: 0 0 15px 0;
@@ -1320,6 +1325,9 @@
       border: 1px solid #ddd;
       border-radius: 25px;
       margin: 10px 0;
+      @include breakpoint(max-width 670px) {
+        width: 100%;
+      }
       > label {
         color: #0e0e0e;
         font-size: 14px;
@@ -1371,6 +1379,12 @@
     display: inline-flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    @include breakpoint(max-width 770px) {
+      width: 100%;
+    }
+    @include breakpoint(max-width 670px) {
+      padding: 10px;
+    }
     h4 {
       width: 100%;
       margin: 0;
@@ -1384,6 +1398,10 @@
       flex-basis: 220px;
       position: relative;
       float: left;
+      @include breakpoint(max-width 670px) {
+        width: 49%;
+        flex-basis: 49%;
+      }
       &:after {
         content: "";
         background-image: url("../i/icons/datepicker-icon.png");
@@ -1401,6 +1419,8 @@
         border: 1px solid #e5e5e5;
         border-radius: 20px;
         width: 100%;
+        padding-left: 10px;
+        box-sizing: border-box;
       }
     }
     &-calendar {
@@ -1411,6 +1431,9 @@
       float: none;
       margin: 30px auto 0;
       display: inline-block;
+      @include breakpoint(max-width 670px) {
+        width: 100%;
+      }
       &:before {
         content: "";
         position: absolute;
@@ -1458,6 +1481,9 @@
       box-sizing: border-box;
       position: relative;
       padding-top: 28px;
+      @include breakpoint(max-width 670px) {
+        padding-top: 10px;
+      }
       &:after {
         content: "";
         width: 15px;
@@ -1467,6 +1493,10 @@
         background-color: #c12025;
         right: 24%;
         bottom: 23%;
+        @include breakpoint(max-width 670px) {
+          right: 50%;
+          bottom: 20%;
+        }
       }
       &:before {
         content: "";
@@ -1477,6 +1507,10 @@
         background-color: #c12025;
         right: 24%;
         bottom: 23%;
+        @include breakpoint(max-width 670px) {
+          right: 50%;
+          bottom: 20%;
+        }
       }
     }
   }
@@ -1491,6 +1525,10 @@
     padding-right: 15px;
     box-sizing: border-box;
     margin: 7px 0;
+    @include breakpoint(max-width 670px) {
+      width: 100%;
+      text-align: left;
+    }
   }
   &__shops--field {
     width: 69.7%;
@@ -1501,6 +1539,9 @@
     box-sizing: border-box;
     margin: 10px 0;
     padding-left: 15px;
+    @include breakpoint(max-width 670px) {
+      width: 100%;
+    }
     &-small {
       width: 19.7%;
       height: 35px;
@@ -1510,6 +1551,9 @@
       border-radius: 18px;
       padding-left: 15px;
       box-sizing: border-box;
+      @include breakpoint(max-width 670px) {
+        width: 100%;
+      }
     }
   }
   &__shops--select-fon {
@@ -1525,10 +1569,13 @@
     text-align: center;
     margin-top: 20px;
     cursor: pointer;
+    @include breakpoint(max-width 670px) {
+      float: none;
+      display: inline-block;
+    }
   }
   &__shops--fons {
     width: 100%;
-    height: 251px;
     float: left;
     background-color: #fff;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
@@ -1563,12 +1610,18 @@
       border: 2px solid transparent;
       margin: 5px 0;
       background-color: #e8e8e8;
+      @include breakpoint(max-width 670px) {
+        width: 100%;
+      }
       img {
         width: 100%;
         height: 100%;
       }
       &:nth-of-type(even) {
         float: right;
+        @include breakpoint(max-width 670px) {
+          float: left;
+        }
       }
     }
     > input[type="radio"]:checked + label {
@@ -1580,6 +1633,9 @@
     width: 100%;
     float: left;
     margin: 15px 0;
+    @include breakpoint(max-width 670px) {
+      text-align: center;
+    }
     span {
       float: left;
       width: 30%;
@@ -1589,6 +1645,10 @@
       font-size: 14px;
       font-weight: 300;
       line-height: 40px;
+      @include breakpoint(max-width 670px) {
+        width: 100%;
+        text-align: center;
+      }
     }
     p {
       margin: 0;
@@ -1598,6 +1658,10 @@
       font-size: 12px;
       font-weight: 400;
       line-height: 40px;
+      @include breakpoint(max-width 670px) {
+        margin-left: 0;
+        width: 100%;
+      }
     }
     .upload {
     	width: 0.1px;
@@ -1617,6 +1681,11 @@
       text-align: center;
       float: left;
       cursor: pointer;
+      @include breakpoint(max-width 670px) {
+        float: none;
+        display: inline-block;
+        margin: 0 auto;
+      }
     }
 
   }
@@ -1697,6 +1766,9 @@
       background-color: #c12025;
       left: 25%;
       bottom: 47%;
+      @include breakpoint(max-width 670px) {
+        left: 15%;
+      }
     }
     &:before {
       content: "";
@@ -1707,6 +1779,9 @@
       background-color: #c12025;
       left: 25%;
       bottom: 47%;
+      @include breakpoint(max-width 670px) {
+        left: 15%;
+      }
     }
   }
 }
