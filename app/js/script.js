@@ -539,12 +539,11 @@ $(document).ready(function () {
 
         parent.css('display', 'block').animate({opacity: 1}, 200);
     });
-    $(document).on('click', '.modal-confirm__no, .modal-confirm__yes', function () {
-      $('.modal-feedback').animate({opacity: 0}, 200,
-          function () {
-              $(this).css('display', 'none');
-          }
-      );
+    $(document).on('click', '.modal-confirm__no, .modal-confirm__yes', function (event) {
+      
+      event.preventDefault();
+      var parent = $(this).parent();
+      parent.css('display', 'none').animate({opacity: 1}, 200);
 
     });
     /*close*/
