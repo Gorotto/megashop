@@ -1298,16 +1298,19 @@
     position: relative;
     width: 49%;
     border: 1px solid #ddd;
-    padding: 35px 45px;
+    padding: 35px;
     box-sizing: border-box;
     border-radius: 10px;
     h4 {
       width: 100%;
-      margin: 0;
+      margin: 0 0 15px 0;
       font-size: 17px;
       font-weight: 300;
       line-height: 34px;
       color: #000;
+      border-bottom: 1px solid #ddd;
+      float: left;
+      text-align: left;
     }
     &-status {
       float: right;
@@ -1316,6 +1319,7 @@
       background-color: #fff;
       border: 1px solid #ddd;
       border-radius: 25px;
+      margin: 10px 0;
       > label {
         color: #0e0e0e;
         font-size: 14px;
@@ -1475,6 +1479,184 @@
         bottom: 23%;
       }
     }
+  }
+  &__shops--label {
+    width: 30.3%;
+    float: left;
+    text-align: right;
+    color: #010101;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 30px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    margin: 7px 0;
+  }
+  &__shops--field {
+    width: 69.7%;
+    height: 35px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 18px;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding-left: 15px;
+    &-small {
+      width: 19.7%;
+      height: 35px;
+      float: left;
+      background-color: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 18px;
+      padding-left: 15px;
+      box-sizing: border-box;
+    }
+  }
+  &__shops--select-fon {
+    float: left;
+    width: 170px;
+    height: 40px;
+    background-color: #c12025;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  &__shops--fons {
+    width: 100%;
+    height: 251px;
+    float: left;
+    background-color: #fff;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    display: none;
+    > label {
+      color: #0e0e0e;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 18px;
+      width: 50%;
+      float: left;
+    }
+    > input[type="radio"] {
+      display: none;
+    }
+    > input[type="radio"] + label {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100px;
+      color: #0e0e0e;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 40px;
+      width: 48%;
+      cursor: pointer;
+      text-align: center;
+      height: 40px;
+      border: 2px solid transparent;
+      margin: 5px 0;
+      background-color: #e8e8e8;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      &:nth-of-type(even) {
+        float: right;
+      }
+    }
+    > input[type="radio"]:checked + label {
+      border: 2px solid #72c835;
+    }
+
+  }
+  &__shops--add {
+    width: 100%;
+    float: left;
+    margin: 15px 0;
+    span {
+      float: left;
+      width: 30%;
+      position: relative;
+      text-align: left;
+      color: #010101;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 40px;
+    }
+    p {
+      margin: 0;
+      float: left;
+      margin-left: 20px;
+      color: #939393;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 40px;
+    }
+    .upload {
+    	width: 0.1px;
+    	height: 0.1px;
+    	opacity: 0;
+    }
+
+    .upload + label {
+      width: 130px;
+      height: 40px;
+      background-color: #f5f5f5;
+      border-radius: 20px;
+      color: #5d5d5d;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 40px;
+      text-align: center;
+      float: left;
+      cursor: pointer;
+    }
+
+  }
+  &__shops--save {
+    display: block;
+    position: relative;
+    float: right;
+    width: 250px;
+    height: 40px;
+    border-radius: 23px;
+    background-color: #72c835;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 40px;
+    text-align: center;
+  }
+  &__shops--row {
+    width: 100%;
+    float: left;
+    position: relative;
+    margin: 20px 0;
+  }
+  &__shops--title {
+    width: 100%;
+    float: left;
+    margin: 20px 0 0 0;
+    color: #0e0e0e;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px;
+  }
+  &__shops--text {
+    width: 100%;
+    float: left;
+    color: #232323;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 34px;
+    margin: 0 0 20px;
   }
 }
 .calendar__weak {

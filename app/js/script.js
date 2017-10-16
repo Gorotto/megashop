@@ -15,10 +15,10 @@ $(document).ready(function () {
     /*close*/
 
     /*header submenu*/
-    $(document).on('click', '.header__nav li a', function (event) {//меню каталога        
+    $(document).on('click', '.header__nav li a', function (event) {//меню каталога
         var HeadSubmenu = $(this).next('.header__catalog'),//блок каталога
             BackgroundBlock = $(this).closest('.header').nextAll().find('.catalog__bg');//блок затемнения
-        if ($(this).hasClass('show-head-submenu')) {//при наличии подменю            
+        if ($(this).hasClass('show-head-submenu')) {//при наличии подменю
             $(this).removeClass('show-head-submenu');//убираем класс-индикатор
             HeadSubmenu.slideUp(400);//убираем блок каталога
             BackgroundBlock.fadeOut('400');//скрываем блок затемнения
@@ -595,6 +595,14 @@ $(document).ready(function () {
       });
       jQuery.datetimepicker.setLocale('ru');
     }
+    /*close*/
+
+    /*select-fon*/
+    $(document).on('click', '.cabinet__shops--select-fon', function (event) {
+        event.preventDefault();
+        $('.cabinet__shops--fons').slideToggle(500);
+        return false;
+    });
     /*close*/
 });
 

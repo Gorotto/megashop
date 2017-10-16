@@ -62,49 +62,72 @@
                 <img src="../static/i/OAMI-logo.svg" alt="">
             </a>
 
-            <section class="search">
+<!-- start search.html-->
+<section class="search">
 
-                <form class="search__form">
+        <form class="search__form">
 
-                    <input class="search__form--field" type="text" placeholder="Поиск среди товаров">
+            <input class="search__form--field" type="text" placeholder="Поиск среди товаров">
+            <div class="search__form--upload">
+                <p class="search__form--example">Apple</p>
+                <p class="search__form--example">Apple Ipad</p>
+                <p class="search__form--example">Apple Iphone</p>
+            </div>
 
-                    <div class="search__form--categories">
+            <div class="search__form--categories">
 
-                        <div class="search__form--trigger">
-                            <span class="search__form--title" data-id="0">
-                                    Все категории</span>
-                            <span class="search__form--arrow"></span>
-                        </div>
-                        <ul class="search__form--list">
-                            <li data-id="1">Все для ремонта</li>
-                            <li data-id="2"> Увлечения и хобби</li>
-                            <li data-id="3"> Детские товары</li>
-                            <li data-id="4">Спорт и отдых</li>
-                            <li data-id="5">Красота и здоровье</li>
-                            <li data-id="6">Софт и программы</li>
-                            <li data-id="7">Все для дачи</li>
-                            <li data-id="8">Праздники и торжества</li>
-                            <li data-id="9">Еда и напитки</li>
-                            <li data-id="10">Обувь и сумки</li>
-                            <li data-id="11">Другие категории</li>
-                            <li data-id="12">Скидки и акции</li>
-                        </ul>
+                <!--<div class="search__form&#45;&#45;trigger">-->
+                    <select class="search__form--select" name="" id="">
+                        <option value="0">Все категории</option>
+                        <option value="1">Все для ремонта</option>
+                        <option value="2">Увлечения и хобби</option>
+                        <option value="3">Детские товары</option>
+                        <option value="4">Спорт и отдых</option>
+                        <option value="5">Красота и здоровье</option>
+                        <option value="6">Софт и программы</option>
+                        <option value="7">Все для дачи</option>
+                        <option value="8">Праздники и торжества</option>
+                        <option value="9">Еда и напитки</option>
+                        <option value="10">Обувь и сумки</option>
+                        <option value="11">Другие категории</option>
+                        <option value="12">Скидки и акции</option>
+                    </select>
+                    <span class="search__form--arrow"></span>
 
-                    </div>
+                   <!--<span class="search__form&#45;&#45;title" data-id="0">-->
+                                    <!--Все категории</span>-->
+                   <!--<span class="search__form&#45;&#45;arrow"></span>-->
+               <!-- </div>-->
+                <!--<ul class="search__form&#45;&#45;list">-->
+                    <!--<li data-id="1">Все для ремонта</li>-->
+                    <!--<li data-id="2"> Увлечения и хобби</li>-->
+                    <!--<li data-id="3"> Детские товары</li>-->
+                    <!--<li data-id="4">Спорт и отдых</li>-->
+                    <!--<li data-id="5">Красота и здоровье</li>-->
+                    <!--<li data-id="6">Софт и программы</li>-->
+                    <!--<li data-id="7">Все для дачи</li>-->
+                    <!--<li data-id="8">Праздники и торжества</li>-->
+                    <!--<li data-id="9">Еда и напитки</li>-->
+                    <!--<li data-id="10">Обувь и сумки</li>-->
+                    <!--<li data-id="11">Другие категории</li>-->
+                    <!--<li data-id="12">Скидки и акции</li>-->
+                <!--</ul>-->
 
-                    <button class="search__form--submit" type="submit">
-                        <span><img src="../static/i/icons/search-icon.png" alt=""></span>
-                    </button>
+            </div>
 
+            <button class="search__form--submit" type="submit">
+                <span><img src="../static/i/icons/search-icon.png" alt=""></span>
+            </button>
 
-                </form>
+        </form>
 
-                <a href="#" class="partner">
-                    <span><img src="../static/i/icons/shake-hands-icon.png" alt=""></span>
-                    <span>Стать партнером</span>
-                </a>
+        <a href="#" class="partner">
+            <span><img src="../static/i/icons/shake-hands-icon.png" alt=""></span>
+            <span>Стать партнером</span>
+        </a>
 
-            </section>
+</section>
+<!-- end search.html-->
 
         </div>
 
@@ -150,6 +173,67 @@
                    name="status">
             <label for="status_2">
               Offline</label>
+        </div>
+        <label for="1_1" class="cabinet__shops--label">Название магазина</label>
+        <input id="1_1" class="cabinet__shops--field" type="text" name="" value="">
+        <label for="1_2" class="cabinet__shops--label">Описание магазина</label>
+        <input id="1_2" class="cabinet__shops--field" type="text" name="" value="">
+        <h4>Склад отгрузки</h4>
+        <label for="1_3" class="cabinet__shops--label">Город</label>
+        <input id="1_3" class="cabinet__shops--field" type="text" name="" value="">
+        <label for="1_4" class="cabinet__shops--label">Улица/Корпус</label>
+        <input id="1_4" class="cabinet__shops--field" type="text" name="" value="">
+        <label for="1_5" class="cabinet__shops--label">Дом</label>
+        <input id="1_5" class="cabinet__shops--field-small" type="text" name="" value="">
+        <label for="1_6" class="cabinet__shops--label">Квартира/Офис</label>
+        <input id="1_6" class="cabinet__shops--field-small" type="text" name="" value="">
+        <h4>Внешний вид</h4>
+        <span class="cabinet__shops--select-fon">Выбрать фон</span>
+        <div class="cabinet__shops--fons">
+          <input type="radio" id="fon_1" name="fon">
+          <label for="fon_1">
+            <img src="/static/i/banners/shop--fon.png" alt="">
+          </label>
+          <input type="radio" id="fon_2" name="fon">
+          <label for="fon_2">
+            <img src="/static/i/banners/shop--fon-1.png" alt="">
+          </label>
+          <input type="radio" id="fon_3" name="fon">
+          <label for="fon_3">
+
+          </label>
+          <input type="radio" id="fon_4" name="fon">
+          <label for="fon_4">
+
+          </label>
+          <input type="radio" id="fon_5" name="fon">
+          <label for="fon_5">
+
+          </label>
+          <input type="radio" id="fon_6" name="fon">
+          <label for="fon_6">
+
+          </label>
+          <input type="radio" id="fon_7" name="fon">
+          <label for="fon_7">
+
+          </label>
+          <input type="radio" id="fon_8" name="fon">
+          <label for="fon_8">
+
+          </label>
+        </div>
+        <div class="cabinet__shops--add">
+          <span>Загрузить свой фон</span>
+          <input type="file" name="file" id="file-1" class="upload" />
+          <label for="file-1">Обзор...</label>
+          <p>Рекомендуемый размер 1170*160</p>
+        </div>
+        <div class="cabinet__shops--add">
+          <span>Загрузить логотип</span>
+          <input type="file" name="file" id="file-2" class="upload" />
+          <label for="file-2">Обзор...</label>
+          <p>Рекомендуемый размер 100*100</p>
         </div>
       </div>
       <div class="cabinet__shops--days">
@@ -211,7 +295,41 @@
           <span class="calendar__day">3</span>
         </div>
       </div>
-
+      <div class="cabinet__shops--row">
+        <a href="#" class="cabinet__shops--save">Сохранить все изменения</a>
+      </div>
+      <h4 class="cabinet__shops--title">Предварительный просмотр</h4>
+      <p class="cabinet__shops--text">Так будет выглядеть шапка вашей страницы</p>
+      <a href="#" class="cabinet__content--shop">
+        <div class="cabinet__content--shop-wrap">
+          <img src="../static/i/banners/shop--fon.png" alt="">
+          <div class="cabinet__content--shop-logo">
+            <img src="../static/i/logo-shop.png" alt="">
+          </div>
+          <div class="cabinet__content--shop-info">
+            <p>Статус<span class="status-online">Online</span></p>
+            <p>Кол-во сделок<span>2 165</span></p>
+            <p>Рейтинг <span>99%</span></p>
+            <p>Страна<span>Россия</span></p>
+            <p>Город<span>Санкт-Петербруг</span></p>
+          </div>
+        </div>
+      </a>
+      <a href="#"  class="cabinet__content--shop">
+        <div class="cabinet__content--shop-wrap">
+          <img src="../static/i/banners/shop--fon-1.png" alt="">
+          <div class="cabinet__content--shop-logo">
+            <img src="../static/i/logo-shop.png" alt="">
+          </div>
+          <div class="cabinet__content--shop-info">
+            <p>Статус<span class="status-ofline">Online</span></p>
+            <p>Кол-во сделок<span>2 165</span></p>
+            <p>Рейтинг <span>99%</span></p>
+            <p>Страна<span>Россия</span></p>
+            <p>Город<span>Санкт-Петербруг</span></p>
+          </div>
+        </div>
+      </a>
     </div>
 
 </section>
