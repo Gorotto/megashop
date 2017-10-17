@@ -14,6 +14,13 @@
       border-radius: 5px;
       float: left;
       margin-bottom: 40px;
+      @include breakpoint(max-width 770px) {
+        width: 100%;
+        margin: 20px 0;
+      }
+      @include breakpoint(max-width 660px) {
+        height: auto;
+      }
       &-add {
         float: right;
         min-width: 200px;
@@ -73,6 +80,7 @@
         }
         .upload-video  + label {
           width: 200px;
+          margin-right: 80px;
         }
       }
       h4 {
@@ -112,6 +120,12 @@
         box-sizing: border-box;
         float: left;
         margin: 8px 0;
+        @include breakpoint(max-width 660px) {
+          width: 100%;
+          margin-bottom: 5px;
+          text-align: left;
+          margin-left: 0;
+        }
       }
       &-field {
         width: 61%;
@@ -123,6 +137,11 @@
         padding-left: 15px;
         box-sizing: border-box;
         margin: 8px 0 8px 15px;
+        @include breakpoint(max-width 660px) {
+          width: 100%;
+          margin-bottom: 5px;
+          margin-left: 0;
+        }
       }
       &-small {
         width: 95px;
@@ -134,6 +153,11 @@
         padding-left: 15px;
         box-sizing: border-box;
         margin: 8px 0 8px 15px;
+        @include breakpoint(max-width 660px) {
+          width: 89%;
+          margin-bottom: 5px;
+          margin-left: 0;
+        }
       }
       &-medium {
         width: 146px;
@@ -145,6 +169,11 @@
         padding-left: 15px;
         box-sizing: border-box;
         margin: 8px 0 8px 15px;
+        @include breakpoint(max-width 660px) {
+          width: 89%;
+          margin-bottom: 5px;
+          margin-left: 0;
+        }
       }
       &-select {
         width: 61%;
@@ -167,6 +196,11 @@
         -ms-appearance: none;
         appearance: none!important;
         margin: 8px 0 8px 15px;
+        @include breakpoint(max-width 660px) {
+          width: 100%;
+          margin-bottom: 5px;
+          margin-left: 0;
+        }
       }
       .red-border {
         border: 1px solid #c12025;
@@ -180,10 +214,19 @@
         .cabinet__showcase--item-select {
           width: 200px;
           margin-left: 0;
+          @include breakpoint(max-width 660px) {
+            width: 100%;
+            margin-bottom: 5px;
+          }
         }
         .input-right {
           width: 200px;
           float: right;
+          @include breakpoint(max-width 660px) {
+            width: 100%;
+            margin-bottom: 5px;
+            float: left;
+          }
         }
         .row-title {
           width: 200px;
@@ -193,8 +236,17 @@
           font-weight: 300;
           line-height: 34px;
           text-align: left;
+          @include breakpoint(max-width 660px) {
+            width: 100%;
+            margin-bottom: 5px;
+          }
           &:first-of-type {
             width: calc(100% - 200px);
+
+            @include breakpoint(max-width 660px) {
+              width: 100%;
+              margin-bottom: 5px;
+            }
           }
         }
         .quantity {
@@ -213,6 +265,10 @@
           border-radius: 25px;
           color: #c12025;
           text-align: center;
+          @include breakpoint(max-width 660px) {
+            width: 89%;
+            margin-bottom: 5px;
+          }
         }
       }
       &-thumb {
@@ -234,6 +290,13 @@
         resize: none;
         padding-left: 10px;
         box-sizing: border-box;
+        @include breakpoint(max-width 770px) {
+          width: calc(100% - 145px);
+        }
+        @include breakpoint(max-width 770px) {
+          width: calc(100% - 29px);
+          height: 90px;
+        }
         &::placeholder {
           color: #969696;
           font-size: 14px;
