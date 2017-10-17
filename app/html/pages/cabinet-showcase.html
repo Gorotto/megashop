@@ -1,0 +1,208 @@
+<!-- @@include ../html_open.html -->
+
+<header class="header">
+
+    <div class="header__top">
+
+        <div class="container">
+
+            <div class="header__top-links">
+
+                <div class="header__top-links--region">
+                    <span>Ваш регион:</span>
+
+                    <a href="#" class="city-select">Москва</a>
+
+                    <div class="header__top-links--hover-region">
+
+                        <h3>Ваш регион <span>Москва</span>?</h3>
+
+                        <div class="links">
+                            <a href="#" class="yes">Да, верно</a>
+                            <a href="#" class="chose">Выбрать другой</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="header__top-links--cabinet">
+
+                    <a href="authorization.html" class="header__top-links--enter">Вход</a>
+                    <a href="buyer-registration.html" class="header__top-links--enter">Регистрация</a>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="header__logo">
+
+        <div class="container">
+
+            <a href="index.html" class="logo">
+                <img src="../static/i/OAMI-logo.svg" alt="">
+            </a>
+
+            <!-- @@include ../search.html -->
+
+        </div>
+
+    </div>
+
+    <div class="header__navigation">
+
+        <div class="container">
+
+            <a id="mobile-menu" href="#" class="header__trigger">
+                <span class=""></span>
+            </a>
+
+            <ul class="header__cabinet-nav">
+                <li><a href="orders-page.html">Заказы</a></li>
+                <li><a href="#">Склад</a></li>
+                <li><a href="#">Витрина</a></li>
+                <li><a href="#">Продвижение</a></li>
+                <li><a href="#">Сообщения</a></li>
+                <li><a href="#">Бугхалтерия</a></li>
+                <li><a href="#">Мои покупки</a></li>
+                <li><a href="#">Профиль</a></li>
+                <li><a href="#">Настройки магазина</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</header>
+
+<section class="cabinet__showcase">
+  <div class="container">
+    <div class="cabinet__showcase--item">
+      <h4>Общее описание</h4>
+      <label for="1_1" class="cabinet__showcase--item-label">Наименование:</label>
+      <input id="1_1" class="cabinet__showcase--item-field" type="text" name="" value="">
+      <label for="1_2" class="cabinet__showcase--item-label">Категория:</label>
+      <select name="" id="1_2" class="cabinet__showcase--item-select">
+        <option value="">Осветительные приборы</option>
+        <option value="">Осветительные приборы</option>
+        <option value="">Осветительные приборы</option>
+      </select>
+      <label for="1_3" class="cabinet__showcase--item-label">Продвинуть товар в:</label>
+      <select name="" id="1_3" class="cabinet__showcase--item-select red-border">
+        <option value="">Хиты продаж</option>
+        <option value="">Хиты продаж</option>
+        <option value="">Хиты продаж</option>
+      </select>
+      <label for="1_4" class="cabinet__showcase--item-label">Артикул:</label>
+      <input id="1_4" class="cabinet__showcase--item-field" type="text" name="" value="">
+      <label for="1_5" class="cabinet__showcase--item-label">Описание:</label>
+      <input id="1_5" class="cabinet__showcase--item-field" type="text" name="" value="">
+    </div>
+    <div class="cabinet__showcase--item">
+      <h4>Изображения товара</h4>
+      <div class="cabinet__showcase--item-row">
+        <div class="cabinet__showcase--item-thumb">
+          <img src="/static/i/goods/product_10.png" alt="">
+        </div>
+        <textarea placeholder="Описание конкретной фотографии товара"></textarea>
+        <a href="#" class="cabinet__showcase--item-delete"></a>
+      </div>
+      <div class="cabinet__showcase--item-row">
+        <div class="cabinet__showcase--item-thumb">
+          <img src="/static/i/goods/product_10.png" alt="">
+        </div>
+        <textarea placeholder="Описание конкретной фотографии товара"></textarea>
+        <a href="#" class="cabinet__showcase--item-delete"></a>
+      </div>
+      <div class="cabinet__showcase--item-button">
+        <input type="file" name="file" id="file-pic" class="upload" />
+        <label for="file-pic">Добавить еще изображение</label>
+      </div>
+      <div class="cabinet__showcase--item-button">
+        <input type="file" name="file" id="file-video" class="upload upload-video" />
+        <label for="file-video">Добавить видео</label>
+      </div>
+    </div>
+
+    <div class="cabinet__showcase--item">
+      <h4>Характеристики товара</h4>
+      <div class="cabinet__showcase--item-row">
+        <span class="row-title">Наименование параметра:</span>
+        <span class="row-title">Значение параметра:</span>
+        <select name="" class="cabinet__showcase--item-select">
+          <option value="">Цвет</option>
+          <option value="">Цвет</option>
+          <option value="">Цвет</option>
+        </select>
+        <input class="cabinet__showcase--item-field input-right" type="text" name="" value="">
+      </div>
+      <div class="cabinet__showcase--item-row">
+        <select name="" class="cabinet__showcase--item-select">
+          <option value="">Диагональ</option>
+          <option value="">Диагональ</option>
+          <option value="">Диагональ</option>
+        </select>
+        <input class="cabinet__showcase--item-field input-right" type="text" name="" value="">
+      </div>
+      <div class="cabinet__showcase--item-row">
+        <select name="" class="cabinet__showcase--item-select">
+          <option value="">Мощность</option>
+          <option value="">Мощность</option>
+          <option value="">Мощность</option>
+        </select>
+        <input class="cabinet__showcase--item-field input-right" type="text" name="" value="">
+      </div>
+      <div class="cabinet__showcase--item-add">Добавить еще</div>
+    </div>
+
+    <div class="cabinet__showcase--item">
+      <h4>Стоимость и остаток</h4>
+      <div class="cabinet__showcase--item-row">
+        <label for="4_1" class="cabinet__showcase--item-label">Количество на складе:</label>
+        <input id="4_1" class="cabinet__showcase--item-small" type="text" name="" value="">
+        <span class="quantity">шт.</span>
+      </div>
+      <div class="cabinet__showcase--item-row">
+        <label for="4_2" class="cabinet__showcase--item-label">Адрес склада:</label>
+        <input id="4_2" class="cabinet__showcase--item-field" type="text" name="" value="" placeholder="по умолчанию">
+      </div>
+      <div class="cabinet__showcase--item-row">
+        <label for="4_3" class="cabinet__showcase--item-label">Базовая стоимость:</label>
+        <input id="4_3" class="cabinet__showcase--item-medium" type="text" name="" value="">
+        <span class="quantity">
+          <i class="fa fa-rub" aria-hidden="true"></i>
+        </span>
+      </div>
+      <div class="cabinet__showcase--item-row">
+        <a href="" class="cabinet__showcase--item-label dial-link">Активировать скидки:</a>
+        <input class="cabinet__showcase--item-medium red-border" type="text" name="" value="">
+        <span class="quantity">%</span>
+      </div>
+      <div class="cabinet__showcase--item-row">
+        <label for="4_5" class="cabinet__showcase--item-label">Количество дней:</label>
+        <input id="4_5" class="cabinet__showcase--item-medium red-border" type="text" name="" value="">
+      </div>
+      <div class="cabinet__showcase--item-row">
+        <label for="4_6" class="cabinet__showcase--item-label">Добавить “Монетки”:</label>
+        <input id="4_6" class="cabinet__showcase--item-medium red-border" type="text" name="" value="">
+      </div>
+      <div class="cabinet__showcase--item-row">
+        <label for="4_7" class="cabinet__showcase--item-label">Итого:</label>
+        <input id="4_7" class="cabinet__showcase--item-medium" type="text" name="" value="">
+        <span class="quantity">
+          <i class="fa fa-rub" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- @@include ../footer.html -->
+
+<!-- @@include ../html_close.html -->

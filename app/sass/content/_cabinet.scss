@@ -2,6 +2,254 @@
   width: 100%;
   float: left;
   position: relative;
+  &__showcase {
+    width: 100%;
+    float: left;
+    &--item {
+      width: 48.5%;
+      height: 480px;
+      border: 1px solid #ddd;
+      padding: 20px 30px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      float: left;
+      margin-bottom: 40px;
+      &-add {
+        float: right;
+        min-width: 200px;
+        height: 40px;
+        background-color: #f5f5f5;
+        border-radius: 25px;
+        color: #5d5d5d;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 15px;
+        margin-top: 15px;
+        &:before {
+          content: "";
+          background-image: url("../i/icons/circle-add--icon.png");
+          width: 12px;
+          height: 12px;
+          display: block;
+          left: 14%;
+          position: relative;
+          top: 14px;
+        }
+      }
+      &-button {
+        width: 100%;
+        float: left;
+        position: relative;
+        .upload {
+        	width: 0.1px;
+        	height: 0.1px;
+        	opacity: 0;
+        }
+
+        .upload + label {
+          float: right;
+          width: 280px;
+          height: 40px;
+          background-color: #f5f5f5;
+          border-radius: 25px;
+          color: #5d5d5d;
+          text-align: center;
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 15px;
+          margin-top: 15px;
+          cursor: pointer;
+          &:before {
+            content: "";
+            background-image: url("../i/icons/circle-add--icon.png");
+            width: 12px;
+            height: 12px;
+            display: block;
+            left: 10%;
+            position: relative;
+            top: 14px;
+          }
+        }
+        .upload-video  + label {
+          width: 200px;
+        }
+      }
+      h4 {
+        margin: 0 0 10px;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 34px;
+        text-align: left;
+        float: left;
+        width: 100%;
+      }
+      &:nth-of-type(even) {
+        float: right;
+      }
+      &:nth-of-type(2) {
+        .cabinet__showcase--item-row {
+          border-bottom: none;
+          // margin: 0;
+          padding: 0;
+        }
+      }
+      &:nth-of-type(4) {
+        .cabinet__showcase--item-row {
+          border-bottom: none;
+          margin: 0;
+          padding: 0;
+        }
+      }
+      &-label {
+        width: 35%;
+        color: #010101;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 34px;
+        text-align: right;
+        // padding-right: 15px;
+        box-sizing: border-box;
+        float: left;
+        margin: 8px 0;
+      }
+      &-field {
+        width: 61%;
+        height: 40px;
+        border: 1px solid #e5e5e5;
+        border-radius: 25px;
+        background-color: #fff;
+        float: left;
+        padding-left: 15px;
+        box-sizing: border-box;
+        margin: 8px 0 8px 15px;
+      }
+      &-small {
+        width: 95px;
+        height: 40px;
+        border: 1px solid #e5e5e5;
+        border-radius: 25px;
+        background-color: #fff;
+        float: left;
+        padding-left: 15px;
+        box-sizing: border-box;
+        margin: 8px 0 8px 15px;
+      }
+      &-medium {
+        width: 146px;
+        height: 40px;
+        border: 1px solid #e5e5e5;
+        border-radius: 25px;
+        background-color: #fff;
+        float: left;
+        padding-left: 15px;
+        box-sizing: border-box;
+        margin: 8px 0 8px 15px;
+      }
+      &-select {
+        width: 61%;
+        height: 40px;
+        border: 1px solid #e5e5e5;
+        border-radius: 25px;
+        background-color: #fff;
+        float: left;
+        padding-left: 15px;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        background-image: url('../i/icons/arrow-down-icon.png');
+        background-position-y:  center;
+        background-position-x: 97%;
+        background-repeat: no-repeat;
+        line-height: 1em;
+        -moz-appearance: none;
+        text-indent: 0.01px;
+        text-overflow: '';
+        -ms-appearance: none;
+        appearance: none!important;
+        margin: 8px 0 8px 15px;
+      }
+      .red-border {
+        border: 1px solid #c12025;
+      }
+      &-row {
+        width: 100%;
+        float: left;
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+        box-sizing: border-box;
+        .cabinet__showcase--item-select {
+          width: 200px;
+          margin-left: 0;
+        }
+        .input-right {
+          width: 200px;
+          float: right;
+        }
+        .row-title {
+          width: 200px;
+          float: left;
+          color: #010101;
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 34px;
+          text-align: left;
+          &:first-of-type {
+            width: calc(100% - 200px);
+          }
+        }
+        .quantity {
+          float: left;
+          margin-left: 10px;
+          width: auto;
+          color: #232323;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 34px;
+          margin-top: 9px;
+        }
+        .dial-link {
+          height: 40px;
+          background-color: #f5f5f5;
+          border-radius: 25px;
+          color: #c12025;
+          text-align: center;
+        }
+      }
+      &-thumb {
+        width: 74px;
+        height: 59px;
+        float: left;
+        margin-top: 16px;
+        margin-right: 28px;
+        img {
+          width: 100%;
+        }
+      }
+      textarea {
+        width: 331px;
+        height: 72px;
+        border: 1px solid #e5e5e5;
+        float: left;
+        border-radius: 3px;
+        resize: none;
+        padding-left: 10px;
+        box-sizing: border-box;
+        &::placeholder {
+          color: #969696;
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 34px;
+        }
+      }
+      &-delete {
+        background-image: url("../i/icons/delete-icon.png");
+        width: 24px;
+        height: 24px;
+        float: right;
+        margin-top: 25px;
+      }
+    }
+  }
   .title {
     display: block;
     position: relative;
