@@ -1541,6 +1541,7 @@
             <li><a href="cabinet-waiting.html" target="_blank">Кабинет - отзывы. Ожидают отзыва</a></li>
             <li><a href="cabinet-seller.html" target="_blank">Кабинет - настройка продавца</a></li>
             <li><a href="cabinet-showcase.html" target="_blank">Кабинет - витрина</a></li>
+            <li><a href="" class="document-modal__open">Заказать Документ</a></li>
         </ul>
 
     </div>
@@ -1668,6 +1669,43 @@
 
 <div id="black-overlay"></div>
 <!-- end footer.html-->
+
+
+<div id="document-modal" class="document-modal">
+
+    <span class="modal-confirm__close"></span>
+
+    <h3 class="document-modal__title">Заказать документ</h3>
+    <p class="document-modal__subtitle">Выберите удобный вам вариант ниже и нажмите «Заказать».</p>
+    <div class="document-modal__box">
+      <input type="radio" id="gender_1"
+             name="gender" value="male">
+      <label for="gender_1">
+          <span></span>
+          Получить по почте оригинал</label>
+      <input type="radio" id="gender_2"
+             name="gender" value="male">
+      <label for="gender_2">
+          <span></span>
+          Получить скан копию на email</label>
+      <input type="radio" id="gender_3"
+             name="gender" value="male">
+      <label for="gender_3">
+          <span></span>
+          Получить электроную версию через систему ЭДО</label>
+      <a href="#" class="document-modal__about">Что такое система ЭДО?</a>
+    </div>
+    <a href="#" class="modal-confirm__yes">
+      <span class="icon"></span>
+      Заказать
+    </a>
+    <a href="#" class="modal-confirm__no">
+      <span class="icon"></span>
+      Отменить
+    </a>
+
+
+</div>
 
 <!-- start html_close.html-->
 

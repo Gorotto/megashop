@@ -540,7 +540,7 @@ $(document).ready(function () {
         parent.css('display', 'block').animate({opacity: 1}, 200);
     });
     $(document).on('click', '.modal-confirm__no, .modal-confirm__yes', function (event) {
-      
+
       event.preventDefault();
       var parent = $(this).parent();
       parent.css('display', 'none').animate({opacity: 1}, 200);
@@ -601,6 +601,16 @@ $(document).ready(function () {
         event.preventDefault();
         $('.cabinet__shops--fons').slideToggle(500);
         return false;
+    });
+    /*close*/
+    /*document modal*/
+    $(document).on('click', '.document-modal__open', function (event) {
+        event.preventDefault();
+        $('#document-modal').css('display', 'block').animate({opacity: 1}, 200);
+    });
+    $(document).on('click', '.modal-confirm__no, .modal-confirm__yes, .modal-confirm__close', function () {
+        event.preventDefault();
+        $('#document-modal').animate({opacity: 0}, 200).css('display', 'none');
     });
     /*close*/
 });
