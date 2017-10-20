@@ -34,8 +34,8 @@
         line-height: 15px;
         margin-top: 15px;
         &:before {
-          content: "";
-          background-image: url("../i/icons/circle-add--icon.png");
+          content: '';
+          background-image: url('../i/icons/circle-add--icon.png');
           width: 12px;
           height: 12px;
           display: block;
@@ -53,7 +53,6 @@
         	height: 0.1px;
         	opacity: 0;
         }
-
         .upload + label {
           float: right;
           width: 280px;
@@ -68,8 +67,8 @@
           margin-top: 15px;
           cursor: pointer;
           &:before {
-            content: "";
-            background-image: url("../i/icons/circle-add--icon.png");
+            content: '';
+            background-image: url('../i/icons/circle-add--icon.png');
             width: 12px;
             height: 12px;
             display: block;
@@ -117,7 +116,7 @@
         line-height: 34px;
         text-align: right;
         // padding-right: 15px;
-        box-sizing: border-box;
+        @include box-sizing(border-box);
         float: left;
         margin: 8px 0;
         @include breakpoint(max-width 660px) {
@@ -135,7 +134,7 @@
         background-color: #fff;
         float: left;
         padding-left: 15px;
-        box-sizing: border-box;
+        @include box-sizing(border-box);
         margin: 8px 0 8px 15px;
         @include breakpoint(max-width 660px) {
           width: 100%;
@@ -144,14 +143,14 @@
         }
       }
       &-small {
+        float: left;
         width: 95px;
         height: 40px;
         border: 1px solid #e5e5e5;
         border-radius: 25px;
         background-color: #fff;
-        float: left;
         padding-left: 15px;
-        box-sizing: border-box;
+        @include box-sizing(border-box);
         margin: 8px 0 8px 15px;
         @include breakpoint(max-width 660px) {
           width: 89%;
@@ -160,14 +159,14 @@
         }
       }
       &-medium {
+        float: left;
         width: 146px;
         height: 40px;
         border: 1px solid #e5e5e5;
         border-radius: 25px;
         background-color: #fff;
-        float: left;
         padding-left: 15px;
-        box-sizing: border-box;
+        @include box-sizing(border-box);
         margin: 8px 0 8px 15px;
         @include breakpoint(max-width 660px) {
           width: 89%;
@@ -176,19 +175,19 @@
         }
       }
       &-select {
+        float: left;
         width: 61%;
         height: 40px;
         border: 1px solid #e5e5e5;
         border-radius: 25px;
-        background-color: #fff;
-        float: left;
+        //background-color: #fff;
         padding-left: 15px;
-        box-sizing: border-box;
+        @include box-sizing(border-box);
         -webkit-appearance: none;
         background-image: url('../i/icons/arrow-down-icon.png');
+        background-repeat: no-repeat;
         background-position-y:  center;
         background-position-x: 97%;
-        background-repeat: no-repeat;
         line-height: 1em;
         -moz-appearance: none;
         text-indent: 0.01px;
@@ -210,7 +209,7 @@
         float: left;
         border-bottom: 1px solid #ddd;
         padding: 10px 0;
-        box-sizing: border-box;
+        @include box-sizing(border-box);
         .cabinet__showcase--item-select {
           width: 200px;
           margin-left: 0;
@@ -242,7 +241,6 @@
           }
           &:first-of-type {
             width: calc(100% - 200px);
-
             @include breakpoint(max-width 660px) {
               width: 100%;
               margin-bottom: 5px;
@@ -289,7 +287,7 @@
         border-radius: 3px;
         resize: none;
         padding-left: 10px;
-        box-sizing: border-box;
+        @include box-sizing(border-box);
         @include breakpoint(max-width 770px) {
           width: calc(100% - 145px);
         }
@@ -305,7 +303,7 @@
         }
       }
       &-delete {
-        background-image: url("../i/icons/delete-icon.png");
+        background-image: url('../i/icons/delete-icon.png');
         width: 24px;
         height: 24px;
         float: right;
@@ -365,53 +363,53 @@
       margin: 0;
       padding: 0;
       li {
-        width: 100%;
         display: inline-block;
+        float: left;
+        width: 100%;
         list-style-type: none;
         padding: 16px 0;
-        box-sizing: border-box;
+        @include box-sizing(border-box);
         border-bottom: 1px solid #ddd;
-        float: left;
         a {
+          float: left;
           width: 100%;
           text-align: left;
           color: #0e0e0e;
           font-size: 14px;
           font-weight: 300;
           line-height: 18px;
-          float: left;
           .value {
             float: right;
           }
           .arrow {
-            background-image: url("../i/icons/arrow-down-icon.png");
-            width: 7px;
-            height: 5px;
-            background-repeat: no-repeat;
             position: relative;
             float: right;
+            width: 7px;
+            height: 5px;
+            background-image: url('../i/icons/arrow-down-icon.png');
+            background-repeat: no-repeat;
             top: 7px;
             right: 5px;
           }
         }
         ul {
+          display: none;
           width: 100%;
           margin: 30px 0 0;
           padding: 0;
-          display: none;
           li {
+            position: relative;
             border-bottom: none;
             padding: 10px 0 10px 25px;
-            position: relative;
             &:before {
-              content: "";
+              position: absolute;
+              content: '';
               width: 6px;
               height: 6px;
               border-radius: 50%;
               background-color: #bfbfbf;
               margin-left: -15px;
               margin-top: 6px;
-              position: absolute;
             }
             a {
               color: #0e0e0e;
@@ -613,7 +611,7 @@
         height: 16px;
         top: 0;
         left: -5px;
-        background-image: url("../i/icons/attach-icon.png");
+        background-image: url('../i/icons/attach-icon.png');
         background-repeat: no-repeat;
         -webkit-background-size: contain;
         background-size: contain;
@@ -730,7 +728,7 @@
         float: left;
         position: relative;
         &:before {
-          content: "";
+          content: '';
           width: 100%;
           position: absolute;
           margin-top: 0;
@@ -1181,7 +1179,7 @@
       &:after {
         display: block;
         position: absolute;
-        content: "";
+        content: '';
         width: 11px;
         height: 6px;
         top: 16px;
@@ -1233,7 +1231,7 @@
         border-bottom-right-radius: 20px;
         border: none;
         outline: none;
-        background-image: url("../i/icons/search-icon.png");
+        background-image: url('../i/icons/search-icon.png');
         background-repeat: no-repeat;
         background-size: 40%;
         background-position: 40%;
@@ -1594,7 +1592,7 @@
     }
     .modal-confirm__no {
       .icon {
-        background-image: url("../i/icons/circle-close--icon.png");
+        background-image: url('../i/icons/circle-close--icon.png');
         width: 12px;
         height: 12px;
         background-repeat: no-repeat;
@@ -1644,10 +1642,10 @@
         width: 50%;
         float: left;
       }
-      > input[type="radio"] {
+      > input[type='radio'] {
         display: none;
       }
-      > input[type="radio"] + label {
+      > input[type='radio'] + label {
         display: block;
         position: relative;
         float: left;
@@ -1669,7 +1667,7 @@
           border-bottom-right-radius: 25px;
         }
       }
-      > input[type="radio"]:checked + label {
+      > input[type='radio']:checked + label {
         background-color: #f5f5f5;
       }
     }
@@ -1711,8 +1709,8 @@
         flex-basis: 49%;
       }
       &:after {
-        content: "";
-        background-image: url("../i/icons/datepicker-icon.png");
+        content: '';
+        background-image: url('../i/icons/datepicker-icon.png');
         width: 19px;
         height: 20px;
         position: absolute;
@@ -1743,7 +1741,7 @@
         width: 100%;
       }
       &:before {
-        content: "";
+        content: '';
         position: absolute;
         left: -11px;
         width: 104%;
@@ -1793,7 +1791,7 @@
         padding-top: 10px;
       }
       &:after {
-        content: "";
+        content: '';
         width: 15px;
         height: 2px;
         position: absolute;
@@ -1807,7 +1805,7 @@
         }
       }
       &:before {
-        content: "";
+        content: '';
         width: 15px;
         height: 2px;
         position: absolute;
@@ -1899,10 +1897,10 @@
       width: 50%;
       float: left;
     }
-    > input[type="radio"] {
+    > input[type='radio'] {
       display: none;
     }
-    > input[type="radio"] + label {
+    > input[type='radio'] + label {
       display: block;
       position: relative;
       float: left;
@@ -1932,7 +1930,7 @@
         }
       }
     }
-    > input[type="radio"]:checked + label {
+    > input[type='radio']:checked + label {
       border: 2px solid #72c835;
     }
 
@@ -2066,7 +2064,7 @@
   }
   &--not {
     &:after {
-      content: "";
+      content: '';
       width: 35px;
       height: 3px;
       position: absolute;
@@ -2079,7 +2077,7 @@
       }
     }
     &:before {
-      content: "";
+      content: '';
       width: 35px;
       height: 3px;
       position: absolute;
@@ -2094,11 +2092,11 @@
   }
 }
 .excel-icon {
-  background-image: url("../i/icons/excel-icon.png");
   display: block;
+  position: absolute;
   width: 22px;
   height: 22px;
-  position: absolute;
+  background-image: url('../i/icons/excel-icon.png');  
   top: 8px;
   left: 23px;
 }
@@ -2128,8 +2126,8 @@
   }
   &:nth-of-type(1), &:nth-of-type(2) {
     &:after {
-     content: "";
-     background-image: url("../i/icons/datepicker-icon.png");
+     content: '';
+     background-image: url('../i/icons/datepicker-icon.png');
      width: 19px;
      height: 20px;
      position: absolute;
@@ -2149,7 +2147,7 @@
   &--button {
     position: absolute;
     right: 0;
-    background-image: url("../i/icons/search-prod__icon.png");
+    background-image: url('../i/icons/search-prod__icon.png');
     width: 18px;
     height: 18px;
     border: none;
@@ -2176,12 +2174,12 @@
     &:after {
       display: block;
       position: absolute;
-      content: "";
+      content: '';
       width: 11px;
       height: 6px;
       top: 16px;
       right: 19px;
-      background-image: url(../i/icons/arrow-down-icon.png);
+      background-image: url('../i/icons/arrow-down-icon.png');
       background-repeat: no-repeat;
       background-size: contain;
     }
@@ -2189,8 +2187,8 @@
  }
 .status-online {
   &:before {
-    content: "";
     display: inline-block;
+    content: '';   
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -2200,8 +2198,8 @@
 }
 .status-ofline{
   &:before {
-    content: "";
     display: inline-block;
+    content: '';   
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -2260,19 +2258,20 @@
   font-weight: 300;
   line-height: 15px;
   padding: 8px;
-  box-sizing: border-box;
+  @include box-sizing(border-box);
   margin: 0 5px;
   @include breakpoint(max-width 770px) {
     margin-bottom: 5px;
   }
   .close-icon {
-    background-image: url("../i/icons/modal-close-icon.png");
-    background-repeat: no-repeat;
     display: block;
     position: relative;
     float: right;
     width: 7px;
     height: 7px;
+    background-image: url('../i/icons/modal-close-icon.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: 100%;
     background-size: 100%;
     margin-left: 7px;
     top: 5px;
@@ -2282,45 +2281,45 @@
 }
 
 .zip-icon {
-  background-image: url("../i/icons/zip-icon.png");
-  background-repeat: no-repeat;
   display: block;
   position: relative;
   float: left;
+  background-image: url('../i/icons/zip-icon.png');
+  background-repeat: no-repeat;
   margin-right: 7px;
   width: 13px;
   height: 16px;
 }
 
 .txt-icon {
-  background-image: url("../i/icons/txt-icon.png");
-  background-repeat: no-repeat;
   display: block;
   position: relative;
   float: left;
+  background-image: url('../i/icons/txt-icon.png');
+  background-repeat: no-repeat;
   margin-right: 7px;
   width: 13px;
   height: 16px;
 }
 
 .pdf-icon {
-  background-image: url("../i/icons/pdf-icon.png");
-  background-repeat: no-repeat;
   display: block;
   position: relative;
   float: left;
+  background-image: url('../i/icons/pdf-icon.png');
+  background-repeat: no-repeat;
   margin-right: 7px;
   width: 13px;
   height: 16px;
 }
 
 .reply-icon {
-  background-image: url("../i/icons/reply-icon.png");
+  display: inline-block;
+  position: relative;
+  background-image: url('../i/icons/reply-icon.png');
   width: 20px;
   height: 18px;
   float: none;
-  display: inline-block;
-  position: relative;
   top: -8px;
 }
 
