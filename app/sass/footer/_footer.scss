@@ -143,6 +143,7 @@
     @include flex-wrap(wrap);
     @include flex-direction(row);
     @include justify-content(flex-end);
+    align-items: baseline;
     position: relative;
     float: right;
     > span{

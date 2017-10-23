@@ -1904,7 +1904,7 @@
       display: block;
       position: relative;
       float: left;
-      width: 100px;
+      //width: 100px;
       color: #0e0e0e;
       font-size: 14px;
       font-weight: 300;
@@ -1933,7 +1933,6 @@
     > input[type='radio']:checked + label {
       border: 2px solid #72c835;
     }
-
   }
   &__shops--add {
     width: 100%;
@@ -1943,9 +1942,9 @@
       text-align: center;
     }
     span {
+      position: relative;
       float: left;
       width: 30%;
-      position: relative;
       text-align: left;
       color: #010101;
       font-size: 14px;
@@ -1974,7 +1973,6 @@
     	height: 0.1px;
     	opacity: 0;
     }
-
     .upload + label {
       width: 130px;
       height: 40px;
@@ -1993,7 +1991,6 @@
         margin: 0 auto;
       }
     }
-
   }
   &__shops--save {
     display: block;
@@ -2146,7 +2143,6 @@
   }
   &--button {
     position: absolute;
-    right: 0;
     background-image: url('../i/icons/search-prod__icon.png');
     width: 18px;
     height: 18px;
@@ -2154,7 +2150,6 @@
     background-color: #fff;
     right: 13px;
     top: 9px;
-
   }
   &--select {
     width: 200px;
